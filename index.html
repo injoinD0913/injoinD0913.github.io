@@ -220,7 +220,7 @@
                 
               
 
-              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:57:06" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
+              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:57:58" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
             </span>
           
             
@@ -319,18 +319,14 @@
 <ul>
 <li><p><strong>2.7 删除文件并找回</strong></p>
 <ul>
-<li><p>前提：删除前，文件存在时的状态提交到了本地库。</p>
-</li>
-<li><p>操作：<code>git reset --hard [指针位置]</code></p>
-<blockquote>
-<p>删除操作已经提交到本地库：指针位置指向历史记录</p>
-<p>删除操作尚未提交到本地库：指针位置使用 HEAD</p>
-</blockquote>
-</li>
+<li>前提：删除前，文件存在时的状态提交到了本地库。</li>
+<li>操作：<code>git reset --hard [指针位置]</code></li>
 </ul>
 </li>
 </ul>
-<ul>
+<pre><code>&gt;删除操作已经提交到本地库：指针位置指向历史记录
+&gt;
+&gt;删除操作尚未提交到本地库：指针位置使用 HEAD</code></pre><ul>
 <li><p><strong>2.8 比较文件差异</strong></p>
 <ul>
 <li><p><code>git diff [文件名]</code></p>
