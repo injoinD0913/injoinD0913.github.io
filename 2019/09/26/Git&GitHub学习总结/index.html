@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="git&amp;amp;github学习总结1.Git的优势 大部分操作在本地完成，不需要联网 完整性保证 尽可能添加数据而不是删除或修改数据 分支操作非常快捷流畅 与 Linux 命令全面兼容  2.Git的基本操作 2.1 状态查看  git stastus  查看工作区、暂存区的状态   2.2 添加  git add [file name]  将工作区的“新建/修改”添加到暂存区   2.3 提交">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-26T13:50:34.955Z">
+<meta property="og:updated_time" content="2019-09-26T13:51:41.690Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git&amp;github学习总结">
 <meta name="twitter:description" content="git&amp;amp;github学习总结1.Git的优势 大部分操作在本地完成，不需要联网 完整性保证 尽可能添加数据而不是删除或修改数据 分支操作非常快捷流畅 与 Linux 命令全面兼容  2.Git的基本操作 2.1 状态查看  git stastus  查看工作区、暂存区的状态   2.2 添加  git add [file name]  将工作区的“新建/修改”添加到暂存区   2.3 提交">
@@ -225,7 +225,7 @@
                 
               
 
-              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:50:34" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
+              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:51:41" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
             </span>
           
             
@@ -298,14 +298,17 @@
 <p>注：表示后退n步</p>
 </blockquote>
 <ul>
-<li><p><strong>2.6 reset命令的三个参数对比</strong></p>
-<ul>
-<li><p>1.<br><code>--soft 参数</code></p>
-<pre><code>&gt;仅仅在本地库移动HEAD指针</code></pre></li>
-<li><p>2.<br><code>--mixed 参数</code></p>
+<li><strong>2.6 reset命令的三个参数对比</strong><ul>
+<li>1.<br><code>--soft 参数</code></li>
+</ul>
+</li>
+</ul>
+<pre><code>&gt;仅仅在本地库移动HEAD指针</code></pre><ul>
+<li>2.<br><code>--mixed 参数</code></li>
+</ul>
 <pre><code>&gt;在本地库移动 HEAD 指针
 &gt;
-&gt;重置暂存区</code></pre></li>
+&gt;重置暂存区</code></pre><ul>
 <li><p>3.<br><code>--hard 参数</code></p>
 <blockquote>
 <p>在本地库移动HEAD指针</p>
@@ -314,21 +317,17 @@
 </blockquote>
 </li>
 </ul>
-</li>
-</ul>
 <ul>
 <li><p><strong>2.7 删除文件并找回</strong></p>
 <ul>
-<li><p>前提：删除前，文件存在时的状态提交到了本地库。</p>
+<li>前提：删除前，文件存在时的状态提交到了本地库。</li>
+<li>操作：<code>git reset --hard [指针位置]</code></li>
+</ul>
 </li>
-<li><p>操作：<code>git reset --hard [指针位置]</code></p>
+</ul>
 <pre><code>&gt;删除操作已经提交到本地库：指针位置指向历史记录
 &gt;
-&gt;删除操作尚未提交到本地库：指针位置使用 HEAD</code></pre></li>
-</ul>
-</li>
-</ul>
-<ul>
+&gt;删除操作尚未提交到本地库：指针位置使用 HEAD</code></pre><ul>
 <li><p><strong>2.8 比较文件差异</strong></p>
 <ul>
 <li><p><code>git diff [文件名]</code></p>
