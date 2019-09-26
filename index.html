@@ -220,7 +220,7 @@
                 
               
 
-              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:29:50" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
+              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:34:50" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
             </span>
           
             
@@ -249,16 +249,28 @@
 <h3 id="2-Git的基本操作"><a href="#2-Git的基本操作" class="headerlink" title="2.Git的基本操作"></a>2.Git的基本操作</h3><ul>
 <li><strong>2.1 状态查看</strong></li>
 </ul>
-<figure class="highlight plain"><figcaption><span>stastus</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">&gt;查看工作区、暂存区的状态</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* **2.2 添加**</span><br><span class="line"></span><br><span class="line">```git add [file name]</span><br></pre></td></tr></table></figure>
-
+<p><code>git stastus</code></p>
+<blockquote>
+<p>查看工作区、暂存区的状态</p>
+</blockquote>
+<ul>
+<li><strong>2.2 添加</strong></li>
+</ul>
+<p><code>git add [file name]</code></p>
 <blockquote>
 <p>将工作区的“新建/修改”添加到暂存区</p>
 </blockquote>
 <ul>
 <li><strong>2.3 提交</strong></li>
 </ul>
-<figure class="highlight plain"><figcaption><span>commit -m "commit message" [file name]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">&gt;将暂存区的内容提交到本地库 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* **2.4 查看历史记录**</span><br><span class="line"></span><br><span class="line">```git log</span><br></pre></td></tr></table></figure>
-
+<p><code>git commit -m &quot;commit message&quot; [file name]</code></p>
+<blockquote>
+<p>将暂存区的内容提交到本地库 </p>
+</blockquote>
+<ul>
+<li><strong>2.4 查看历史记录</strong></li>
+</ul>
+<pre><code class="git"></code></pre>
 <blockquote>
 <p>多屏显示控制方式： 空格向下翻页 b 向上翻页 q 退出</p>
 </blockquote>
@@ -267,30 +279,56 @@
 </ul>
 <p><strong><em>本质：HEAD指针移动</em></strong></p>
 <p>基于索引值操作[推荐]</p>
-<figure class="highlight plain"><figcaption><span>reset --hard [局部索引值]</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">```git reset --hard a6ace91</span><br></pre></td></tr></table></figure>
-
+<p><code>git reset --hard [局部索引值]</code></p>
+<p><code>git reset --hard a6ace91</code></p>
 <blockquote>
 <p>使用^符号：只能后退</p>
 </blockquote>
-<figure class="highlight plain"><figcaption><span>reset --hard HEAD^</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">&gt;注：一个^表示后退一步，n个表示后退n步</span><br><span class="line">使用~符号：只能后退</span><br><span class="line"></span><br><span class="line">```git reset --hard HEAD~n</span><br></pre></td></tr></table></figure>
-
+<p><code>git reset --hard HEAD^</code></p>
+<blockquote>
+<p>注：一个^表示后退一步，n个表示后退n步<br>使用~符号：只能后退</p>
+</blockquote>
+<p><code>git reset --hard HEAD~n</code></p>
 <blockquote>
 <p>注：表示后退n步</p>
 </blockquote>
 <ul>
-<li><strong>2.6 reset命令的三个参数对比</strong><br> + </li>
-</ul>
-<p>1.</p>
-<figure class="highlight plain"><figcaption><span>参数</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">           &gt;仅仅在本地库移动HEAD指针</span><br><span class="line">   + </span><br><span class="line">2.</span><br><span class="line">```--mixed 参数</span><br></pre></td></tr></table></figure>
-
+<li><p><strong>2.6 reset命令的三个参数对比</strong></p>
+<ul>
+<li><p>1.<br><code>--soft 参数</code></p>
+<pre><code>&gt;仅仅在本地库移动HEAD指针</code></pre></li>
+<li><p>2.<br><code>--mixed 参数</code></p>
 <pre><code>&gt;在本地库移动 HEAD 指针
 &gt;
-&gt;重置暂存区</code></pre><ul>
-<li><p>3.</p>
-<figure class="highlight plain"><figcaption><span>参数</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">        &gt;在本地库移动HEAD指针</span><br><span class="line">        &gt;</span><br><span class="line">        &gt;重置暂存区</span><br><span class="line">        &gt;</span><br><span class="line">        &gt;重置工作区</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* **2.7 删除文件并找回**</span><br><span class="line"></span><br><span class="line">  + 前提：删除前，文件存在时的状态提交到了本地库。</span><br><span class="line">  + 操作：`git reset --hard [指针位置]`</span><br><span class="line">          &gt;删除操作已经提交到本地库：指针位置指向历史记录</span><br><span class="line">          &gt;</span><br><span class="line">          &gt;删除操作尚未提交到本地库：指针位置使用 HEAD</span><br><span class="line">          &gt;</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* **2.8 比较文件差异**</span><br><span class="line">   +  </span><br><span class="line">```git diff [文件名]</span><br></pre></td></tr></table></figure>
-
-<pre><code>&gt;将工作区中的文件和暂存区进行比较</code></pre><ul>
-<li><code>git diff [本地库中历史版本] [文件名]</code><blockquote>
+&gt;重置暂存区</code></pre></li>
+<li><p>3.<br><code>--hard 参数</code></p>
+<blockquote>
+<p>在本地库移动HEAD指针</p>
+<p>重置暂存区</p>
+<p>重置工作区</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>2.7 删除文件并找回</strong></p>
+<ul>
+<li>前提：删除前，文件存在时的状态提交到了本地库。</li>
+<li>操作：<code>git reset --hard [指针位置]</code><pre><code>&gt;删除操作已经提交到本地库：指针位置指向历史记录
+&gt;
+&gt;删除操作尚未提交到本地库：指针位置使用 HEAD
+&gt;</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>2.8 比较文件差异</strong></p>
+<ul>
+<li><p><code>git diff [文件名]</code></p>
+<pre><code>&gt;将工作区中的文件和暂存区进行比较</code></pre></li>
+<li><p><code>git diff [本地库中历史版本] [文件名]</code></p>
+<blockquote>
 <p>将工作区中的文件和本地库历史记录比较 </p>
 <p>不带文件名比较多个文件</p>
 </blockquote>
