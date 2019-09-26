@@ -220,7 +220,7 @@
                 
               
 
-              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:43:42" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
+              <time title="Created: 2019-09-26 00:00:00 / Modified: 21:48:31" itemprop="dateCreated datePublished" datetime="2019-09-26T00:00:00+08:00">2019-09-26</time>
             </span>
           
             
@@ -314,13 +314,10 @@
 <ul>
 <li><p><strong>2.7 删除文件并找回</strong></p>
 <ul>
-<li><p>前提：删除前，文件存在时的状态提交到了本地库。</p>
-</li>
-<li><p>操作：<code>git reset --hard [指针位置]</code></p>
-<pre><code>&gt;删除操作已经提交到本地库：指针位置指向历史记录
+<li>前提：删除前，文件存在时的状态提交到了本地库。</li>
+<li>操作：<code>git reset --hard [指针位置]</code><pre><code>&gt;删除操作已经提交到本地库：指针位置指向历史记录
 &gt;
-&gt;删除操作尚未提交到本地库：指针位置使用 HEAD
-&gt;</code></pre></li>
+&gt;删除操作尚未提交到本地库：指针位置使用 HEAD</code></pre></li>
 </ul>
 </li>
 </ul>
@@ -328,7 +325,10 @@
 <li><p><strong>2.8 比较文件差异</strong></p>
 <ul>
 <li><p><code>git diff [文件名]</code></p>
-<pre><code>&gt;将工作区中的文件和暂存区进行比较</code></pre></li>
+<blockquote>
+<p>将工作区中的文件和暂存区进行比较</p>
+</blockquote>
+</li>
 <li><p><code>git diff [本地库中历史版本] [文件名]</code></p>
 <blockquote>
 <p>将工作区中的文件和本地库历史记录比较 </p>
