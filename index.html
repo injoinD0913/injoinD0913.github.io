@@ -191,6 +191,109 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://injoinD0913.github.io/2019/09/29/Hexo+GitHub搭建博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dddddwen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/29/Hexo+GitHub搭建博客/" class="post-title-link" itemprop="url">Untitled</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-09-29 00:46:04" itemprop="dateCreated datePublished" datetime="2019-09-29T00:46:04+08:00">2019-09-29</time>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>#关于hexo与github使用过程中的问题与笔记</p>
+<p><strong>一、搭建个人博客前提：</strong></p>
+<p><strong><em>Node.js、git</em></strong> 环境安装</p>
+<p><strong>二、Hexo安装</strong></p>
+<p>安装Hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -cli -g #安装hexo模块</span><br><span class="line">hexo init blog #通过hexo创建一个blog项目</span><br><span class="line">cd blog #打开blog文件夹</span><br><span class="line">npm install</span><br><span class="line">hexo server #开发服务</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、使用github</strong></p>
+<p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p>
+<p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p>
+<p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p>
+<p>1.设置Git的user name和Email：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>2.生成密钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p>
+<p><strong>五、配置Deployment</strong></p>
+<blockquote>
+<p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:injoinD/injoinD.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p><strong>七、生成静态文件部署到GitHub</strong></p>
+<p>通过hexo命令，发布到GitHub上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g #生成网站静态文件到默认设置的 public 文件夹</span><br><span class="line">hexo d #自动生成网站静态文件，并部署到设定的仓库</span><br><span class="line">hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://injoinD0913.github.io/2019/09/26/Git&GitHub学习总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -623,7 +726,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
