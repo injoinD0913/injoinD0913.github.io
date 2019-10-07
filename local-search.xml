@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>数据结构——循环链表与双向链表</title>
+    <link href="undefined2019/10/07/%E5%BE%AA%E7%8E%AF%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
+    <url>2019/10/07/%E5%BE%AA%E7%8E%AF%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h1><p>循环链表是一个首尾相接的链表。将单链表最后一个结点的指针域由NULL改为指向表头结点，就得到了单链形式的循环链表，称为循环单链表。</p><p>在循环单链表中，表中所有结点都被链在一个环上，为使某些操作实现方便，在循环单链表中也可设置一个头结点。这样，空循环链表仅由一个自成循环的头结点表示。</p><p>循环单链表与单链表的实现算法类似，差别仅在于算法中判别当前结点p是否为表尾结点的条件不同。</p><p>单链表中判别条件为<strong>p!=NULL或p-&gt;next!=NULL</strong>,而单循环链表的判别条件是p!=L或p-&gt;next!=L。</p><h2 id="1、初始化"><a href="#1、初始化" class="headerlink" title="1、初始化"></a>1、初始化</h2><pre><code>InitCLinkList(LinkList *CL)/*CL用来接收待初始化的循环单链表的头指针变量的地址*/{    *CL = (LinkList)malloc(sizeof(Node)); /* 建立头结点*/    (*CL)-&gt;next=*CL; /*建立空的循环单链表CL*/}</code></pre><h2 id="2、建立"><a href="#2、建立" class="headerlink" title="2、建立"></a>2、建立</h2><pre><code>void CreateCLinkList(LinkList CL)/*CL是已经初始化好的、带头结点的空循环链表的头指针，通过键盘输入元素值，利用尾插法建立循环单链表CL*/{    Node *rear, *s;     char c;    rear = CL; /*rear指针动态指向链表的当前表尾，其初值指向头结点*/    c=gechar();/*读入第一个元素*/    while(c!=&#39;$&#39;)/*只要读入的元素不是结束标志，就存入新结点s并链到表尾，直到读入结束标志*/    {        s=(Node*)malloc(sizeof(Node));        s-&gt;data=c;        rear-&gt;next=s;        rear=s;        c=getchar();    }    rear-&gt;next=CL; /*让最后一个节点的next链域指向头结点}</code></pre><h2 id="3、合并"><a href="#3、合并" class="headerlink" title="3、合并"></a>3、合并</h2><p>【算法思想】</p><p>先找到两个链表LA,LB的表尾，并分别由指针p,q指向它们，然后将第一个链表的尾与第二个链表的第一个结点链接起来，并修改第二个表的表尾q，使它的链域指向第一个表的头结点。</p><pre><code>LinkList merge_1(LinkList LA，LinkList LB){    Node *p,*q;    p=LA;    q=LB;    while(p-&gt;next!=LA)         p=p-&gt;next; /*找到表LA的表尾，用p指向它*/    while(q-&gt;next!=LB)         q=q-&gt;next; /*找到表LB的表尾，用q指向它*/    q-&gt;next=LA;/*修改表LB的尾指针，使之指向表LA的头结点*/    p-&gt;next=LB-&gt;next;/*修改表LA的尾指针，使之指向表LB中的第一个结点*/    free(LB);    return(LA);}</code></pre><p>#双向链表</p><p>循环单链表虽然能够实现从任一结点出发沿着链能找到其前驱结点，但时间耗费是O(n)。如果希望从表中快速确定某一个结点的前驱，另一个解决办法就是在单链表的每个结点里再增加一个指向其前驱的指针域prior。这样形成的链表中就有两条方向不同的链，称为双向链表。</p><p>在双向链表的结点中有两个指针域，一个指向直接后继，另一个指向直接前驱。</p><pre><code>//-----双向链表的存储结构-----typedef struct DuLNode{    ElemType data;//数据域    struct DuLNode *prior;//指向直接前驱    struct DuLNode *next;//指向直接后继}DuLNode,*DuLinkList;</code></pre><p>在双向链表中，若d为指向表中某一结点的指针，则显然有<strong>d-&gt;next-&gt;prior=d-&gt;prior-&gt;next=d</strong></p><p>在双向链表中，有些操作仅需涉及一个方向的指针，它们的算法描述和线性链表的操作相同，但在插入、删除时有很大的不同，在双向链表中需同时修改两个方向上的指针。</p><h2 id="1、插入"><a href="#1、插入" class="headerlink" title="1、插入"></a>1、插入</h2><pre><code>status listinsert_dul(dulinklist &amp;L,int i,elemtype e){//在带头结点的双向链表L中第i个位置之前插入元素e    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p        return ERROR;//p为NULL时，第i个元素不存在    s=dulnode;//生成新结点*s    s-&gt;data=e;//将结点*s数据域置为e    s-&gt;prior=p-&gt;prior;//将结点*s插入L中    p-&gt;prior-&gt;next=s;    s-&gt;next=p;    p-&gt;prior=s;    return OK;}</code></pre><h2 id="2、删除"><a href="#2、删除" class="headerlink" title="2、删除"></a>2、删除</h2><pre><code>status listdelete_dul(dulinklist &amp;L，int i){//删除带头结点的双向链表L中的第i个元素    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p        return ERROR;//p为NULL时。第i个元素不存在    p-&gt;prioe-&gt;next=p-&gt;next;//修改被删结点的前驱结点的后继指针    p-&gt;next-&gt;prior=p-&gt;prior;//修改被删结点的后继结点的前驱结点    delete p;//释放被删结点的空间    return OK;}</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Circular Linked List  &amp;  Double Linked List</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>数据结构——单链表</title>
     <link href="undefined2019/10/07/%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
     <url>2019/10/07/%E5%8D%95%E9%93%BE%E8%A1%A8/</url>

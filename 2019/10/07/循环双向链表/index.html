@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content>
+  <meta name="author" content="Dddddwen">
+  <meta name="keywords" content>
+  <title>数据结构——循环链表与双向链表 ~ Hexo</title>
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
+  <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  
+    <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+    <div class="view intro-2"
+         style="background: url('/img/VCG211171411210.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              <p>星期一, 十月 7日 2019, 12:00 凌晨</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h1 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h1><p>循环链表是一个首尾相接的链表。将单链表最后一个结点的指针域由NULL改为指向表头结点，就得到了单链形式的循环链表，称为循环单链表。</p>
+<p>在循环单链表中，表中所有结点都被链在一个环上，为使某些操作实现方便，在循环单链表中也可设置一个头结点。这样，空循环链表仅由一个自成循环的头结点表示。</p>
+<p>循环单链表与单链表的实现算法类似，差别仅在于算法中判别当前结点p是否为表尾结点的条件不同。</p>
+<p>单链表中判别条件为<strong>p!=NULL或p-&gt;next!=NULL</strong>,而单循环链表的判别条件是p!=L或p-&gt;next!=L。</p>
+<h2 id="1、初始化"><a href="#1、初始化" class="headerlink" title="1、初始化"></a>1、初始化</h2><pre><code>InitCLinkList(LinkList *CL)
+/*CL用来接收待初始化的循环单链表的头指针变量的地址*/
+{
+    *CL = (LinkList)malloc(sizeof(Node)); /* 建立头结点*/
+    (*CL)-&gt;next=*CL; /*建立空的循环单链表CL*/
+}</code></pre><h2 id="2、建立"><a href="#2、建立" class="headerlink" title="2、建立"></a>2、建立</h2><pre><code>void CreateCLinkList(LinkList CL)
+/*CL是已经初始化好的、带头结点的空循环链表的头指针，通过键盘输入元素值，利用尾插法建立循环单链表CL*/
+{
+    Node *rear, *s; 
+    char c;
+    rear = CL; /*rear指针动态指向链表的当前表尾，其初值指向头结点*/
+    c=gechar();/*读入第一个元素*/
+    while(c!=&#39;$&#39;)/*只要读入的元素不是结束标志，就存入新结点s并链到表尾，直到读入结束标志*/
+    {
+        s=(Node*)malloc(sizeof(Node));
+        s-&gt;data=c;
+        rear-&gt;next=s;
+        rear=s;
+        c=getchar();
+    }
+    rear-&gt;next=CL; /*让最后一个节点的next链域指向头结点
+}</code></pre><h2 id="3、合并"><a href="#3、合并" class="headerlink" title="3、合并"></a>3、合并</h2><p>【算法思想】</p>
+<p>先找到两个链表LA,LB的表尾，并分别由指针p,q指向它们，然后将第一个链表的尾与第二个链表的第一个结点链接起来，并修改第二个表的表尾q，使它的链域指向第一个表的头结点。</p>
+<pre><code>LinkList merge_1(LinkList LA，LinkList LB)
+{
+    Node *p,*q;
+    p=LA;
+    q=LB;
+    while(p-&gt;next!=LA) 
+        p=p-&gt;next; /*找到表LA的表尾，用p指向它*/
+    while(q-&gt;next!=LB) 
+        q=q-&gt;next; /*找到表LB的表尾，用q指向它*/
+    q-&gt;next=LA;/*修改表LB的尾指针，使之指向表LA的头结点*/
+    p-&gt;next=LB-&gt;next;/*修改表LA的尾指针，使之指向表LB中的第一个结点*/
+    free(LB);
+    return(LA);
+}</code></pre><p>#双向链表</p>
+<p>循环单链表虽然能够实现从任一结点出发沿着链能找到其前驱结点，但时间耗费是O(n)。如果希望从表中快速确定某一个结点的前驱，另一个解决办法就是在单链表的每个结点里再增加一个指向其前驱的指针域prior。这样形成的链表中就有两条方向不同的链，称为双向链表。</p>
+<p>在双向链表的结点中有两个指针域，一个指向直接后继，另一个指向直接前驱。</p>
+<pre><code>//-----双向链表的存储结构-----
+typedef struct DuLNode
+{
+    ElemType data;//数据域
+    struct DuLNode *prior;//指向直接前驱
+    struct DuLNode *next;//指向直接后继
+}DuLNode,*DuLinkList;</code></pre><p>在双向链表中，若d为指向表中某一结点的指针，则显然有<strong>d-&gt;next-&gt;prior=d-&gt;prior-&gt;next=d</strong></p>
+<p>在双向链表中，有些操作仅需涉及一个方向的指针，它们的算法描述和线性链表的操作相同，但在插入、删除时有很大的不同，在双向链表中需同时修改两个方向上的指针。</p>
+<h2 id="1、插入"><a href="#1、插入" class="headerlink" title="1、插入"></a>1、插入</h2><pre><code>status listinsert_dul(dulinklist &amp;L,int i,elemtype e)
+{//在带头结点的双向链表L中第i个位置之前插入元素e
+    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p
+        return ERROR;//p为NULL时，第i个元素不存在
+    s=dulnode;//生成新结点*s
+    s-&gt;data=e;//将结点*s数据域置为e
+    s-&gt;prior=p-&gt;prior;//将结点*s插入L中
+    p-&gt;prior-&gt;next=s;
+    s-&gt;next=p;
+    p-&gt;prior=s;
+    return OK;
+}</code></pre><h2 id="2、删除"><a href="#2、删除" class="headerlink" title="2、删除"></a>2、删除</h2><pre><code>status listdelete_dul(dulinklist &amp;L，int i)
+{//删除带头结点的双向链表L中的第i个元素
+    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p
+        return ERROR;//p为NULL时。第i个元素不存在
+    p-&gt;prioe-&gt;next=p-&gt;next;//修改被删结点的前驱结点的后继指针
+    p-&gt;next-&gt;prior=p-&gt;prior;//修改被删结点的后继结点的前驱结点
+    delete p;//释放被删结点的空间
+    return OK;
+}</code></pre>
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Circular%20Linked%20List%20%20&%20%20Double%20Linked%20List">Circular Linked List  &amp;  Double Linked List</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+  <script src="/js/lazyload.js" ></script>
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "数据结构——循环链表与双向链表&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+</body>
+</html>
