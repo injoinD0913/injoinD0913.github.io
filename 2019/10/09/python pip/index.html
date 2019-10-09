@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="Dddddwen">
   <meta name="keywords" content>
-  <title>标签 ~ Hexo</title>
+  <title>python pip 安装工具包找不到时的问题与解决 ~ Hexo</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -30,7 +30,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -101,6 +101,9 @@
             </span>
 
             
+              <br>
+              <p>星期三, 十月 9日 2019, 4:50 下午</p>
+            
           </div>
 
           
@@ -111,22 +114,62 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="/tags/Circular-Linked-List-Double-Linked-List/" style="font-size: 15px; color: #bbe">Circular Linked List  &  Double Linked List</a> <a href="/tags/Git-GitHub/" style="font-size: 15px; color: #bbe">Git GitHub</a> <a href="/tags/Hexo-GitHub/" style="font-size: 15px; color: #bbe">Hexo GitHub</a> <a href="/tags/LinkList/" style="font-size: 15px; color: #bbe">LinkList</a> <a href="/tags/MarkDown/" style="font-size: 15px; color: #bbe">MarkDown</a> <a href="/tags/Static-LinkedList/" style="font-size: 15px; color: #bbe">Static LinkedList</a> <a href="/tags/python/" style="font-size: 15px; color: #bbe">python</a>
-</div>
-              </div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h1 id="python-pip-安装一些包找不到的问题-Could-not-find-a-version-that-satisfies…"><a href="#python-pip-安装一些包找不到的问题-Could-not-find-a-version-that-satisfies…" class="headerlink" title="python pip 安装一些包找不到的问题 Could not find a version that satisfies…."></a>python pip 安装一些包找不到的问题 Could not find a version that satisfies….</h1><h2 id="有时候下载python自带的pip安装一些工具包时，会报如下错误"><a href="#有时候下载python自带的pip安装一些工具包时，会报如下错误" class="headerlink" title="有时候下载python自带的pip安装一些工具包时，会报如下错误"></a>有时候下载python自带的pip安装一些工具包时，会报如下错误</h2><p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5C1.png" srcset="/img/loading.gif" alt="avatar"></p>
+<p>找不到满意的版本，说明pip可能需要升级了，所以使用</p>
+<p><code>python -m pip install --upgrade pip</code></p>
+<p>升级一下pip ，–upgrade 后面跟的是需要升级的库名</p>
+<p>也有可能是网络的问题，可以使用国内镜像比如豆瓣的镜像:</p>
+<p><code>pip install package-name -i https://pypi.doubanio.com/simple/ --trusted-host pypi.douban.com</code></p>
+<p>–trusted-host pypi.douban.com 这是为了获得ssl证书的认证</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/python">python</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -180,6 +223,11 @@
   <script src="/js/lazyload.js" ></script>
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -195,7 +243,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签&nbsp;",
+        "python pip 安装工具包找不到时的问题与解决&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
