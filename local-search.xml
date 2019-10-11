@@ -8,7 +8,7 @@
     <link href="undefined2019/10/11/jupyter%20notebook/"/>
     <url>2019/10/11/jupyter%20notebook/</url>
     
-    <content type="html"><![CDATA[<h1 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h1><p>Jupyter Notebooks 的本质是一个 Web 应用程序，支持实时代码，数学方程，可视化和 markdown。</p><p>Notebooks，不仅可以运行书写的python代码，同时还支持markdown格式的文本显示。</p><p>在Notebooks中还可以运行python</p><h1 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h1><p>安装方式分为两种：</p><ul><li>Anaconda方法</li><li>pip方法</li></ul><h2 id="2-1Anaconda方法"><a href="#2-1Anaconda方法" class="headerlink" title="2.1Anaconda方法"></a>2.1Anaconda方法</h2><p>在Anaconda官网上下载安装包，在安装Anaconda的同时会安装Python和 Jupyter Notebooks这两个工具，并且还包含相当多数据科学和机器学习社区常用的软件包。</p><h2 id="2-2pip方法"><a href="#2-2pip方法" class="headerlink" title="2.2pip方法"></a>2.2pip方法</h2><p>我没试过…之后会尝试一下</p><h3 id="2-2-1安装python"><a href="#2-2-1安装python" class="headerlink" title="2.2.1安装python"></a>2.2.1安装python</h3><p>在安装python过程中记得选择PATH中添加环境变量</p><h3 id="2-2-2升级pip到最新版本"><a href="#2-2-2升级pip到最新版本" class="headerlink" title="2.2.2升级pip到最新版本"></a>2.2.2升级pip到最新版本</h3><p>安装python的同时会安装pip，但此时需要升级到最新版</p><p>打开命令提示窗，切换到python的安装目录下的Scripts文件夹。</p><p>执行如下命令：</p><p><code>pip install --upgrade pip</code></p><h3 id="2-2-3安装Jupyter-Notebooks"><a href="#2-2-3安装Jupyter-Notebooks" class="headerlink" title="2.2.3安装Jupyter Notebooks"></a>2.2.3安装Jupyter Notebooks</h3><p>打开命令提示窗，切换到python的安装目录下的Scripts文件夹。</p><p>执行如下命令：</p><p><code>pip install jupyter</code></p><h3 id="2-2-4启动Jupyter-Notebooks"><a href="#2-2-4启动Jupyter-Notebooks" class="headerlink" title="2.2.4启动Jupyter Notebooks"></a>2.2.4启动Jupyter Notebooks</h3><p>打开命令提示窗，切换到python的安装目录下的Scripts文件夹。执行如下命令</p><p><code>jupyter notebooks</code></p><p>启动成功后，浏览器自动打开notebook窗口。此时显示的是Script文件夹下的文件目录。</p><p><strong>注意：启动notebooks之后，不要不要不要关闭该命令提示窗口，因为一旦关闭该窗口就会与本地服务器断开连接</strong></p><h2 id="三、jupyter-notebook基本使用"><a href="#三、jupyter-notebook基本使用" class="headerlink" title="三、jupyter notebook基本使用"></a>三、jupyter notebook基本使用</h2><p>![ERROR](../../Program Files/MarkdownPad 2/img/1.png)</p><p>点击右侧的New按钮可展开下拉列表按钮，其内包括了可创建的四种工作环境：</p><ul><li>Python3：创建一个可以执行python代码的文件</li><li>Text File：创建文本类型的文件，后缀名为.txt</li><li>Folder：创建一个文件夹</li><li>Teminal：在浏览器中打开一的命令窗口</li></ul><h3 id="3-1jupyter-notebook-中编写并执行python代码"><a href="#3-1jupyter-notebook-中编写并执行python代码" class="headerlink" title="3.1jupyter notebook 中编写并执行python代码"></a>3.1jupyter notebook 中编写并执行python代码</h3><p>在首页右侧点击<code>New</code>，选择点击<code>Python3</code>,页面即跳转到一个新的窗口，此时已经创建了一个新的文件，该文件的名称(默认为Untitled)，点击即可修改文件名</p><p>![ERROR](../../Program Files/MarkdownPad 2/img/2.png)</p><p>在<code>In [ ] :</code>后面的输入框中我们可以输入一段python代码进行测试，点击<code>Run</code>按钮执行,也可以快捷键<code>Ctrl+Enter</code>执行代码</p><p>![ERROR](../../Program Files/MarkdownPad 2/img/3.png)</p><p><strong>在jupyter notebook中代码可以直接运行得出结果</strong></p><h3 id="3-2jupyter-notebook-中使用Markdown添加文本"><a href="#3-2jupyter-notebook-中使用Markdown添加文本" class="headerlink" title="3.2jupyter notebook 中使用Markdown添加文本"></a>3.2jupyter notebook 中使用Markdown添加文本</h3><p>在jupyter notebook中还可以使用MarkDown添加解释性文本，code下拉栏显示是markdown类型，这时就可以使用MarkDown语法进行编写文本了，同时代码里print 的内容都是以markdown的格式显示的。</p><p>![ERROR](../../Program Files/MarkdownPad 2/img/4.png)</p><h2 id="四、jupyter-notebook中的常用的快捷键"><a href="#四、jupyter-notebook中的常用的快捷键" class="headerlink" title="四、jupyter notebook中的常用的快捷键"></a>四、jupyter notebook中的常用的快捷键</h2><p><code>Ctrl + Enter</code>: 执行单元格代码</p><p><code>Shift + Enter</code>: 执行单元格代码并且移动到下一个单元格</p><p><code>Alt + Enter</code>: 执行单元格代码，新建并移动到下一个单元格</p><p>这几个快捷键都是在编写程序的时候经常用到的。</p><p>其他的快捷键可以在命令模式下按<code>H</code>或点击<code>Help</code>中<code>Keyboard Shortcuts</code>查询</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h1><p>Jupyter Notebooks 的本质是一个 Web 应用程序，支持实时代码，数学方程，可视化和 markdown。</p><p>Notebooks，不仅可以运行书写的python代码，同时还支持markdown格式的文本显示。</p><p>在Notebooks中还可以运行python</p><h1 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h1><p>安装方式分为两种：</p><ul><li>Anaconda方法</li><li>pip方法</li></ul><h2 id="2-1Anaconda方法"><a href="#2-1Anaconda方法" class="headerlink" title="2.1Anaconda方法"></a>2.1Anaconda方法</h2><p>在Anaconda官网上下载安装包，在安装Anaconda的同时会安装Python和 Jupyter Notebooks这两个工具，并且还包含相当多数据科学和机器学习社区常用的软件包。</p><h2 id="2-2pip方法"><a href="#2-2pip方法" class="headerlink" title="2.2pip方法"></a>2.2pip方法</h2><p>我没试过…之后会尝试一下</p><h3 id="2-2-1安装python"><a href="#2-2-1安装python" class="headerlink" title="2.2.1安装python"></a>2.2.1安装python</h3><p>在安装python过程中记得选择PATH中添加环境变量</p><h3 id="2-2-2升级pip到最新版本"><a href="#2-2-2升级pip到最新版本" class="headerlink" title="2.2.2升级pip到最新版本"></a>2.2.2升级pip到最新版本</h3><p>安装python的同时会安装pip，但此时需要升级到最新版</p><p>打开命令提示窗，切换到python的安装目录下的Scripts文件夹。</p><p>执行如下命令：</p><p><code>pip install --upgrade pip</code></p><h3 id="2-2-3安装Jupyter-Notebooks"><a href="#2-2-3安装Jupyter-Notebooks" class="headerlink" title="2.2.3安装Jupyter Notebooks"></a>2.2.3安装Jupyter Notebooks</h3><p>打开命令提示窗，切换到python的安装目录下的Scripts文件夹。</p><p>执行如下命令：</p><p><code>pip install jupyter</code></p><h3 id="2-2-4启动Jupyter-Notebooks"><a href="#2-2-4启动Jupyter-Notebooks" class="headerlink" title="2.2.4启动Jupyter Notebooks"></a>2.2.4启动Jupyter Notebooks</h3><p>打开命令提示窗，切换到python的安装目录下的Scripts文件夹。执行如下命令</p><p><code>jupyter notebooks</code></p><p>启动成功后，浏览器自动打开notebook窗口。此时显示的是Script文件夹下的文件目录。</p><p><strong>注意：启动notebooks之后，不要不要不要关闭该命令提示窗口，因为一旦关闭该窗口就会与本地服务器断开连接</strong></p><h2 id="三、jupyter-notebook基本使用"><a href="#三、jupyter-notebook基本使用" class="headerlink" title="三、jupyter notebook基本使用"></a>三、jupyter notebook基本使用</h2><p><img src="https://note.youdao.com/yws/api/personal/file/WEB011839af16b758fcad8823e63bfdf3ec?method=getImage&version=8&cstk=38kKjVFP" srcset="/img/loading.gif" alt="ERROR"></p><p>点击右侧的New按钮可展开下拉列表按钮，其内包括了可创建的四种工作环境：</p><ul><li>Python3：创建一个可以执行python代码的文件</li><li>Text File：创建文本类型的文件，后缀名为.txt</li><li>Folder：创建一个文件夹</li><li>Teminal：在浏览器中打开一的命令窗口</li></ul><h3 id="3-1jupyter-notebook-中编写并执行python代码"><a href="#3-1jupyter-notebook-中编写并执行python代码" class="headerlink" title="3.1jupyter notebook 中编写并执行python代码"></a>3.1jupyter notebook 中编写并执行python代码</h3><p>在首页右侧点击<code>New</code>，选择点击<code>Python3</code>,页面即跳转到一个新的窗口，此时已经创建了一个新的文件，该文件的名称(默认为Untitled)，点击即可修改文件名</p><p><img src="https://note.youdao.com/yws/api/personal/file/WEB3f5c96ecc262c969de03b7ebe5a7cec8?method=getImage&version=9&cstk=38kKjVFP" srcset="/img/loading.gif" alt="ERROR"></p><p>在<code>In [ ] :</code>后面的输入框中我们可以输入一段python代码进行测试，点击<code>Run</code>按钮执行,也可以快捷键<code>Ctrl+Enter</code>执行代码</p><p><img src="https://note.youdao.com/yws/api/personal/file/WEB11859ecf9a529c3e0c5a10f220c6c021?method=getImage&version=10&cstk=38kKjVFP" srcset="/img/loading.gif" alt="ERROR"></p><p><strong>在jupyter notebook中代码可以直接运行得出结果</strong></p><h3 id="3-2jupyter-notebook-中使用Markdown添加文本"><a href="#3-2jupyter-notebook-中使用Markdown添加文本" class="headerlink" title="3.2jupyter notebook 中使用Markdown添加文本"></a>3.2jupyter notebook 中使用Markdown添加文本</h3><p>在jupyter notebook中还可以使用MarkDown添加解释性文本，code下拉栏显示是markdown类型，这时就可以使用MarkDown语法进行编写文本了，同时代码里print 的内容都是以markdown的格式显示的。</p><p><img src="https://note.youdao.com/yws/api/personal/file/WEB3b100e65a38a1d129f4fb9abb8034683?method=getImage&version=11&cstk=38kKjVFP" srcset="/img/loading.gif" alt="ERROR"></p><h2 id="四、jupyter-notebook中的常用的快捷键"><a href="#四、jupyter-notebook中的常用的快捷键" class="headerlink" title="四、jupyter notebook中的常用的快捷键"></a>四、jupyter notebook中的常用的快捷键</h2><p><code>Ctrl + Enter</code>: 执行单元格代码</p><p><code>Shift + Enter</code>: 执行单元格代码并且移动到下一个单元格</p><p><code>Alt + Enter</code>: 执行单元格代码，新建并移动到下一个单元格</p><p>这几个快捷键都是在编写程序的时候经常用到的。</p><p>其他的快捷键可以在命令模式下按<code>H</code>或点击<code>Help</code>中<code>Keyboard Shortcuts</code>查询</p>]]></content>
     
     
     
@@ -61,25 +61,6 @@
   
   
   <entry>
-    <title>数据结构——循环链表与双向链表</title>
-    <link href="undefined2019/10/07/%E5%BE%AA%E7%8E%AF%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
-    <url>2019/10/07/%E5%BE%AA%E7%8E%AF%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</url>
-    
-    <content type="html"><![CDATA[<h1 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h1><p>循环链表是一个首尾相接的链表。将单链表最后一个结点的指针域由NULL改为指向表头结点，就得到了单链形式的循环链表，称为循环单链表。</p><p>在循环单链表中，表中所有结点都被链在一个环上，为使某些操作实现方便，在循环单链表中也可设置一个头结点。这样，空循环链表仅由一个自成循环的头结点表示。</p><p>循环单链表与单链表的实现算法类似，差别仅在于算法中判别当前结点p是否为表尾结点的条件不同。</p><p>单链表中判别条件为<strong>p!=NULL或p-&gt;next!=NULL</strong>,而单循环链表的判别条件是p!=L或p-&gt;next!=L。</p><h2 id="1、初始化"><a href="#1、初始化" class="headerlink" title="1、初始化"></a>1、初始化</h2><pre><code>InitCLinkList(LinkList *CL)/*CL用来接收待初始化的循环单链表的头指针变量的地址*/{    *CL = (LinkList)malloc(sizeof(Node)); /* 建立头结点*/    (*CL)-&gt;next=*CL; /*建立空的循环单链表CL*/}</code></pre><h2 id="2、建立"><a href="#2、建立" class="headerlink" title="2、建立"></a>2、建立</h2><pre><code>void CreateCLinkList(LinkList CL)/*CL是已经初始化好的、带头结点的空循环链表的头指针，通过键盘输入元素值，利用尾插法建立循环单链表CL*/{    Node *rear, *s;     char c;    rear = CL; /*rear指针动态指向链表的当前表尾，其初值指向头结点*/    c=gechar();/*读入第一个元素*/    while(c!=&#39;$&#39;)/*只要读入的元素不是结束标志，就存入新结点s并链到表尾，直到读入结束标志*/    {        s=(Node*)malloc(sizeof(Node));        s-&gt;data=c;        rear-&gt;next=s;        rear=s;        c=getchar();    }    rear-&gt;next=CL; /*让最后一个节点的next链域指向头结点}</code></pre><h2 id="3、合并"><a href="#3、合并" class="headerlink" title="3、合并"></a>3、合并</h2><p>【算法思想】</p><p>先找到两个链表LA,LB的表尾，并分别由指针p,q指向它们，然后将第一个链表的尾与第二个链表的第一个结点链接起来，并修改第二个表的表尾q，使它的链域指向第一个表的头结点。</p><pre><code>LinkList merge_1(LinkList LA，LinkList LB){    Node *p,*q;    p=LA;    q=LB;    while(p-&gt;next!=LA)         p=p-&gt;next; /*找到表LA的表尾，用p指向它*/    while(q-&gt;next!=LB)         q=q-&gt;next; /*找到表LB的表尾，用q指向它*/    q-&gt;next=LA;/*修改表LB的尾指针，使之指向表LA的头结点*/    p-&gt;next=LB-&gt;next;/*修改表LA的尾指针，使之指向表LB中的第一个结点*/    free(LB);    return(LA);}</code></pre><p>#双向链表</p><p>循环单链表虽然能够实现从任一结点出发沿着链能找到其前驱结点，但时间耗费是O(n)。如果希望从表中快速确定某一个结点的前驱，另一个解决办法就是在单链表的每个结点里再增加一个指向其前驱的指针域prior。这样形成的链表中就有两条方向不同的链，称为双向链表。</p><p>在双向链表的结点中有两个指针域，一个指向直接后继，另一个指向直接前驱。</p><pre><code>//-----双向链表的存储结构-----typedef struct DuLNode{    ElemType data;//数据域    struct DuLNode *prior;//指向直接前驱    struct DuLNode *next;//指向直接后继}DuLNode,*DuLinkList;</code></pre><p>在双向链表中，若d为指向表中某一结点的指针，则显然有<strong>d-&gt;next-&gt;prior=d-&gt;prior-&gt;next=d</strong></p><p>在双向链表中，有些操作仅需涉及一个方向的指针，它们的算法描述和线性链表的操作相同，但在插入、删除时有很大的不同，在双向链表中需同时修改两个方向上的指针。</p><h2 id="1、插入"><a href="#1、插入" class="headerlink" title="1、插入"></a>1、插入</h2><pre><code>status listinsert_dul(dulinklist &amp;L,int i,elemtype e){//在带头结点的双向链表L中第i个位置之前插入元素e    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p        return ERROR;//p为NULL时，第i个元素不存在    s=dulnode;//生成新结点*s    s-&gt;data=e;//将结点*s数据域置为e    s-&gt;prior=p-&gt;prior;//将结点*s插入L中    p-&gt;prior-&gt;next=s;    s-&gt;next=p;    p-&gt;prior=s;    return OK;}</code></pre><h2 id="2、删除"><a href="#2、删除" class="headerlink" title="2、删除"></a>2、删除</h2><pre><code>status listdelete_dul(dulinklist &amp;L，int i){//删除带头结点的双向链表L中的第i个元素    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p        return ERROR;//p为NULL时。第i个元素不存在    p-&gt;prioe-&gt;next=p-&gt;next;//修改被删结点的前驱结点的后继指针    p-&gt;next-&gt;prior=p-&gt;prior;//修改被删结点的后继结点的前驱结点    delete p;//释放被删结点的空间    return OK;}</code></pre>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Circular Linked List  &amp;  Double Linked List</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数据结构——单链表</title>
     <link href="undefined2019/10/07/%E5%8D%95%E9%93%BE%E8%A1%A8/"/>
     <url>2019/10/07/%E5%8D%95%E9%93%BE%E8%A1%A8/</url>
@@ -91,6 +72,25 @@
     <tags>
       
       <tag>LinkList</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据结构——循环链表与双向链表</title>
+    <link href="undefined2019/10/07/%E5%BE%AA%E7%8E%AF%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/"/>
+    <url>2019/10/07/%E5%BE%AA%E7%8E%AF%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h1><p>循环链表是一个首尾相接的链表。将单链表最后一个结点的指针域由NULL改为指向表头结点，就得到了单链形式的循环链表，称为循环单链表。</p><p>在循环单链表中，表中所有结点都被链在一个环上，为使某些操作实现方便，在循环单链表中也可设置一个头结点。这样，空循环链表仅由一个自成循环的头结点表示。</p><p>循环单链表与单链表的实现算法类似，差别仅在于算法中判别当前结点p是否为表尾结点的条件不同。</p><p>单链表中判别条件为<strong>p!=NULL或p-&gt;next!=NULL</strong>,而单循环链表的判别条件是p!=L或p-&gt;next!=L。</p><h2 id="1、初始化"><a href="#1、初始化" class="headerlink" title="1、初始化"></a>1、初始化</h2><pre><code>InitCLinkList(LinkList *CL)/*CL用来接收待初始化的循环单链表的头指针变量的地址*/{    *CL = (LinkList)malloc(sizeof(Node)); /* 建立头结点*/    (*CL)-&gt;next=*CL; /*建立空的循环单链表CL*/}</code></pre><h2 id="2、建立"><a href="#2、建立" class="headerlink" title="2、建立"></a>2、建立</h2><pre><code>void CreateCLinkList(LinkList CL)/*CL是已经初始化好的、带头结点的空循环链表的头指针，通过键盘输入元素值，利用尾插法建立循环单链表CL*/{    Node *rear, *s;     char c;    rear = CL; /*rear指针动态指向链表的当前表尾，其初值指向头结点*/    c=gechar();/*读入第一个元素*/    while(c!=&#39;$&#39;)/*只要读入的元素不是结束标志，就存入新结点s并链到表尾，直到读入结束标志*/    {        s=(Node*)malloc(sizeof(Node));        s-&gt;data=c;        rear-&gt;next=s;        rear=s;        c=getchar();    }    rear-&gt;next=CL; /*让最后一个节点的next链域指向头结点}</code></pre><h2 id="3、合并"><a href="#3、合并" class="headerlink" title="3、合并"></a>3、合并</h2><p>【算法思想】</p><p>先找到两个链表LA,LB的表尾，并分别由指针p,q指向它们，然后将第一个链表的尾与第二个链表的第一个结点链接起来，并修改第二个表的表尾q，使它的链域指向第一个表的头结点。</p><pre><code>LinkList merge_1(LinkList LA，LinkList LB){    Node *p,*q;    p=LA;    q=LB;    while(p-&gt;next!=LA)         p=p-&gt;next; /*找到表LA的表尾，用p指向它*/    while(q-&gt;next!=LB)         q=q-&gt;next; /*找到表LB的表尾，用q指向它*/    q-&gt;next=LA;/*修改表LB的尾指针，使之指向表LA的头结点*/    p-&gt;next=LB-&gt;next;/*修改表LA的尾指针，使之指向表LB中的第一个结点*/    free(LB);    return(LA);}</code></pre><p>#双向链表</p><p>循环单链表虽然能够实现从任一结点出发沿着链能找到其前驱结点，但时间耗费是O(n)。如果希望从表中快速确定某一个结点的前驱，另一个解决办法就是在单链表的每个结点里再增加一个指向其前驱的指针域prior。这样形成的链表中就有两条方向不同的链，称为双向链表。</p><p>在双向链表的结点中有两个指针域，一个指向直接后继，另一个指向直接前驱。</p><pre><code>//-----双向链表的存储结构-----typedef struct DuLNode{    ElemType data;//数据域    struct DuLNode *prior;//指向直接前驱    struct DuLNode *next;//指向直接后继}DuLNode,*DuLinkList;</code></pre><p>在双向链表中，若d为指向表中某一结点的指针，则显然有<strong>d-&gt;next-&gt;prior=d-&gt;prior-&gt;next=d</strong></p><p>在双向链表中，有些操作仅需涉及一个方向的指针，它们的算法描述和线性链表的操作相同，但在插入、删除时有很大的不同，在双向链表中需同时修改两个方向上的指针。</p><h2 id="1、插入"><a href="#1、插入" class="headerlink" title="1、插入"></a>1、插入</h2><pre><code>status listinsert_dul(dulinklist &amp;L,int i,elemtype e){//在带头结点的双向链表L中第i个位置之前插入元素e    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p        return ERROR;//p为NULL时，第i个元素不存在    s=dulnode;//生成新结点*s    s-&gt;data=e;//将结点*s数据域置为e    s-&gt;prior=p-&gt;prior;//将结点*s插入L中    p-&gt;prior-&gt;next=s;    s-&gt;next=p;    p-&gt;prior=s;    return OK;}</code></pre><h2 id="2、删除"><a href="#2、删除" class="headerlink" title="2、删除"></a>2、删除</h2><pre><code>status listdelete_dul(dulinklist &amp;L，int i){//删除带头结点的双向链表L中的第i个元素    if(!(p=getelem_dul(L,i)))//在L中确定第i个元素的位置指针p        return ERROR;//p为NULL时。第i个元素不存在    p-&gt;prioe-&gt;next=p-&gt;next;//修改被删结点的前驱结点的后继指针    p-&gt;next-&gt;prior=p-&gt;prior;//修改被删结点的后继结点的前驱结点    delete p;//释放被删结点的空间    return OK;}</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Circular Linked List  &amp;  Double Linked List</tag>
       
     </tags>
     
@@ -118,25 +118,6 @@
   
   
   <entry>
-    <title>Hexo+GitHub搭建博客</title>
-    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    
-    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记</p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装</p><p><strong>二、Hexo安装</strong></p><p>安装Hexo</p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Hexo GitHub</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>MarkDown语法小结</title>
     <link href="undefined2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
     <url>2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/</url>
@@ -148,6 +129,25 @@
     <tags>
       
       <tag>MarkDown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo+GitHub搭建博客</title>
+    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记</p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装</p><p><strong>二、Hexo安装</strong></p><p>安装Hexo</p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Hexo GitHub</tag>
       
     </tags>
     
