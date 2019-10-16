@@ -128,6 +128,53 @@
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/10/16/猜谜游戏小测试/">
+        <p class="h4 index-header">猜谜游戏小测试</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">测试代码速写一个简单的猜谜游戏，即程序选择一个数字让用户来猜，在每一次猜测时，程序将告诉用户猜的数字比程序大还是小，当用户猜中数字时游戏结束。
+该游戏的代码如下：
+from random import randint
+
+def play():
+    random_int = randint(0,100)
+
+    while True:
+        user_guess = int(input(&quot;What number did we guess (0-100)?&quot;))
+    if user_guess == randint:
+        print(&quot;You found the number ({random_int}).Congrats!&quot;)
+        break
+
+    if user_guess &lt; random_int:
+        print(&quot;You number is less than the number we guessed.&quot;)
+        continue
+
+    i</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-16&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python">Python</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/10/11/jupyter notebook/">
         <p class="h4 index-header">jupyter notebook的简单使用</p>
         
@@ -419,6 +466,52 @@ typedef struct
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/09/29/Hexo+GitHub搭建博客/">
+        <p class="h4 index-header">Hexo+GitHub搭建博客</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">#关于hexo与github使用过程中的问题与笔记
+一、搭建个人博客前提：
+Node.js、git 环境安装
+二、Hexo安装
+安装Hexo
+npm install hexo -cli -g #安装hexo模块
+hexo init blog #通过hexo创建一个blog项目
+cd blog #打开blog文件夹
+npm install
+hexo server #开发服务三、使用github
+GitHub中创建一个与用户名一致的仓库，以 io 为后缀，且一个账户只能建立一个。
+如建立一个名叫injoinD.github.io的仓库，其中injoinD为用户名。
+四、配置git信息（Hexo和GitHub之间利用SSH通信）
+1.设置Git的user name和Email：
+git config --global user.name &quot;用户名&quot;
+git config --global user.email &quot;邮箱&quot;2.生成密钥
+ssh-keygen -t rsa -C &quot;邮箱&quot;打开以.ssh结尾的文件夹，将里面的内容配置到Git</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-29&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Hexo%20GitHub">Hexo GitHub</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/09/29/MarkDown语法小结/">
         <p class="h4 index-header">MarkDown语法小结</p>
         
@@ -466,52 +559,6 @@ typedef struct
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/MarkDown">MarkDown</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/09/29/Hexo+GitHub搭建博客/">
-        <p class="h4 index-header">Hexo+GitHub搭建博客</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">#关于hexo与github使用过程中的问题与笔记
-一、搭建个人博客前提：
-Node.js、git 环境安装
-二、Hexo安装
-安装Hexo
-npm install hexo -cli -g #安装hexo模块
-hexo init blog #通过hexo创建一个blog项目
-cd blog #打开blog文件夹
-npm install
-hexo server #开发服务三、使用github
-GitHub中创建一个与用户名一致的仓库，以 io 为后缀，且一个账户只能建立一个。
-如建立一个名叫injoinD.github.io的仓库，其中injoinD为用户名。
-四、配置git信息（Hexo和GitHub之间利用SSH通信）
-1.设置Git的user name和Email：
-git config --global user.name &quot;用户名&quot;
-git config --global user.email &quot;邮箱&quot;2.生成密钥
-ssh-keygen -t rsa -C &quot;邮箱&quot;打开以.ssh结尾的文件夹，将里面的内容配置到Git</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-29&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/Hexo%20GitHub">Hexo GitHub</a>&nbsp;
           
         
       </div>
@@ -592,35 +639,6 @@ git reset --hard HEAD~</div>
           
             <a href="/tags/Git%20GitHub">Git GitHub</a>&nbsp;
           
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/09/25/duwen/">
-        <p class="h4 index-header">Dddddwen</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">搭博客的过程中虽然遇到了很多问题，但还是成功解决，拥有了属于自己的博客。
-然后最近进入工作室的学习中，接触了很多新知识，现在只是略懂皮毛，希望快快将这些基础消化。
-很感谢工作室各位的帮助，还是要谢谢宁哥，每周检查学习情况的制度不断督促着我，能让我按时完成学习任务。
-最近逐渐开始步入正轨，接下来就要百分六十投入工作室，百分四十投入学习，在2019最后的三个月里，我想我会收获很多。
-</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-25&nbsp;&nbsp;
-        
-        
         
       </div>
     </div>

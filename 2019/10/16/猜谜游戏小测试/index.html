@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="Dddddwen">
   <meta name="keywords" content>
-  <title>归档 ~ Hexo</title>
+  <title>猜谜游戏小测试 ~ Hexo</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -30,7 +30,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -101,6 +101,9 @@
             </span>
 
             
+              <br>
+              <p>星期三, 十月 16日 2019, 11:40 晚上</p>
+            
           </div>
 
           
@@ -111,59 +114,80 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 12 篇文章</p>
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/2019/09/29/Hexo+GitHub搭建博客/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hexo+GitHub搭建博客</span>
-      <span style="float: right;">09-29</span>
-    </a>
-  
-    
-    <a href="/2019/09/29/MarkDown语法小结/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">MarkDown语法小结</span>
-      <span style="float: right;">09-29</span>
-    </a>
-  
-    
-    <a href="/2019/09/26/Git&GitHub学习总结/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">git&amp;github学习总结</span>
-      <span style="float: right;">09-26</span>
-    </a>
-  
-    
-    <a href="/2019/09/25/duwen/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Dddddwen</span>
-      <span style="float: right;">09-25</span>
-    </a>
-  
-    
-    <a href="/2019/09/25/hello-world/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hello World</span>
-      <span style="float: right;">09-25</span>
-    </a>
-  
-</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h1 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h1><p>速写一个简单的猜谜游戏，即程序选择一个数字让用户来猜，在每一次猜测时，程序将告诉用户猜的数字比程序大还是小，当用户猜中数字时游戏结束。</p>
+<p>该游戏的代码如下：</p>
+<pre><code>from random import randint
+
+def play():
+    random_int = randint(0,100)
+
+    while True:
+        user_guess = int(input(&quot;What number did we guess (0-100)?&quot;))
+    if user_guess == randint:
+        print(&quot;You found the number ({random_int}).Congrats!&quot;)
+        break
+
+    if user_guess &lt; random_int:
+        print(&quot;You number is less than the number we guessed.&quot;)
+        continue
+
+    if user_guess &gt; random_int:
+        print(&quot;You number is more than the number we guessed.&quot;)
+        continue
 
 
-              </div>
-            </div>
+if __name__ == &#39;__main__&#39;:
+    paly()
+</code></pre><p>在PyCharm中提供</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Python">Python</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -217,6 +241,11 @@
   <script src="/js/lazyload.js" ></script>
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -232,7 +261,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "猜谜游戏小测试&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
