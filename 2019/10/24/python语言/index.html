@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content>
+  <meta name="author" content="Dddddwen">
+  <meta name="keywords" content>
+  <title>python语言语法 ~ Hexo</title>
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
+  <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  
+    <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+    <div class="view intro-2"
+         style="background: url('/img/VCG211171411210.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              <p>星期四, 十月 24日 2019, 12:00 凌晨</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="1-变量"><a href="#1-变量" class="headerlink" title="1. 变量"></a>1. 变量</h2><ul>
+<li><p>变量作用</p>
+<ul>
+<li>增强程序可读性，拒绝硬编码</li>
+<li>对程序的修改效率有了显著提高</li>
+</ul>
+</li>
+<li><p>变量命名规则</p>
+<ul>
+<li>变量名必须为字母或者下划线（或者汉字）开头，可以包含字母，下划线，数字，甚至汉字</li>
+<li>不能使用python关键字和保留字<pre><code>- 常见关键字:if,else,while,for等</code></pre></li>
+<li>区分大小写</li>
+</ul>
+</li>
+<li><p>变量推荐命名法则</p>
+<ul>
+<li>使用英文单词或缩写，见名知意</li>
+<li>尽量不要使用汉字、汉语拼音命名</li>
+<li>驼峰命名法:由多个单词构成，除第一个单词外，其余首字母大写，如：myAge,myName</li>
+<li>大驼峰:包括第一个单词在内的首字母都大写，如：MyAge,MyName</li>
+<li>posix命名规则:由单词构成，全部小写，单词间用下划线连接，如:my_age,my_name</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-Python基础类型"><a href="#2-Python基础类型" class="headerlink" title="2. Python基础类型"></a>2. Python基础类型</h2><ul>
+<li>常量数字<ul>
+<li>直接表示出来的数字就是常量数字，即常量数</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数字类型</th>
+<th>数字举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>十进制整数</td>
+<td>123, 56, -13</td>
+</tr>
+<tr>
+<td>浮点数</td>
+<td>1.21, -0.93847, 4e-12, 4.98e4</td>
+</tr>
+<tr>
+<td>复数</td>
+<td>3+56j, 4.6+7.83j</td>
+</tr>
+<tr>
+<td>二进制开头（0b开头）</td>
+<td>0b1001, 0b101</td>
+</tr>
+<tr>
+<td>十六进制（0x）开头</td>
+<td>oxfec, 0x12fd</td>
+</tr>
+<tr>
+<td>八进制（0o开头）</td>
+<td>0o432, 0o763</td>
+</tr>
+</tbody></table>
+<p>  -补充:八进制在python2.x中可以以’0’或者’0o’开头，在python3.x中只能以’0o’开头</p>
+<ul>
+<li><p>整数</p>
+<ul>
+<li>整数通常指不带有小数部分的数字，包括自然数，0，负数等，如：23,-9</li>
+<li>可以表示任意大的数字</li>
+<li>整数的进制:2,8,10,16进制<ul>
+<li>python中的二进制常量数由’0b’开头</li>
+<li>python中的八进制常量数由’0o’开头</li>
+<li>python中的十六进制常量数由’0x’开头</li>
+</ul>
+</li>
+<li>不同进制直接的转换<ul>
+<li>十进制转换成二进制: <code>bin()</code></li>
+<li>十进制转换成八进制: <code>oct()</code></li>
+<li>十进制转换成十六进制: <code>hex()</code></li>
+<li>默认转换成的是十进制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>浮点数</p>
+<ul>
+<li>定义:即我们日常理解的小数，3.0</li>
+<li>表示形式:<ul>
+<li>常见小数:带小数点，例如3.4,5.0</li>
+<li>科学计数法，小数乘以10为底的指数，指数可以为负数，3243.234=3.243234×10^3=3.243234e3</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>复数</p>
+<ul>
+<li>由实部和虚部组成，中间用‘+’链接，虚部后跟‘j’表示</li>
+<li>例如:3+4j,23.12+43.2j</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-字符串类型"><a href="#3-字符串类型" class="headerlink" title="3. 字符串类型"></a>3. 字符串类型</h2><h3 id="什么是字符串"><a href="#什么是字符串" class="headerlink" title="什么是字符串"></a>什么是字符串</h3><ul>
+<li>表示文本信息的一种形式</li>
+<li>排列有序</li>
+<li>在非注释中，凡是用引号括起来的部分都是字符串</li>
+<li>引号类型:<pre><code>* 单引号:&#39;&#39;
+* 双引号:&quot;&quot;
+* 三单引号:&#39;&#39;&#39;python&#39;&#39;&#39;
+* 三双引号:&quot;&quot;&quot;python&quot;&quot;&quot;</code></pre><h3 id="四种引号的区别"><a href="#四种引号的区别" class="headerlink" title="四种引号的区别"></a>四种引号的区别</h3></li>
+<li>单引号，双引号认为没有区别</li>
+<li>三单引号，三双引号被认为没有区别</li>
+<li>三引号常用来表示多行字符串信息，或者在程序函数内部函数体开头表示函数说明<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3></li>
+<li>转义字符:字符串中一些不太好表示的符号，比如换行，制表符等，连同一些需要特殊表示的符号，如单引号，为了表示这些符号，需要用一些特殊的形式，俗称转义，需要转义的符号俗称转义字符</li>
+<li>转义字符:<ul>
+<li>单引号:&#39;</li>
+<li>双引号:&quot;</li>
+<li>响铃:\a</li>
+<li>反斜杠:\</li>
+<li>换行:\n</li>
+<li>水平制表符:\t</li>
+<li>垂直制表符:\v</li>
+<li>倒退:\b</li>
+<li>空字符串，字符值为0:\0</li>
+<li>unicode 16位的十六进制数值:\uxxxx(注意，是四个数字)</li>
+<li>Unicode 32位的十六进制数值:\uxxxx xxxx(注意，u后边是8位数)</li>
+<li>十六进制值:\xXX(注意，第一个x是必须有的，后边大X表示十六进制值)</li>
+<li>八进制值:\oXX</li>
+</ul>
+</li>
+</ul>
+<h3 id="字符串的格式化"><a href="#字符串的格式化" class="headerlink" title="字符串的格式化"></a>字符串的格式化</h3><ul>
+<li>把字符串按照一定格式进行打印或者填充</li>
+<li>格式化的分类<pre><code> - 使用%进行格式化
+    ```### 占位符总共的种类
+       - %s:字符串
+       - %r:字符串，但是是使用repr而不是str
+       - %c:整数转换成单个字符
+       - %d:十进制整数
+       - %u:无符号整数
+       - %o:表示八进制
+       - %x:十六进制，字母为小写（x为小写）
+       - %X:十六进制，字母为大写（X为大写）
+       - %e:浮点数（e为小写），例如2.87e+12
+       - %E:浮点数（E为小写），例如2.87E+12
+       - %f,%F:浮点数十进制形式
+       - %g,%G:十进制形式浮点或者指数浮点自动转换
+       - 格式字符前出现整数表示此占位符所占位置的宽度
+       - 格式字符前出现‘-’表示左对齐
+       - 格式字符前出现‘+’表示右对齐
+       - 0位数不足用‘0’补齐
+       - width表示宽度
+       - pricision精度 ```
+ - 使用format函数</code></pre></li>
+</ul>
+<h2 id="4-String类型的API"><a href="#4-String类型的API" class="headerlink" title="4. String类型的API"></a>4. String类型的API</h2><ul>
+<li>API(ApplicationProngrammingInterface应用程序接口)，是第三方已经做好的继承好的程序功能，我们需要的仅仅是调用，目的是最大程度上减少使用者的开发时间，提高使用者的开发效率。</li>
+</ul>
+<h3 id="1-一般函数"><a href="#1-一般函数" class="headerlink" title="1.一般函数"></a>1.一般函数</h3><ul>
+<li><p>satrtswith/endswith</p>
+<ul>
+<li>判断是否以×××特定字符开头或结尾</li>
+</ul>
+</li>
+<li><p>count</p>
+<pre><code>- 计数，计算一个字符中某个子字符串出现的次数</code></pre></li>
+<li><p>find</p>
+<pre><code>- 查找字符串中子字符串出现的位置
+- 能查到，返回第一个查到的位置
+- 查不到结果，返回-1</code></pre></li>
+</ul>
+<h3 id="2-判断字符串"><a href="#2-判断字符串" class="headerlink" title="2.判断字符串"></a>2.判断字符串</h3><ul>
+<li><p>起一定判断功能的字符串</p>
+</li>
+<li><p>islower/isupper</p>
+<ul>
+<li>判断字符串是小写字母还是大写字母</li>
+<li>要求全部是瞎写或者大写才返回真值</li>
+</ul>
+</li>
+<li><p>isdigit</p>
+<ul>
+<li>判断字符串是否是全部由数字符号组成</li>
+</ul>
+</li>
+<li><p>isalpha</p>
+<ul>
+<li>判断字符串是否全部由字母组成</li>
+<li>alpha是指英文字符表里面内容</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-操作类函数"><a href="#3-操作类函数" class="headerlink" title="3.操作类函数"></a>3.操作类函数</h3><ul>
+<li><p>lower/upper </p>
+<pre><code>- 把字符串转换成大小写</code></pre></li>
+<li><p>strip/lstrip/rstrip</p>
+<pre><code>- 去掉空格</code></pre></li>
+<li><p>swapcase</p>
+<pre><code>- 字符串中字符交换大小写</code></pre></li>
+</ul>
+<h2 id="5-布尔变量"><a href="#5-布尔变量" class="headerlink" title="5. 布尔变量"></a>5. 布尔变量</h2><ul>
+<li>表示真假</li>
+<li>True/False</li>
+<li>在编程当中，需要大量判断真假、是非、对错</li>
+<li>None<ul>
+<li>None是一个特殊的常量</li>
+<li>不表示任何类型，通常用来占位，或者变量解除绑定，None与任何其他的类型进行比较永远返回False</li>
+<li>作用：<ul>
+<li>占位</li>
+<li>解除变量绑定</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-运算符"><a href="#6-运算符" class="headerlink" title="6. 运算符"></a>6. 运算符</h2><ul>
+<li>运算符就是为数据提供运算链接的符号</li>
+</ul>
+<h3 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1.算数运算符"></a>1.算数运算符</h3><ul>
+<li>+,-,<em>,/,%(取余取模),//(地板除，得到的结果取整),*</em>(幂指数)</li>
+<li>优先级<ul>
+<li>三个等级<ul>
+<li>1.**</li>
+<li>2.*，/，%，//</li>
+<li>+，-</li>
+</ul>
+</li>
+<li>如果有括号，先计算括号内表达式</li>
+</ul>
+</li>
+<li><em>表达式中如果出现浮点数，整数等，则计算结果为浮点数*</em></li>
+</ul>
+<h3 id="2-赋值运算符"><a href="#2-赋值运算符" class="headerlink" title="2.赋值运算符"></a>2.赋值运算符</h3><ul>
+<li>为python变量提供赋值运算功能的符号</li>
+<li>=,+=,-=,/=,%=,**=,//=</li>
+</ul>
+<h3 id="3-比较运算符"><a href="#3-比较运算符" class="headerlink" title="3.比较运算符"></a>3.比较运算符</h3><ul>
+<li>为我们提供比较功能的运算符</li>
+<li>特点是：最后的结果总是真或者假，即布尔值</li>
+<li>&lt;,&gt;,&lt;=,&gt;=,==,!=</li>
+</ul>
+<h3 id="4-逻辑运算符"><a href="#4-逻辑运算符" class="headerlink" title="4.逻辑运算符"></a>4.逻辑运算符</h3><ul>
+<li>逻辑运算就是对布尔值进行运算</li>
+<li>and,or,not</li>
+</ul>
+<h3 id="5-特殊运算符"><a href="#5-特殊运算符" class="headerlink" title="5.特殊运算符"></a>5.特殊运算符</h3><ul>
+<li>is<ul>
+<li>判断两个变量，对象是否同一个</li>
+</ul>
+</li>
+<li>is not<ul>
+<li>跟is操作符正好相反</li>
+</ul>
+</li>
+<li>del<ul>
+<li>用于删除变量，同时解除与对象的关联，如果可能则释放对象</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-基本输入输出"><a href="#7-基本输入输出" class="headerlink" title="7.基本输入输出"></a>7.基本输入输出</h2><ul>
+<li>input:从标准输入设备上读取一个字符串，末尾的换行符会被自动删除<ul>
+<li>标准输入设备：一般指键盘</li>
+<li>标准输出设备：屏幕</li>
+<li>注意：input返回值永远是一个字符串类型</li>
+</ul>
+</li>
+<li>print:输出/打印信息到标准输出设备</li>
+</ul>
+<h2 id="8-分支语句"><a href="#8-分支语句" class="headerlink" title="8.分支语句"></a>8.分支语句</h2><ul>
+<li>程序可以由三种结构组成全部：程序结构=顺序+分支+循环</li>
+<li>顺序：程序从上到下一行一行执行，一行执行完之后才会继续下一行</li>
+<li>分支：通过一个判断条件，不同的结果对应不同的处理程序段</li>
+<li>循环：多次重复执行相同的或相似的代码</li>
+</ul>
+<h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><ul>
+<li>判断一个条件，当条件成立，则执行相应的程序代码段</li>
+<li>语法如下：<pre><code>if(条件表达式)：
+   程序处理模块</code></pre></li>
+<li>python用缩进来表示程序结构或者代码的层级关系<ul>
+<li>可以使用tab键或者空格</li>
+<li>一个tab键表示几个空格可以设置</li>
+<li>pass语句，占位符号，不执行任何语句，不起任何实际作用</li>
+</ul>
+</li>
+</ul>
+<h3 id="if…else…"><a href="#if…else…" class="headerlink" title="if…else…"></a>if…else…</h3><ul>
+<li>假设条件满足，则执行if后面的语句，否则，执行else后面的语句</li>
+<li>else永远跟与他平级的if配对</li>
+</ul>
+<h3 id="三元操作符"><a href="#三元操作符" class="headerlink" title="三元操作符"></a>三元操作符</h3><ul>
+<li>元：操作数的意思，所谓三元，就是一个操作符带动三个操作数一起运算</li>
+<li>三元运算符原本没有</li>
+<li>语法：x if 条件 else y</li>
+<li>表示：如果if条件判断为真，则返回值x，否则，返回值y</li>
+</ul>
+<h2 id="9-循环"><a href="#9-循环" class="headerlink" title="9.循环"></a>9.循环</h2><h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><ul>
+<li>列表：用来盛放/表示一串性质相同或者相似的数据，这些数据组成有序的一种排列方式</li>
+<li>一个列表可以盛放：数字。字符串。列表，或者其他复杂结构<ul>
+<li>列表定义：直接表示列表，需要用中括号括起来，中间数据用逗号隔开</li>
+</ul>
+</li>
+</ul>
+<h3 id="range"><a href="#range" class="headerlink" title="range"></a>range</h3><ul>
+<li>一个函数</li>
+<li>产生一个有规律的有数字组成的列表</li>
+<li>使用包含三个参数：range(start,eng step)</li>
+<li>start:开始数字，以后生成的列表里，包含这个数字作为第一个数字，默认为0</li>
+<li>end:结束数字，这个数字不包含在range生成的列表里，例如range（1，5）就是生成[1,2,3,4]</li>
+<li>step:步长，即每次增加多少，默认为1</li>
+</ul>
+<h3 id="For循环"><a href="#For循环" class="headerlink" title="For循环"></a>For循环</h3><ul>
+<li>程序三大结构：顺序，分支，循环</li>
+<li>循环：重复做一些性质相同或者相似的事情</li>
+<li>Python循环：for，while</li>
+<li>for：用关键字for来表示</li>
+<li>for循环特点：有一个清晰的循环次数，或者清晰的循环结束标志等</li>
+<li>语法：<pre><code>for i in xxx:
+  循环语句模块</code></pre></li>
+</ul>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><ul>
+<li>当满足一定条件时才循环，具体循环多少次没有具体规定</li>
+<li>语法：</li>
+</ul>
+<pre><code>while(循环条件)
+    循环体</code></pre><h3 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h3><ul>
+<li>continue含义：继续下一轮循环</li>
+<li>使用环境：当我们已经确定不需要继续本轮循环的时候使用</li>
+</ul>
+<h2 id="10-函数"><a href="#10-函数" class="headerlink" title="10.函数"></a>10.函数</h2><ul>
+<li>能完成一定逻辑业务功能的程序块（一堆程序代码），是程序模块的一个单位</li>
+<li>作用：<ul>
+<li>代码组织</li>
+<li>代码复用</li>
+</ul>
+</li>
+<li>几个问题<ul>
+<li>函数名/函数定义</li>
+<li>参数</li>
+<li>返回值</li>
+</ul>
+</li>
+</ul>
+<h3 id="函数返回值return语句"><a href="#函数返回值return语句" class="headerlink" title="函数返回值return语句"></a>函数返回值return语句</h3><ul>
+<li>表示无条件结束函数并返回结果</li>
+<li>约定，任一函数都应该有return语句表示结束，可以说return None</li>
+</ul>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>在函数中，用来占位具有一定表示意义的变量名</li>
+<li>分类：<ul>
+<li>形参：参数没有具体的值，主要作用是占据位置</li>
+<li>实参：调用函数时，参数有了具体的值，也就有了具体的意义，此时叫实参</li>
+</ul>
+</li>
+</ul>
+<h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><ul>
+<li>对参数进行别名设置，同时使参数具有了默认值</li>
+</ul>
+<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><ul>
+<li>参数在定义时带默认值</li>
+<li>默认参数定义：<ul>
+<li>默认参数需要使用关键字参数，语法格式为arg=xxx</li>
+<li>必须放在参数列表后面，且默认参数后不得再有普通参数</li>
+</ul>
+</li>
+</ul>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/python">python</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+  <script src="/js/lazyload.js" ></script>
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "python语言语法&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+</body>
+</html>
