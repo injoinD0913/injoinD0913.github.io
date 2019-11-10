@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="Dddddwen">
   <meta name="keywords" content>
-  <title>标签 ~ Hexo</title>
+  <title>if__name__==&#39;__main__&#39;的使用 ~ Hexo</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -30,7 +30,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -101,6 +101,9 @@
             </span>
 
             
+              <br>
+              <p>星期日, 十一月 10日 2019, 3:54 下午</p>
+            
           </div>
 
           
@@ -111,22 +114,60 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="/tags/Git/" style="font-size: 22.5px; color: #779bd3">Git</a> <a href="/tags/MarkDown/" style="font-size: 15px; color: #bbe">MarkDown</a> <a href="/tags/Python/" style="font-size: 15px; color: #bbe">Python</a> <a href="/tags/StatusStruct/" style="font-size: 30px; color: #337ab7">StatusStruct</a> <a href="/tags/python/" style="font-size: 30px; color: #337ab7">python</a>
-</div>
-              </div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <p>一个 Python 源码文件除了可以被直接运行外，还可以作为模块（也就是库）被导入。</p>
+<p><code>if__name__==&#39;__main__&#39;</code>的作用就是控制这两种情况执行代码的过程，在<code>if __name__ == &#39;__main__&#39;:</code> 下的代码只有在第一种情况下（即文件作为脚本直接执行）才会被执行，而import到其他脚本中是不会被执行的。</p>
+<p><strong>name</strong>是当前模块名，当模块被直接运行时模块名为_main_，也就是当前的模块，当模块被导入时，模块名就不是<strong>main</strong>，即代码将不会执行。</p>
+<p>每个python模块都包含内置的变量 <strong>name</strong>，当该模块被直接执行的时候，<strong>name</strong> 等于文件名（包含后缀 .py ）；如果该模块 import 到其他模块中，则该模块的 <strong>name</strong> 等于模块名称（不包含后缀.py）。</p>
+<p>而 “<strong>main</strong>” 始终指当前执行模块的名称（包含后缀.py）。进而当模块被直接执行时，<strong>name</strong> == ‘main’ 结果为真;而当模块被import到其他模块中时，<strong>name</strong> == ‘<strong>main</strong>‘结果为假，就是不调用对应的方法。</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/python">python</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -180,6 +221,11 @@
   <script src="/js/lazyload.js" ></script>
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -195,7 +241,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签&nbsp;",
+        "if__name__=='__main__'的使用&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
