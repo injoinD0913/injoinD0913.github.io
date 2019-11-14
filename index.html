@@ -431,6 +431,46 @@ pip install package-name -i https://pypi.doubanio.com/simple/ --trusted-host pyp
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/10/07/循环双向链表/">
+        <p class="h4 index-header">数据结构——循环链表与双向链表</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">循环链表循环链表是一个首尾相接的链表。将单链表最后一个结点的指针域由NULL改为指向表头结点，就得到了单链形式的循环链表，称为循环单链表。
+在循环单链表中，表中所有结点都被链在一个环上，为使某些操作实现方便，在循环单链表中也可设置一个头结点。这样，空循环链表仅由一个自成循环的头结点表示。
+循环单链表与单链表的实现算法类似，差别仅在于算法中判别当前结点p是否为表尾结点的条件不同。
+单链表中判别条件为p!=NULL或p-&gt;next!=NULL,而单循环链表的判别条件是p!=L或p-&gt;next!=L。
+1、初始化InitCLinkList(LinkList *CL)
+/*CL用来接收待初始化的循环单链表的头指针变量的地址*/
+{
+    *CL = (LinkList)malloc(sizeof(Node)); /* 建立头结点*/
+    (*CL)-&gt;next=*CL; /*建立空的循环单链表CL*/
+}2、建立void CreateCLinkList(LinkList CL)
+/*CL是已经初始化好的、带头结点的空循环链表的头指针，通过键盘输入元素值，利用尾插法建立循</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-07&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/StatusStruct">StatusStruct</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/10/07/单链表/">
         <p class="h4 index-header">数据结构——单链表</p>
         
@@ -460,46 +500,6 @@ InitList(LinkList *L)
 
 
 void CreatList_H(LinkList &amp;L,int n);</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-07&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/StatusStruct">StatusStruct</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/10/07/循环双向链表/">
-        <p class="h4 index-header">数据结构——循环链表与双向链表</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">循环链表循环链表是一个首尾相接的链表。将单链表最后一个结点的指针域由NULL改为指向表头结点，就得到了单链形式的循环链表，称为循环单链表。
-在循环单链表中，表中所有结点都被链在一个环上，为使某些操作实现方便，在循环单链表中也可设置一个头结点。这样，空循环链表仅由一个自成循环的头结点表示。
-循环单链表与单链表的实现算法类似，差别仅在于算法中判别当前结点p是否为表尾结点的条件不同。
-单链表中判别条件为p!=NULL或p-&gt;next!=NULL,而单循环链表的判别条件是p!=L或p-&gt;next!=L。
-1、初始化InitCLinkList(LinkList *CL)
-/*CL用来接收待初始化的循环单链表的头指针变量的地址*/
-{
-    *CL = (LinkList)malloc(sizeof(Node)); /* 建立头结点*/
-    (*CL)-&gt;next=*CL; /*建立空的循环单链表CL*/
-}2、建立void CreateCLinkList(LinkList CL)
-/*CL是已经初始化好的、带头结点的空循环链表的头指针，通过键盘输入元素值，利用尾插法建立循</div>
         </div>
       </a>
 
