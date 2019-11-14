@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>append和extend的区别</title>
+    <link href="undefined2019/11/14/extend%E5%92%8Cappend%E5%8C%BA%E5%88%AB/"/>
+    <url>2019/11/14/extend%E5%92%8Cappend%E5%8C%BA%E5%88%AB/</url>
+    
+    <content type="html"><![CDATA[<p>list.append(object)向列表中添加一个对象object<br>list.extend(seq)把一个序列seq的内容添加到列表中</p><pre><code>student_name = [&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;]new_name = [&#39;Emiliy&#39;, &#39;Joe&#39;]student_name.append(new_media)print student_name&gt;&gt;&gt;[&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;, [&#39;Emiliy&#39;, &#39;Joe&#39;]]```使用append的时候，是将new_name看作一个对象，整体打包添加到student_name对象中。</code></pre><p>student_name = [‘Lily’, ‘Ellen’, ‘Alice’]<br>new_name = [‘Emiliy’, ‘Joe’]<br>student_name.extend(new_media)<br>print student_name</p><blockquote><blockquote><blockquote><p>[‘Lily’, ‘Ellen’, ‘Alice’, ‘Emiliy’, ‘Joe’]```</p></blockquote></blockquote></blockquote><p>使用extend的时候，是将new_name看作一个序列，将这个序列和student_name序列合并，并放在其后面。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>if__name__==&#39;__main__&#39;的使用</title>
     <link href="undefined2019/11/10/name_main/"/>
     <url>2019/11/10/name_main/</url>

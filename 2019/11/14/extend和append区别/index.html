@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="Dddddwen">
   <meta name="keywords" content>
-  <title>归档 ~ Hexo</title>
+  <title>append和extend的区别 ~ Hexo</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -30,7 +30,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -101,6 +101,9 @@
             </span>
 
             
+              <br>
+              <p>星期四, 十一月 14日 2019, 9:51 晚上</p>
+            
           </div>
 
           
@@ -111,59 +114,73 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 15 篇文章</p>
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/2019/09/29/MarkDown语法小结/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">MarkDown语法小结</span>
-      <span style="float: right;">09-29</span>
-    </a>
-  
-    
-    <a href="/2019/09/29/Hexo+GitHub搭建博客/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hexo+GitHub搭建博客</span>
-      <span style="float: right;">09-29</span>
-    </a>
-  
-    
-    <a href="/2019/09/26/Git&GitHub学习总结/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">git&amp;github学习总结</span>
-      <span style="float: right;">09-26</span>
-    </a>
-  
-    
-    <a href="/2019/09/25/duwen/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Dddddwen</span>
-      <span style="float: right;">09-25</span>
-    </a>
-  
-    
-    <a href="/2019/09/25/hello-world/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hello World</span>
-      <span style="float: right;">09-25</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <p>list.append(object)向列表中添加一个对象object<br>list.extend(seq)把一个序列seq的内容添加到列表中</p>
+<pre><code>student_name = [&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;]
+new_name = [&#39;Emiliy&#39;, &#39;Joe&#39;]
+student_name.append(new_media)
+print student_name
+&gt;&gt;&gt;[&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;, [&#39;Emiliy&#39;, &#39;Joe&#39;]]```
 
-              </div>
-            </div>
+使用append的时候，是将new_name看作一个对象，整体打包添加到student_name对象中。
+
+</code></pre><p>student_name = [‘Lily’, ‘Ellen’, ‘Alice’]<br>new_name = [‘Emiliy’, ‘Joe’]<br>student_name.extend(new_media)<br>print student_name</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>[‘Lily’, ‘Ellen’, ‘Alice’, ‘Emiliy’, ‘Joe’]```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>使用extend的时候，是将new_name看作一个序列，将这个序列和student_name序列合并，并放在其后面。</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Python">Python</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -217,6 +234,11 @@
   <script src="/js/lazyload.js" ></script>
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -232,7 +254,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "append和extend的区别&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

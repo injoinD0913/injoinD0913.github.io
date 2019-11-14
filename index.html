@@ -128,6 +128,45 @@
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/11/14/extend和append区别/">
+        <p class="h4 index-header">append和extend的区别</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">list.append(object)向列表中添加一个对象objectlist.extend(seq)把一个序列seq的内容添加到列表中
+student_name = [&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;]
+new_name = [&#39;Emiliy&#39;, &#39;Joe&#39;]
+student_name.append(new_media)
+print student_name
+&gt;&gt;&gt;[&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;, [&#39;Emiliy&#39;, &#39;Joe&#39;]]```
+
+使用append的时候，是将new_name看作一个对象，整体打包添加到student_name对象中。
+
+student_name = [‘Lily’, ‘Ellen’, ‘Alice’]new_name = [‘Emiliy’, ‘Joe’]student_name.extend(new_media)print student_n</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-14&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python">Python</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/11/10/name_main/">
         <p class="h4 index-header">if__name__==&#39;__main__&#39;的使用</p>
         
@@ -549,63 +588,6 @@ typedef struct
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/StatusStruct">StatusStruct</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/09/29/MarkDown语法小结/">
-        <p class="h4 index-header">MarkDown语法小结</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">#MarkDown语法小结 
-1.标题
-使用 # 表示标题，一级标题使用一个 # ，二级标题使用两个 ## ，以此类推，共有六级标题。
-使用 ===== 表示高阶标题，使用 --------- 表示次阶标题。
-
-
-# 和标题之间记得有个空格哦。
-==== 和 ---- 表示标题时，大于等于2个都可以表示。
-我通常在标题分级时使用标题标记，这个的用处很明了了。
-
-示例1
-# 这是一级标题
-
-这也是一级标题
-========
-
-## 这是二级标题
-这也是二级标题
---------------
-这是一级标题这也是一级标题这是二级标题这也是二级标题2.引用使用 &gt; 表示引用， &gt;&gt; 表示引用里面再套一层引用，依次类推。
-
-如果 &gt; 和 &gt;&gt; 嵌套使用的话，从 &gt;&gt; 退到 &gt; 时，必须之间要加一个空格或者 &gt; 作为过渡，否则默认为下一行和上一行是同一级别的引用。如示例所示。 
-引用标记里可以使用其他标记，如：有序列表或无序列表标记，代码标记等。 
-
-示例 
-&gt; 这是一级引用
-&gt;&gt;这是二级引用
-&gt;&gt;&gt; </div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-29&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/MarkDown">MarkDown</a>&nbsp;
           
         
       </div>
