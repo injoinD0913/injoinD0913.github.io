@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="Dddddwen">
   <meta name="keywords" content>
-  <title>标签 - Python ~ Hexo</title>
+  <title>标签 - python ~ Hexo</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -120,22 +120,34 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
+  <p class="h4">共计 4 篇文章</p>
   <hr>
   
     
       
       <p class="h5">2019</p>
     
-    <a href="/2019/11/14/extend和append区别/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">append和extend的区别</span>
-      <span style="float: right;">11-14</span>
+    <a href="/2019/11/10/name_main/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">if__name__==&#39;__main__&#39;的使用</span>
+      <span style="float: right;">11-10</span>
     </a>
   
     
-    <a href="/2019/10/16/猜谜游戏小测试/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Python——猜谜游戏小测试</span>
-      <span style="float: right;">10-16</span>
+    <a href="/2019/10/24/python语言/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">python语言语法</span>
+      <span style="float: right;">10-24</span>
+    </a>
+  
+    
+    <a href="/2019/10/11/jupyter notebook/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">jupyter notebook的简单使用</span>
+      <span style="float: right;">10-11</span>
+    </a>
+  
+    
+    <a href="/2019/10/09/python pip/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">python pip 安装工具包找不到时的问题与解决</span>
+      <span style="float: right;">10-09</span>
     </a>
   
 </div>
@@ -214,7 +226,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签 - Python&nbsp;",
+        "标签 - python&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -236,29 +248,6 @@
       
     };
     var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      getSearchFile(path);
-      this.onclick = null
-    }
-  </script>
-
-
-</body>
-</html>
-var el = "h1,h2,h3,h4,h5,h6".split(",");
     var res = [];
     for (item of el) {
       res.push(".markdown-body > " + item)
