@@ -8,7 +8,7 @@
     <link href="undefined2019/11/29/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     <url>2019/11/29/py%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     
-    <content type="html"><![CDATA[<h4 id="Python-提供了两个级别访问的网络服务。："><a href="#Python-提供了两个级别访问的网络服务。：" class="headerlink" title="Python 提供了两个级别访问的网络服务。："></a>Python 提供了两个级别访问的网络服务。：</h4><ul><li>低级别的网络服务支持基本的 Socket，它提供了标准的 BSD Sockets API，可以访问底层操作系统Socket接口的全部方法。</li><li>高级别的网络服务模块 SocketServer， 它提供了服务器中心类，可以简化网络服务器的开发。</li></ul><h4 id="什么是-Socket"><a href="#什么是-Socket" class="headerlink" title="什么是 Socket?"></a>什么是 Socket?</h4><p>Socket又称”套接字”，应用程序通常通过”套接字”向网络发出请求或者应答网络请求，使主机间或者一台计算机上的进程间可以通讯。</p><h4 id="socket-函数"><a href="#socket-函数" class="headerlink" title="socket()函数"></a>socket()函数</h4><p>Python 中，我们用 socket（）函数来创建套接字，语法格式如下：</p><p><code>socket.socket([family[, type[, proto]]])</code></p><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ul><li>family: 套接字家族可以使AF_UNIX或者AF_INET</li><li>type: 套接字类型可以根据是面向连接的还是非连接分为SOCK_STREAM或SOCK_DGRAM</li><li>protocol: 一般不填默认为0.</li></ul><p>Socket 对象(内建)方法<br>|函数 | 描述 |<br>|-|-|<br>服务器端套接字<br>|s.bind() | 绑定地址（host,port）到套接字， 在AF_INET下,以元组（host,port）的形式表示地址。 |<br>|s.listen() | 开始TCP监听。backlog指定在拒绝连接之前，操作系统可以挂起的最大连接数量。该值至少为1，大部分应用程序设为5就可以了。 |<br>|s.accept() | 被动接受TCP客户端连接,(阻塞式)等待连接的到来|</p><p>客户端套接字<br>|s.connect()    | 主动初始化TCP服务器连接，。一般address的格式为元组（hostname,port），如果连接出错，返回socket.error错误。|<br>|s.connect_ex() | connect()函数的扩展版本,出错时返回出错码,而不是抛出异常|</p><p>公共用途的套接字函数(部分)<br>|s.recv() | 接收TCP数据，数据以字符串形式返回，bufsize指定要接收的最大数据量。flag提供有关消息的其他信息，通常可以忽略。|<br>|s.send() | 发送TCP数据，将string中的数据发送到连接的套接字。返回值是要发送的字节数量，该数量可能小于string的字节大小。|<br>|s.sendall()    | 完整发送TCP数据，完整发送TCP数据。将string中的数据发送到连接的套接字，但在返回之前会尝试发送所有数据。成功返回None，失败则抛出异常。|<br>|s.recvfrom() | 接收UDP数据，与recv()类似，但返回值是（data,address）。其中data是包含接收数据的字符串，address是发送数据的套接字地址。|<br>|s.sendto() | 发送UDP数据，将数据发送到套接字，address是形式为（ipaddr，port）的元组，指定远程地址。返回值是发送的字节数。|<br>|s.close() | 关闭套接字|</p><h4 id="Python-Internet-模块"><a href="#Python-Internet-模块" class="headerlink" title="Python Internet 模块"></a>Python Internet 模块</h4><p>以下列出了 Python 网络编程的一些重要模块：</p><table><thead><tr><th>协议</th><th>功能用处</th><th>端口号</th><th>Python 模块</th></tr></thead><tbody><tr><td>HTTP</td><td>网页访问</td><td>80</td><td>httplib, urllib, xmlrpclib</td></tr><tr><td>NNTP</td><td>阅读和张贴新闻文章，俗称为”帖子”</td><td>119</td><td>nntplib</td></tr><tr><td>FTP</td><td>文件传输</td><td>20</td><td>ftplib, urllib</td></tr><tr><td>SMTP</td><td>发送邮件</td><td>25</td><td>smtplib</td></tr><tr><td>POP3</td><td>接收邮件</td><td>110</td><td>poplib</td></tr><tr><td>IMAP4</td><td>获取邮件</td><td>143</td><td>imaplib</td></tr><tr><td>Telnet</td><td>命令行</td><td>23</td><td>telnetlib</td></tr><tr><td>Gopher</td><td>信息查找</td><td>70</td><td>gopherlib, urllib</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<h4 id="Python-提供了两个级别访问的网络服务。："><a href="#Python-提供了两个级别访问的网络服务。：" class="headerlink" title="Python 提供了两个级别访问的网络服务。："></a>Python 提供了两个级别访问的网络服务。：</h4><ul><li>低级别的网络服务支持基本的 Socket，它提供了标准的 BSD Sockets API，可以访问底层操作系统Socket接口的全部方法。</li><li>高级别的网络服务模块 SocketServer， 它提供了服务器中心类，可以简化网络服务器的开发。</li></ul><h4 id="什么是-Socket"><a href="#什么是-Socket" class="headerlink" title="什么是 Socket?"></a>什么是 Socket?</h4><p>Socket又称”套接字”，应用程序通常通过”套接字”向网络发出请求或者应答网络请求，使主机间或者一台计算机上的进程间可以通讯。</p><h4 id="socket-函数"><a href="#socket-函数" class="headerlink" title="socket()函数"></a>socket()函数</h4><p>Python 中，我们用 socket（）函数来创建套接字，语法格式如下：</p><p><code>socket.socket([family[, type[, proto]]])</code></p><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ul><li>family: 套接字家族可以使AF_UNIX或者AF_INET</li><li>type: 套接字类型可以根据是面向连接的还是非连接分为SOCK_STREAM或SOCK_DGRAM</li><li>protocol: 一般不填默认为0.</li></ul><p>Socket 对象(内建)方法<br>| 函数 | 描述 |<br>|-|-|<br>| 服务器端套接字 |<br>|s.bind() | 绑定地址（host,port）到套接字， 在AF_INET下,以元组（host,port）的形式表示地址。 |<br>|s.listen() | 开始TCP监听。backlog指定在拒绝连接之前，操作系统可以挂起的最大连接数量。该值至少为1，大部分应用程序设为5就可以了。 |<br>|s.accept() | 被动接受TCP客户端连接,(阻塞式)等待连接的到来|</p><p>| 客户端套接字 |<br>|s.connect()    | 主动初始化TCP服务器连接，。一般address的格式为元组（hostname,port），如果连接出错，返回socket.error错误。|<br>|s.connect_ex() | connect()函数的扩展版本,出错时返回出错码,而不是抛出异常|</p><p>| 公共用途的套接字函数(部分) |<br>|s.recv() | 接收TCP数据，数据以字符串形式返回，bufsize指定要接收的最大数据量。flag提供有关消息的其他信息，通常可以忽略。|<br>|s.send() | 发送TCP数据，将string中的数据发送到连接的套接字。返回值是要发送的字节数量，该数量可能小于string的字节大小。|<br>|s.sendall()    | 完整发送TCP数据，完整发送TCP数据。将string中的数据发送到连接的套接字，但在返回之前会尝试发送所有数据。成功返回None，失败则抛出异常。|<br>|s.recvfrom() | 接收UDP数据，与recv()类似，但返回值是（data,address）。其中data是包含接收数据的字符串，address是发送数据的套接字地址。|<br>|s.sendto() | 发送UDP数据，将数据发送到套接字，address是形式为（ipaddr，port）的元组，指定远程地址。返回值是发送的字节数。|<br>|s.close() | 关闭套接字|</p><h4 id="Python-Internet-模块"><a href="#Python-Internet-模块" class="headerlink" title="Python Internet 模块"></a>Python Internet 模块</h4><p>以下列出了 Python 网络编程的一些重要模块：</p><table><thead><tr><th>协议</th><th>功能用处</th><th>端口号</th><th>Python 模块</th></tr></thead><tbody><tr><td>HTTP</td><td>网页访问</td><td>80</td><td>httplib, urllib, xmlrpclib</td></tr><tr><td>NNTP</td><td>阅读和张贴新闻文章，俗称为”帖子”</td><td>119</td><td>nntplib</td></tr><tr><td>FTP</td><td>文件传输</td><td>20</td><td>ftplib, urllib</td></tr><tr><td>SMTP</td><td>发送邮件</td><td>25</td><td>smtplib</td></tr><tr><td>POP3</td><td>接收邮件</td><td>110</td><td>poplib</td></tr><tr><td>IMAP4</td><td>获取邮件</td><td>143</td><td>imaplib</td></tr><tr><td>Telnet</td><td>命令行</td><td>23</td><td>telnetlib</td></tr><tr><td>Gopher</td><td>信息查找</td><td>70</td><td>gopherlib, urllib</td></tr></tbody></table>]]></content>
     
     
     
@@ -213,25 +213,6 @@
   
   
   <entry>
-    <title>Hexo+GitHub搭建博客</title>
-    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    
-    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记 </p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装 </p><p><strong>二、Hexo安装</strong></p><p>安装Hexo </p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Git</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>MarkDown语法小结</title>
     <link href="undefined2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
     <url>2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/</url>
@@ -243,6 +224,25 @@
     <tags>
       
       <tag>MarkDown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo+GitHub搭建博客</title>
+    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记 </p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装 </p><p><strong>二、Hexo安装</strong></p><p>安装Hexo </p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
       
     </tags>
     
