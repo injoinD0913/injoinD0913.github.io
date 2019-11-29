@@ -286,13 +286,15 @@ posix命名规则:由单词构成，全部小写，单词间用下划线连接�
     
     <div class="col-12 col-md-8 m-auto">
       <a href="/2019/10/20/回文判断/">
-        <p class="h4 index-header">栈和队的应用——回文判断</p>
+        <p class="h4 index-header"></p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">题目描述回文判断。称正读与反读都相同的字符序列为“回文序列”。 
+          <div class="index-text mb-1">
+title: 栈和队的应用——回文判断date: 2019-10-20 22:20
+tags: StatusStruct题目描述回文判断。称正读与反读都相同的字符序列为“回文序列”。 
 试写一个算法，判断依次读入的一个以@为结束符的字母序列，是否为形如“序列1&amp;序列2”模式的字符序列。其中序列1和序列2的逆序列。例如，“a+b&amp;b+a”是属于该模式的字符序列，而“1+3&amp;3-1”则不是。
 算法思想依次读入字符串中的字符，将已读字符放入顺序栈中，以‘@’为停止标志初始化两个空栈，先将字符串入栈l1，以‘&amp;’为分割点，将后半部分字符出栈在入栈到l2中，若最后l1,l2中出栈的字符相等，则是回文序列。否则，就不是回文序列。
 算法描述#include&lt;stdio.h&gt;
@@ -308,12 +310,7 @@ typedef struct stack
 
 void InitStack(stack* l)
 {
-    l-&gt;top = -1;
-}
-
-void PushStack(stack* l, char a)
-{
-    if (l-&</div>
+    l-&g</div>
         </div>
       </a>
 
@@ -322,11 +319,6 @@ void PushStack(stack* l, char a)
           <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-20&nbsp;&nbsp;
         
         
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/StatusStruct">StatusStruct</a>&nbsp;
-          
         
       </div>
     </div>
