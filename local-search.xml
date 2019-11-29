@@ -213,25 +213,6 @@
   
   
   <entry>
-    <title>Hexo+GitHub搭建博客</title>
-    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    
-    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记 </p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装 </p><p><strong>二、Hexo安装</strong></p><p>安装Hexo </p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Git</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>MarkDown语法小结</title>
     <link href="undefined2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
     <url>2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/</url>
@@ -243,6 +224,25 @@
     <tags>
       
       <tag>MarkDown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo+GitHub搭建博客</title>
+    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记 </p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装 </p><p><strong>二、Hexo安装</strong></p><p>安装Hexo </p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
       
     </tags>
     
