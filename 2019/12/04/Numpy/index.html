@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="Dddddwen">
   <meta name="keywords" content>
-  <title>归档 ~ Hexo</title>
+  <title>Numpy入门与实践 ~ Hexo</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -30,7 +30,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -101,6 +101,9 @@
             </span>
 
             
+              <br>
+              <p>星期三, 十二月 4日 2019, 12:00 凌晨</p>
+            
           </div>
 
           
@@ -111,77 +114,207 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 17 篇文章</p>
-  <hr>
-  
-    
       
-      <p class="h5">2019</p>
-    
-    <a href="/2019/10/24/python语言/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">python语言语法</span>
-      <span style="float: right;">10-24</span>
-    </a>
-  
-    
-    <a href="/2019/10/20/回文判断/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">栈和队的应用——回文判断</span>
-      <span style="float: right;">10-20</span>
-    </a>
-  
-    
-    <a href="/2019/10/16/猜谜游戏小测试/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Python——猜谜游戏小测试</span>
-      <span style="float: right;">10-16</span>
-    </a>
-  
-    
-    <a href="/2019/10/11/jupyter notebook/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">jupyter notebook的简单使用</span>
-      <span style="float: right;">10-11</span>
-    </a>
-  
-    
-    <a href="/2019/10/09/python pip/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">python pip 安装工具包找不到时的问题与解决</span>
-      <span style="float: right;">10-09</span>
-    </a>
-  
-    
-    <a href="/2019/10/07/单链表/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">数据结构——单链表</span>
-      <span style="float: right;">10-07</span>
-    </a>
-  
-    
-    <a href="/2019/10/07/循环双向链表/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">数据结构——循环链表与双向链表</span>
-      <span style="float: right;">10-07</span>
-    </a>
-  
-    
-    <a href="/2019/10/06/静态链表/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">数据结构——静态链表</span>
-      <span style="float: right;">10-06</span>
-    </a>
-  
-</div>
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h2 id="Ndarray多维数组"><a href="#Ndarray多维数组" class="headerlink" title="Ndarray多维数组"></a>Ndarray多维数组</h2><ul>
+<li>Numpy库是用于科学计算的一个开源Python扩充程序库，是其他数据分析包的基础包，为Python提供了高性能的数组与矩阵运算处理能力。</li>
+</ul>
+<h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>使用说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>arange</td>
+<td>类似于内置的range函数,用于创建数组</td>
+</tr>
+<tr>
+<td>ones</td>
+<td>创建指定长度或形状的全数组</td>
+</tr>
+<tr>
+<td>ones_like</td>
+<td>以另一个数组为参考,根据其形状和dtype创建全1数组</td>
+</tr>
+<tr>
+<td>zeros,zeros_like</td>
+<td>类似于ones,ones_like,创建全0数组</td>
+</tr>
+<tr>
+<td>empty,empty_like</td>
+<td>同上,创建没有具体值的数</td>
+</tr>
+<tr>
+<td>eye,identity</td>
+<td>创建正方的N*N单位矩阵</td>
+</tr>
+</tbody></table>
+<h3 id="数组对象属性"><a href="#数组对象属性" class="headerlink" title="数组对象属性"></a>数组对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>使用说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.ndim</td>
+<td>秩，即数据轴的个数</td>
+</tr>
+<tr>
+<td>.shape</td>
+<td>数组的维度</td>
+</tr>
+<tr>
+<td>.size</td>
+<td>元素的总个数</td>
+</tr>
+<tr>
+<td>.dtype</td>
+<td>数据类型</td>
+</tr>
+<tr>
+<td>.itemsize</td>
+<td>数组中每个元素的字节大小</td>
+</tr>
+</tbody></table>
+<h3 id="数组类型与变换"><a href="#数组类型与变换" class="headerlink" title="数组类型与变换"></a>数组类型与变换</h3><ul>
+<li>dtype</li>
+<li>astype</li>
+<li>数组重塑、合并，拆分，转置<br>重塑  <code>reshape</code> <code>swapaxes</code>旋转(少用)<br>将数组折叠变为一维数组  <code>ravel</code> <code>flatten</code><br>合并  <code>concatenate</code><br>垂直  <code>vstack</code><br>水平  <code>hsatck</code><br>拆分  <code>split</code><br>转置  <code>transpose</code>  <code>T</code></li>
+</ul>
+<h3 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>使用说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rand</td>
+<td>产生均匀分布的样本值</td>
+</tr>
+<tr>
+<td>randint</td>
+<td>给定范围内取随机整数</td>
+</tr>
+<tr>
+<td>randn</td>
+<td>产生正态分布的样本值</td>
+</tr>
+<tr>
+<td>seed</td>
+<td>随机数种子</td>
+</tr>
+<tr>
+<td>permutation</td>
+<td>对一个序列随机排序，不改变原数组</td>
+</tr>
+<tr>
+<td>shuffle</td>
+<td>对一个序列随机排序，改变原数组</td>
+</tr>
+<tr>
+<td>uniform(low,high,size)</td>
+<td>产生具有均匀分布的数组，low起始值，high结束值，size形状</td>
+</tr>
+<tr>
+<td>normal(loc,scale,size)</td>
+<td>产生具有正态分布的数组，loc均值，scale标准差</td>
+</tr>
+<tr>
+<td>poisson(lam,size)</td>
+<td>产生泊松分布的数组，lam随机事件发生率</td>
+</tr>
+</tbody></table>
+<h2 id="数组的索引和切片"><a href="#数组的索引和切片" class="headerlink" title="数组的索引和切片"></a>数组的索引和切片</h2><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>[1][2]</p>
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>[:1]</p>
+<h3 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h3><p>true false<br>按照要求显示符号条件的行列数组</p>
+<h3 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h3><p>可以改变数组的顺序<br>.ix_</p>
+<h2 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>使用说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sum</td>
+<td>求和</td>
+</tr>
+<tr>
+<td>mean</td>
+<td>算数平均数</td>
+</tr>
+<tr>
+<td>std,var</td>
+<td>标准差和方差</td>
+</tr>
+<tr>
+<td>min,max</td>
+<td>最小值和最大值</td>
+</tr>
+<tr>
+<td>argmin,argmax</td>
+<td>最小和最大元素的索引</td>
+</tr>
+<tr>
+<td>cumsum</td>
+<td>所有元素的累计和</td>
+</tr>
+<tr>
+<td>cumprod</td>
+<td>所有元素的累计积</td>
+</tr>
+</tbody></table>
 
-              </div>
-            </div>
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -235,6 +368,11 @@
   <script src="/js/lazyload.js" ></script>
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -250,7 +388,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "归档&nbsp;",
+        "Numpy入门与实践&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
