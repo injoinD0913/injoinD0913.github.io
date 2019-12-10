@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content>
+  <meta name="author" content="Dddddwen">
+  <meta name="keywords" content>
+  <title>Pandas入门与实践 ~ Hexo</title>
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
+  <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  
+    <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+    <div class="view intro-2"
+         style="background: url('/img/VCG211171411210.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              <p>星期三, 十二月 4日 2019, 12:00 凌晨</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h2 id="pandas数据结构"><a href="#pandas数据结构" class="headerlink" title="pandas数据结构"></a>pandas数据结构</h2><h3 id="Series数据"><a href="#Series数据" class="headerlink" title="Series数据"></a>Series数据</h3><ul>
+<li>指定索引</li>
+</ul>
+<pre><code>In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
+Out []:a    1
+       b    2
+       c    3
+       d    4
+       dtype: int64</code></pre><ul>
+<li>设置字典</li>
+</ul>
+<pre><code>data = {
+      &#39;张三&#39;:92,
+      &#39;李四&#39;:78,
+      &#39;王五&#39;:68,
+      &#39;小明&#39;:82,
+}
+In []:obj = Series(data)
+      obj
+Out[]:张三   92
+      李四   78
+      王五   68
+      小明   82
+      dtype: int64
+</code></pre><p>###DataFrame</p>
+<p>类似于excel表格<br>index行索引<br>cloumns列索引</p>
+<p><strong>构造方法</strong><br>|类型|使用说明|<br>|-|-|<br>|二维ndarray``|数据矩阵，可传入行列索引|<br>|由数组、列表或元组组成的字典||<br>|由Series组成的字典|每个Series为一列，Series索引合并为行索引|<br>|嵌套字典||<br>|字典或Series的列表|各项称为DataFrame一行，字典键或Series索引成为DataFrame列索引|<br>|由列表或元组组成的列表|类似于“二维数组”|</p>
+<h3 id="索引对象"><a href="#索引对象" class="headerlink" title="索引对象"></a>索引对象</h3><ul>
+<li>不可修改</li>
+<li>可以做一些布尔运算</li>
+</ul>
+<h2 id="pandas索引操作"><a href="#pandas索引操作" class="headerlink" title="pandas索引操作"></a>pandas索引操作</h2><h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p><code>reindex</code></p>
+<h3 id="更换索引"><a href="#更换索引" class="headerlink" title="更换索引"></a>更换索引</h3><p>对原有的索引表格进行排序，此时的索引可能是乱序，此时需要重新排序<br><code>reset_index</code><br>此时原索引仍然存在，若不需要，可通过<code>drop = TRUE</code>删掉</p>
+<h3 id="索引和选取"><a href="#索引和选取" class="headerlink" title="索引和选取"></a>索引和选取</h3><ul>
+<li><p>Series<br><code>obj[&#39;a&#39;,&#39;c&#39;]</code><br><code>obj[&#39;a&#39;:&#39;c&#39;]</code></p>
+</li>
+<li><p>DataFrame<br><code>obj[&#39;name&#39;,&#39;city&#39;]</code><br><code>obj[&#39;a&#39;:&#39;c&#39;]</code><br><code>obj[2:]</code></p>
+</li>
+</ul>
+<p><strong>iloc,loc,ix</strong><br><code>obj.iloc[2,1:]</code></p>
+<h3 id="操作行和列"><a href="#操作行和列" class="headerlink" title="操作行和列"></a>操作行和列</h3><p>添加 <code>append</code><br>新加一列 <code>obj[&#39;class&#39;]=2018</code><br>删除行 <code>drop(行号)</code><br>删除列 <code>drop(&#39;class&#39;,axis=1)</code><br>修改 <code>rename</code></p>
+<h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><p>与之前操作相同</p>
+<h3 id="函数应用和映射"><a href="#函数应用和映射" class="headerlink" title="函数应用和映射"></a>函数应用和映射</h3><p>在数据分析实战中，常常会对数据进行较复杂的数据运算，这时需要定义函数。定义好的函数可以应用到pandas数据中，其中有三种方法：map函数，将函数套用在Series的每个元素中；apply函数，将函数套用到DataFrame的行与列上；applymap函数，将函数套用到DataFrame的每个元素上</p>
+<p>map方法：<br>将原来price中元去掉</p>
+<pre><code>def f(x):
+    return x.split(&#39;&#39;)[0]
+obj1[&#39;price&#39;] = obj1[&#39;price&#39;].map(f)
+obj1</code></pre><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="对索引排序"><a href="#对索引排序" class="headerlink" title="对索引排序"></a>对索引排序</h4><p><code>obj.sort_index()</code><br>默认为升序<br><code>obj.sort_index(ascending=False)</code><br>降序</p>
+<h4 id="对值排序"><a href="#对值排序" class="headerlink" title="对值排序"></a>对值排序</h4><p><code>obj.sort_values()</code><br><code>obj.sort_values(by=&#39;b&#39;)</code>    以b一列的元素排序</p>
+<h3 id="汇总与统计"><a href="#汇总与统计" class="headerlink" title="汇总与统计"></a>汇总与统计</h3><p><code>obj.sum()</code>列求和<br><code>obj.sum(axis=1)</code>行求和<br><code>obj.describe()</code></p>
+<h3 id="唯一值与值计数"><a href="#唯一值与值计数" class="headerlink" title="唯一值与值计数"></a>唯一值与值计数</h3><p><code>obj.unique()</code>唯一值<br><code>obj.value_counts()</code>值计数</p>
+<h2 id="层次化索引"><a href="#层次化索引" class="headerlink" title="层次化索引"></a>层次化索引</h2><p>两层或多层嵌套索引<br>obj[‘two’]<br>obj[:,’a’] 内层选取</p>
+<h2 id="pandas可视化"><a href="#pandas可视化" class="headerlink" title="pandas可视化"></a>pandas可视化</h2><p>调用matplotib库可以生成不同类型的统计图</p>
+<p>plot方法</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+  <script src="/js/lazyload.js" ></script>
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Pandas入门与实践&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+</body>
+</html>

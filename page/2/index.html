@@ -168,6 +168,57 @@
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/10/07/单链表/">
+        <p class="h4 index-header">数据结构——单链表</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">单链表的定义与表示线性表链式存储结构的特点是：用一组任意的存储单元存储线性表的数据元素（这组存储单元可以是连续的，也可以是不连续的）。因此，为了正确表示结点之间的逻辑关系，必须在存储线性表的每个数据元素值的同时，存储指示其后继结点的地址（或位置）信息，这两部分信息组成的存储映像称为结点。
+结点包括两个域：数据域用来存储结点的值，指针域用来存储数据元素的直接后继的地址（或位置）。
+单链表上的基本运算初始化【算法步骤】
+
+生成新结点作为头结点，用头指针L指向头结点。
+头结点的指针域置空。
+
+InitList(LinkList *L)
+{
+    *L=(Linklist)malloc(sizeof(Node));/*建立头结点*/
+    (*L)-&gt;next=NULL;/*建立空的单链表L*/
+}建立（前插法）【算法步骤】
+
+创建一个只有头结点的空链表
+根据待创建链表包括的元素个数n，循环n次执行以下操作：
+生成一个新结点*p；
+输入元素值赋给新结点*P的数据域；
+将新结点*p插入到头结点之后。
+
+
+
+void CreatList_H(LinkList &amp;L,int n);</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-07&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/StatusStruct">StatusStruct</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/10/06/静态链表/">
         <p class="h4 index-header">数据结构——静态链表</p>
         
@@ -195,52 +246,6 @@ typedef struct
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/StatusStruct">StatusStruct</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/09/29/Hexo+GitHub搭建博客/">
-        <p class="h4 index-header">Hexo+GitHub搭建博客</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">#关于hexo与github使用过程中的问题与笔记 
-一、搭建个人博客前提：
-Node.js、git 环境安装 
-二、Hexo安装
-安装Hexo 
-npm install hexo -cli -g #安装hexo模块
-hexo init blog #通过hexo创建一个blog项目
-cd blog #打开blog文件夹
-npm install
-hexo server #开发服务三、使用github
-GitHub中创建一个与用户名一致的仓库，以 io 为后缀，且一个账户只能建立一个。
-如建立一个名叫injoinD.github.io的仓库，其中injoinD为用户名。
-四、配置git信息（Hexo和GitHub之间利用SSH通信）
-1.设置Git的user name和Email：
-git config --global user.name &quot;用户名&quot;
-git config --global user.email &quot;邮箱&quot;2.生成密钥
-ssh-keygen -t rsa -C &quot;邮箱&quot;打开以.ssh结尾的文件夹，将里面的内容配置到</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-29&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/Git">Git</a>&nbsp;
           
         
       </div>
@@ -298,6 +303,52 @@ ssh-keygen -t rsa -C &quot;邮箱&quot;打开以.ssh结尾的文件夹，将里�
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/MarkDown">MarkDown</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/09/29/Hexo+GitHub搭建博客/">
+        <p class="h4 index-header">Hexo+GitHub搭建博客</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">#关于hexo与github使用过程中的问题与笔记 
+一、搭建个人博客前提：
+Node.js、git 环境安装 
+二、Hexo安装
+安装Hexo 
+npm install hexo -cli -g #安装hexo模块
+hexo init blog #通过hexo创建一个blog项目
+cd blog #打开blog文件夹
+npm install
+hexo server #开发服务三、使用github
+GitHub中创建一个与用户名一致的仓库，以 io 为后缀，且一个账户只能建立一个。
+如建立一个名叫injoinD.github.io的仓库，其中injoinD为用户名。
+四、配置git信息（Hexo和GitHub之间利用SSH通信）
+1.设置Git的user name和Email：
+git config --global user.name &quot;用户名&quot;
+git config --global user.email &quot;邮箱&quot;2.生成密钥
+ssh-keygen -t rsa -C &quot;邮箱&quot;打开以.ssh结尾的文件夹，将里面的内容配置到</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-29&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Git">Git</a>&nbsp;
           
         
       </div>
