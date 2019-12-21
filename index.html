@@ -197,46 +197,59 @@ IPython命令的输入历史
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/04/Pandas入门与实践/">
-        <p class="h4 index-header">Pandas入门与实践</p>
+      <a href="/2019/12/20/New Document/">
+        <p class="h4 index-header">数值分析笔记</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">pandas数据结构Series数据
-指定索引
+          <div class="index-text mb-1">数值分析笔记NumPy第三方数据表示库NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式
+Matplotlibpyplot如何绘制数据图形的方法
+PandasSeries  DataFrame数据类型
+IPython的%魔术命令
 
-In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
-Out []:a    1
-       b    2
-       c    3
-       d    4
-       dtype: int64
-设置字典
 
-data = {
-      &#39;张三&#39;:92,
-      &#39;李四&#39;:78,
-      &#39;王五&#39;:68,
-      &#39;小明&#39;:82,
-}
-In []:obj = Series(data)
-      obj
-Out[]:张三   92
-      李四   78
-      王五   68
-      小明   82
-      dtype: int64
-###DataFrame
-类似于excel表格index行索引cloumns列索引
-构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
+常用命令
+说明
+
+
+
+%magic
+显示所有魔术命令
+
+
+%hist
+IPython命令的输入历史
+
+
+%pdb
+异常发生后自动进入调试器
+
+
+%reset
+删除当前命名空间中已经定义的变量或名称
+
+
+%who
+显示IPython当前命名空间中已经定义的变量
+
+
+%time statement
+给出代码的执行时间，statement表示一段代码
+
+
+%timeit statement
+多次执行代码，计算综合平均执行时间
+
+
+</div>
         </div>
       </a>
 
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-20&nbsp;&nbsp;
         
         
         
@@ -327,6 +340,62 @@ eye,identity
 dtype
 astype
 数组重塑、合并，拆分，转置重塑  reshape swapaxes旋转(少用)将数组折叠变为一维数组  ravel flatten合并  concate</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/04/Pandas入门与实践/">
+        <p class="h4 index-header">Pandas入门与实践</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">pandas数据结构Series数据
+指定索引
+
+In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
+Out []:a    1
+       b    2
+       c    3
+       d    4
+       dtype: int64
+设置字典
+
+data = {
+      &#39;张三&#39;:92,
+      &#39;李四&#39;:78,
+      &#39;王五&#39;:68,
+      &#39;小明&#39;:82,
+}
+In []:obj = Series(data)
+      obj
+Out[]:张三   92
+      李四   78
+      王五   68
+      小明   82
+      dtype: int64
+###DataFrame
+类似于excel表格index行索引cloumns列索引
+构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
         </div>
       </a>
 
@@ -633,51 +702,6 @@ def play():
       <div>
         
           <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-16&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/Python">Python</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/10/11/jupyter notebook/">
-        <p class="h4 index-header">jupyter notebook的简单使用</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">一、简介Jupyter Notebooks 的本质是一个 Web 应用程序，支持实时代码，数学方程，可视化和 markdown。
-Notebooks，不仅可以运行书写的python代码，同时还支持markdown格式的文本显示。
-在Notebooks中还可以运行python
-二、安装安装方式分为两种：
-
-Anaconda方法
-pip方法
-
-2.1Anaconda方法在Anaconda官网上下载安装包，在安装Anaconda的同时会安装Python和 Jupyter Notebooks这两个工具，并且还包含相当多数据科学和机器学习社区常用的软件包。
-2.2pip方法我没试过…之后会尝试一下
-2.2.1安装python在安装python过程中记得选择PATH中添加环境变量
-2.2.2升级pip到最新版本安装python的同时会安装pip，但此时需要升级到最新版
-打开命令提示窗，切换到python的安装目录下的Scripts文件夹。
-执行如下命令：
-pip install --upgrade pip
-2.2.3安装Jupyter Notebooks打开命令提示窗，切换到python的安装目录</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-11&nbsp;&nbsp;
         
         
         

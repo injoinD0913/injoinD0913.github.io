@@ -14,7 +14,7 @@
   <meta name="description" content>
   <meta name="author" content="Dddddwen">
   <meta name="keywords" content>
-  <title>标签 ~ Hexo</title>
+  <title>数值分析笔记 ~ Hexo</title>
   <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
@@ -30,7 +30,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -101,6 +101,9 @@
             </span>
 
             
+              <br>
+              <p>星期五, 十二月 20日 2019, 12:00 凌晨</p>
+            
           </div>
 
           
@@ -111,22 +114,94 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5 z-depth-3" id="board">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="/tags/Git/" style="font-size: 20px; color: #8ea5dc">Git</a> <a href="/tags/MarkDown/" style="font-size: 15px; color: #bbe">MarkDown</a> <a href="/tags/Python/" style="font-size: 25px; color: #6090c9">Python</a> <a href="/tags/Python数值分析/" style="font-size: 30px; color: #337ab7">Python数值分析</a> <a href="/tags/StatusStruct/" style="font-size: 30px; color: #337ab7">StatusStruct</a> <a href="/tags/python/" style="font-size: 25px; color: #6090c9">python</a>
-</div>
-              </div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h2 id="数值分析笔记"><a href="#数值分析笔记" class="headerlink" title="数值分析笔记"></a>数值分析笔记</h2><h3 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h3><p>第三方数据表示库<br>NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式</p>
+<h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><p>pyplot<br>如何绘制数据图形的方法</p>
+<h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><p>Series  DataFrame数据类型</p>
+<h3 id="IPython的-魔术命令"><a href="#IPython的-魔术命令" class="headerlink" title="IPython的%魔术命令"></a>IPython的%魔术命令</h3><table>
+<thead>
+<tr>
+<th>常用命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%magic</td>
+<td>显示所有魔术命令</td>
+</tr>
+<tr>
+<td>%hist</td>
+<td>IPython命令的输入历史</td>
+</tr>
+<tr>
+<td>%pdb</td>
+<td>异常发生后自动进入调试器</td>
+</tr>
+<tr>
+<td>%reset</td>
+<td>删除当前命名空间中已经定义的变量或名称</td>
+</tr>
+<tr>
+<td>%who</td>
+<td>显示IPython当前命名空间中已经定义的变量</td>
+</tr>
+<tr>
+<td>%time statement</td>
+<td>给出代码的执行时间，statement表示一段代码</td>
+</tr>
+<tr>
+<td>%timeit statement</td>
+<td>多次执行代码，计算综合平均执行时间</td>
+</tr>
+</tbody></table>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
           </div>
         </div>
       </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
     
   </main>
 
@@ -180,6 +255,11 @@
   <script src="/js/lazyload.js" ></script>
 
 
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
 
   <script src="/lib/prettify/prettify.min.js" ></script>
   <script>
@@ -195,7 +275,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签&nbsp;",
+        "数值分析笔记&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
