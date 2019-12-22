@@ -128,7 +128,7 @@
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/22/Numpy库入门/">
+      <a href="/2019/12/22/NumPy数据存储与函数/">
         <p class="h4 index-header"></p>
         
         
@@ -136,18 +136,21 @@
         
         <div class="index-excerpt" >
           <div class="index-text mb-1">
-title: Numpy库入门date: 2019-12-22
-tags: Python数值分析列表和数组一组数据的有序结构区别列表：数据类型可以不同3.1413,&#39;pi&#39;,3.1404,[3.1401,3.1439],&#39;3.1376&#39;
-数组：数组类型相同3.1413,3.1398,3.1404,3.1349,3.1376
-数据维度的Python表示一维数据：列表和集合类型[3.1398,3.1349,3.1376]有序{3.1398,3.1349,3.1376}无序
-二维数据：列表类型[[3.1398,3.1349,3.1376],[3.1413,3.1404,3.1401]]
-三维数据：列表类型高维数据：字典类型或数据表示格式(JSON、xml、YAML格式)
-            &quot;firstname&quot;:&quot;wang&quot;,
-            &quot;lastname&quot;:&quot;ming&quot;,
-        }```
-## Numpy的引用
+title: NumPy数据存储与函数date: 2019-12-22
+tags: Python数值分析数据的CSV文件存取CSV(Comma-Separated Value,逗号分隔符)CSV是一种常见的文件格式，用来存取批量数据。
+CSV文件写入数据np.savetxt(frame,array,fmt=&#39;%.18e&#39;,delimiter=None)
 
-`import numpy as </div>
+frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
+array:存入文件的数组。
+fmt:写入文件的格式，例如%d %.2f %.18e。
+delimiter：分割字符串，默认是空格。
+
+例：np.savetxt(&#39;a.csv&#39;,a,fmt=&#39;%d&#39;,delimiter=&#39;,&#39;)
+CSV文件中数据读入到一个数组类型np.loadtxt(frame,dtype=np.float,delimiter=None,unpack=False)
+
+frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
+dtype:数据类型，可选。
+delimiter</div>
         </div>
       </a>
 
@@ -165,30 +168,27 @@ tags: Python数值分析列表和数组一组数据的有序结构区别列表�
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/22/NumPy数据存储与函数/">
-        <p class="h4 index-header">NumPy数据存储与函数</p>
+      <a href="/2019/12/22/Numpy库入门/">
+        <p class="h4 index-header"></p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">数据的CSV文件存取CSV(Comma-Separated Value,逗号分隔符)CSV是一种常见的文件格式，用来存取批量数据。
-CSV文件写入数据np.savetxt(frame,array,fmt=&#39;%.18e&#39;,delimiter=None)
+          <div class="index-text mb-1">
+title: Numpy库入门date: 2019-12-22
+tags: Python数值分析列表和数组一组数据的有序结构区别列表：数据类型可以不同3.1413,&#39;pi&#39;,3.1404,[3.1401,3.1439],&#39;3.1376&#39;
+数组：数组类型相同3.1413,3.1398,3.1404,3.1349,3.1376
+数据维度的Python表示一维数据：列表和集合类型[3.1398,3.1349,3.1376]有序{3.1398,3.1349,3.1376}无序
+二维数据：列表类型[[3.1398,3.1349,3.1376],[3.1413,3.1404,3.1401]]
+三维数据：列表类型高维数据：字典类型或数据表示格式(JSON、xml、YAML格式)
+            &quot;firstname&quot;:&quot;wang&quot;,
+            &quot;lastname&quot;:&quot;ming&quot;,
+        }```
 
-frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
-array:存入文件的数组。
-fmt:写入文件的格式，例如%d %.2f %.18e。
-delimiter：分割字符串，默认是空格。
+## Numpy的引用
 
-例：np.savetxt(&#39;a.csv&#39;,a,fmt=&#39;%d&#39;,delimiter=&#39;,&#39;)
-CSV文件中数据读入到一个数组类型np.loadtxt(frame,dtype=np.float,delimiter=None,unpack=False)
-
-frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
-dtype:数据类型，可选。
-delimiter:分割字符串，默认是空格。
-unpack：如果True，读入属性将分别写入不同变量。
-
-CSV文件的局限性</div>
+`import numpy as</div>
         </div>
       </a>
 
@@ -197,11 +197,6 @@ CSV文件的局限性</div>
           <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-22&nbsp;&nbsp;
         
         
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
-          
         
       </div>
     </div>
