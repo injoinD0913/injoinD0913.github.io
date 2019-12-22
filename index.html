@@ -129,15 +129,13 @@
     
     <div class="col-12 col-md-8 m-auto">
       <a href="/2019/12/22/NumPy数据存储与函数/">
-        <p class="h4 index-header"></p>
+        <p class="h4 index-header">NumPy数据存储与函数</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">
-title: NumPy数据存储与函数date: 2019-12-22
-tags: Python数值分析数据的CSV文件存取CSV(Comma-Separated Value,逗号分隔符)CSV是一种常见的文件格式，用来存取批量数据。
+          <div class="index-text mb-1">数据的CSV文件存取CSV(Comma-Separated Value,逗号分隔符)CSV是一种常见的文件格式，用来存取批量数据。
 CSV文件写入数据np.savetxt(frame,array,fmt=&#39;%.18e&#39;,delimiter=None)
 
 frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
@@ -150,7 +148,10 @@ CSV文件中数据读入到一个数组类型np.loadtxt(frame,dtype=np.float,del
 
 frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
 dtype:数据类型，可选。
-delimiter</div>
+delimiter:分割字符串，默认是空格。
+unpack：如果True，读入属性将分别写入不同变量。
+
+CSV文件的局限性</div>
         </div>
       </a>
 
@@ -159,6 +160,11 @@ delimiter</div>
           <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-22&nbsp;&nbsp;
         
         
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
+          
         
       </div>
     </div>
@@ -169,15 +175,13 @@ delimiter</div>
     
     <div class="col-12 col-md-8 m-auto">
       <a href="/2019/12/22/Numpy库入门/">
-        <p class="h4 index-header"></p>
+        <p class="h4 index-header">Numpy库入门</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">
-title: Numpy库入门date: 2019-12-22
-tags: Python数值分析列表和数组一组数据的有序结构区别列表：数据类型可以不同3.1413,&#39;pi&#39;,3.1404,[3.1401,3.1439],&#39;3.1376&#39;
+          <div class="index-text mb-1">列表和数组一组数据的有序结构区别列表：数据类型可以不同3.1413,&#39;pi&#39;,3.1404,[3.1401,3.1439],&#39;3.1376&#39;
 数组：数组类型相同3.1413,3.1398,3.1404,3.1349,3.1376
 数据维度的Python表示一维数据：列表和集合类型[3.1398,3.1349,3.1376]有序{3.1398,3.1349,3.1376}无序
 二维数据：列表类型[[3.1398,3.1349,3.1376],[3.1413,3.1404,3.1401]]
@@ -188,77 +192,17 @@ tags: Python数值分析列表和数组一组数据的有序结构区别列表�
 
 ## Numpy的引用
 
-`import numpy as</div>
+`import numpy as np`
+
+## Numpy的N维数组对象ndarray
+
+- 数组对象可以**去掉**元素间**</div>
         </div>
       </a>
 
       <div>
         
           <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-22&nbsp;&nbsp;
-        
-        
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/20/New Document/">
-        <p class="h4 index-header">数值分析笔记</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">数值分析笔记NumPy第三方数据表示库NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式
-Matplotlibpyplot如何绘制数据图形的方法
-PandasSeries  DataFrame数据类型
-IPython的%魔术命令
-
-
-常用命令
-说明
-
-
-
-%magic
-显示所有魔术命令
-
-
-%hist
-IPython命令的输入历史
-
-
-%pdb
-异常发生后自动进入调试器
-
-
-%reset
-删除当前命名空间中已经定义的变量或名称
-
-
-%who
-显示IPython当前命名空间中已经定义的变量
-
-
-%time statement
-给出代码的执行时间，statement表示一段代码
-
-
-%timeit statement
-多次执行代码，计算综合平均执行时间
-
-
-</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-20&nbsp;&nbsp;
         
         
         
@@ -344,46 +288,59 @@ IPython命令的输入历史
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/04/Pandas入门与实践/">
-        <p class="h4 index-header">Pandas入门与实践</p>
+      <a href="/2019/12/20/New Document/">
+        <p class="h4 index-header">数值分析笔记</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">pandas数据结构Series数据
-指定索引
+          <div class="index-text mb-1">数值分析笔记NumPy第三方数据表示库NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式
+Matplotlibpyplot如何绘制数据图形的方法
+PandasSeries  DataFrame数据类型
+IPython的%魔术命令
 
-In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
-Out []:a    1
-       b    2
-       c    3
-       d    4
-       dtype: int64
-设置字典
 
-data = {
-      &#39;张三&#39;:92,
-      &#39;李四&#39;:78,
-      &#39;王五&#39;:68,
-      &#39;小明&#39;:82,
-}
-In []:obj = Series(data)
-      obj
-Out[]:张三   92
-      李四   78
-      王五   68
-      小明   82
-      dtype: int64
-###DataFrame
-类似于excel表格index行索引cloumns列索引
-构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
+常用命令
+说明
+
+
+
+%magic
+显示所有魔术命令
+
+
+%hist
+IPython命令的输入历史
+
+
+%pdb
+异常发生后自动进入调试器
+
+
+%reset
+删除当前命名空间中已经定义的变量或名称
+
+
+%who
+显示IPython当前命名空间中已经定义的变量
+
+
+%time statement
+给出代码的执行时间，statement表示一段代码
+
+
+%timeit statement
+多次执行代码，计算综合平均执行时间
+
+
+</div>
         </div>
       </a>
 
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-20&nbsp;&nbsp;
         
         
         
@@ -496,6 +453,62 @@ astype
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/04/Pandas入门与实践/">
+        <p class="h4 index-header">Pandas入门与实践</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">pandas数据结构Series数据
+指定索引
+
+In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
+Out []:a    1
+       b    2
+       c    3
+       d    4
+       dtype: int64
+设置字典
+
+data = {
+      &#39;张三&#39;:92,
+      &#39;李四&#39;:78,
+      &#39;王五&#39;:68,
+      &#39;小明&#39;:82,
+}
+In []:obj = Series(data)
+      obj
+Out[]:张三   92
+      李四   78
+      王五   68
+      小明   82
+      dtype: int64
+###DataFrame
+类似于excel表格index行索引cloumns列索引
+构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/11/29/py网络编程知识点/">
         <p class="h4 index-header">Python 网络编程部分知识点</p>
         
@@ -542,22 +555,21 @@ s.bind() 绑定地址（host,port）到套接字， 在AF_INET下,以元组（ho
     
     <div class="col-12 col-md-8 m-auto">
       <a href="/2019/11/14/extend和append区别/">
-        <p class="h4 index-header"></p>
+        <p class="h4 index-header">append和extend的区别</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">
-title: append和extend的区别date: 2019-11-14 21:51
-tags: Pythonlist.append(object)向列表中添加一个对象objectlist.extend(seq)把一个序列seq的内容添加到列表中
+          <div class="index-text mb-1">list.append(object)向列表中添加一个对象objectlist.extend(seq)把一个序列seq的内容添加到列表中
 student_name = [&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;]
 new_name = [&#39;Emiliy&#39;, &#39;Joe&#39;]
 student_name.append(new_media)
 print student_name
 [&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;, [&#39;Emiliy&#39;, &#39;Joe&#39;]]使用append的时候，是将new_name看作一个对象，整体打包添加到student_name对象中。
 student_name = [&#39;Lily&#39;, &#39;Ellen&#39;, &#39;Alice&#39;]
-new_nam</div>
+new_name = [&#39;Emiliy&#39;, &#39;Joe&#39;]
+student_name.append(n</div>
         </div>
       </a>
 
@@ -566,6 +578,11 @@ new_nam</div>
           <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-14&nbsp;&nbsp;
         
         
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python">Python</a>&nbsp;
+          
         
       </div>
     </div>
