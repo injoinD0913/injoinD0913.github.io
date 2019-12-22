@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content>
+  <meta name="author" content="Dddddwen">
+  <meta name="keywords" content>
+  <title>NumPy数据存储与函数 ~ Hexo</title>
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
+  <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  
+    <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+    <div class="view intro-2"
+         style="background: url('/img/VCG211171411210.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              <p>星期日, 十二月 22日 2019, 12:00 凌晨</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h2 id="数据的CSV文件存取"><a href="#数据的CSV文件存取" class="headerlink" title="数据的CSV文件存取"></a>数据的CSV文件存取</h2><p>CSV(Comma-Separated Value,逗号分隔符)<br>CSV是一种常见的文件格式，用来存取批量数据。</p>
+<p><strong>CSV文件写入数据</strong><br><code>np.savetxt(frame,array,fmt=&#39;%.18e&#39;,delimiter=None)</code></p>
+<ul>
+<li><code>frame</code>:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。</li>
+<li><code>array</code>:存入文件的数组。</li>
+<li><code>fmt</code>:写入文件的格式，例如%d %.2f %.18e。</li>
+<li><code>delimiter</code>：分割字符串，默认是空格。</li>
+</ul>
+<p>例：<code>np.savetxt(&#39;a.csv&#39;,a,fmt=&#39;%d&#39;,delimiter=&#39;,&#39;)</code></p>
+<p><strong>CSV文件中数据读入到一个数组类型</strong><br><code>np.loadtxt(frame,dtype=np.float,delimiter=None,unpack=False)</code></p>
+<ul>
+<li><code>frame</code>:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。</li>
+<li><code>dtype</code>:数据类型，可选。</li>
+<li><code>delimiter</code>:分割字符串，默认是空格。</li>
+<li><code>unpack</code>：如果True，读入属性将分别写入不同变量。</li>
+</ul>
+<p><strong>CSV文件的局限性</strong><br>CSV只能有效存储一维和二维数组<br>np.savetxt() np.loadtxt()只能有效存储一维和二维数组</p>
+<h2 id="多维数据的存取"><a href="#多维数据的存取" class="headerlink" title="多维数据的存取"></a>多维数据的存取</h2><p><code>a.tofile(frame,sep=&#39;&#39;,format=&#39;%s&#39;)</code></p>
+<ul>
+<li><code>frame</code>:文件、字符串。</li>
+<li><code>sep</code>:数据分割字符串，如果是空串，写入文件为二进制。</li>
+<li><code>format</code>:写入数据的格式。</li>
+</ul>
+<p><code>np.fromfile(frame,dtype=float,count=-1,sep=&#39;&#39;)</code></p>
+<ul>
+<li><code>frame</code>:文件、字符串。</li>
+<li><code>dtype</code>:读取的数据类型。</li>
+<li><code>count</code>:读入元素个数，-1表示读入整个文件。</li>
+<li><code>sep=&#39;&#39;</code>：数据分割字符串，如果是空串，写入文件为二进制。</li>
+</ul>
+<p>需要注意<br>该方法需要读取时知道存入文件时数组的维度和元素类型<br>a.tofile()和np.fromfile()需要配合使用<br>可以通过元数据文件来存储额外信息</p>
+<h2 id="NumPy的便捷文件存取"><a href="#NumPy的便捷文件存取" class="headerlink" title="NumPy的便捷文件存取"></a>NumPy的便捷文件存取</h2><p><code>np.save(fname,array)或np.savez(fname,array)</code></p>
+<ul>
+<li><code>frame</code>:文件名，以.npy为拓展名，压缩拓展名为.npz</li>
+<li><code>array</code>:数组变量</li>
+</ul>
+<p><code>np.load(fname)</code></p>
+<ul>
+<li><code>frame</code>:文件名，以.npy为拓展名，压缩拓展名为.npz</li>
+</ul>
+<h2 id="NumPy的随机数函数"><a href="#NumPy的随机数函数" class="headerlink" title="NumPy的随机数函数"></a>NumPy的随机数函数</h2><p>NumPy的随机数函数子库</p>
+<p>NumPy的random子库</p>
+<p><code>np.random.*</code></p>
+<p>NumPy的随机数函数(1)<br>|函数|说明|<br>|-|-|<br>|rand(d0,d1,…,dn)|根据d0-dn创建随机数数组,浮点数,[0,1),均匀分布|<br>|randn(d0,d1,…,dn)|根据d0-dn创建随机数数组，标准正态分布|<br>|randint(low[,high,shape])|根据d0-dn创建随机整数或整数数组,范围时[low,high)|<br>|seed(s)|随机数种子,s是给定的种子值|</p>
+<p>NumPy的随机数函数(2)<br>|函数|说明|<br>|-|-|<br>|shuffle(a)|根据数组a的第1轴进行随机排列，<em>改变数组x</em>|<br>|permutation(a)|根据数组a的第1轴产生一个新的乱序数组，<em>不改变数组x</em>|<br>|choice(a[,size,replace,p])|从一维数组a中以概率p抽取元素，形成size形状新数组replace表示是否可以重用元素，默认为True|</p>
+<p>NumPy的随机数函数(3)<br>|函数|说明|<br>|-|-|<br>|uniform(low,high,size)|产生具有均匀分布的数组，low起始值，high结束值，size形状|<br>|normal(loc,scale,size)|产生具有正态分布的数组，loc均值，scale标准差，size形状|<br>|poisson(lam,size)|产生具有泊松分布的数组，lam随机事件发生率，size形状|</p>
+<h2 id="NumPy的统计函数"><a href="#NumPy的统计函数" class="headerlink" title="NumPy的统计函数"></a>NumPy的统计函数</h2><p>NumPy的统计函数(1)<br>|函数|说明|<br>|-|-|<br>|sum(a,axis=None)|根据给定轴axis计算数组a相关元素之和，axis整数或元组|<br>|mean(a,axis=None)|根据给定轴axis计算数组a相关元素的期望，axis整数或元组|<br>|average(a,axis=None,weights=None)|根据给定轴axis计算数组a相关元素的加权平均值|<br>|std(a,axis=None)|根据给定轴axis计算数组a相关元素的标准差|<br>|var(a,axis=None)|根据给定轴axis计算数组a相关元素的方差|</p>
+<p><strong>axis=None是统计函数的标配参数</strong></p>
+<p>NumPy的统计函数(2)<br>|函数|说明|<br>|-|-|<br>|min(a) max(a)|计算数组a中元素的最小值、最大值|<br>|argmin(a) argmax(a)|计算数组a中元素最小值、最大值的降一维后下标|<br>|unravel_index(index,shape)|根据shape将一维下标index转移成多维下标|<br>|ptp(a)|计算数组a中元素最大值与最小值的差|<br>|median(a)|计算数组a中元素的中位数(中值)|</p>
+<h2 id="NumPy的梯度函数"><a href="#NumPy的梯度函数" class="headerlink" title="NumPy的梯度函数"></a>NumPy的梯度函数</h2><p>NumPy的梯度函数<br>|函数|说明|<br>|-|-|<br>|np.gradient(f)|计算数组f中元素的梯度，当f为多维是，返回每个维度梯度|</p>
+<p>梯度：连续值之间的变化率，即斜率。反映了元素的变化率。</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+  <script src="/js/lazyload.js" ></script>
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "NumPy数据存储与函数&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+</body>
+</html>
