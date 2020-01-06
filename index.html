@@ -128,6 +128,63 @@
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2020/01/06/图像手绘效果/">
+        <p class="h4 index-header">图像的手绘效果</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">图像的数组表示图像的RGB色彩模式图像一般使用RGB色彩模式，每个像素点的颜色由红绿蓝组成。
+RGB三个颜色通道的变化和叠加得到各种颜色，其中
+
+R红色，取值范围，0-255。
+G绿色，取值范围，0-255。
+B蓝色，取值范围，0-255。
+
+RGB形成的颜色包括了人类视力所能感知的所有颜色。
+PIL库 处理图像的功能库PIL，Python Image Library
+调用引入图像的类
+from PIL import Image
+图像是一个由像素组成的二维矩阵，每个元素是一个RGN值。
+图像的数组显示
+from PIL import Image
+
+import numpy as np
+
+im = np.array(Image.open(&quot;D:/Image/1.JPG&quot;))
+
+print(im.shape,im.dtype)
+
+图像是一个三维数组，维度分别是高度、宽度和像素RGB值。
+图像的变换读入图像后，获得像素RGB值，修改后保存为新的文件。
+from PIL import Image
+
+import numpy as np
+
+a=np.array(Image.o</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-06&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/12/22/NumPy数据存储与函数/">
         <p class="h4 index-header">NumPy数据存储与函数</p>
         
@@ -219,75 +276,6 @@ CSV文件的局限性</div>
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/20/New Document/">
-        <p class="h4 index-header">数值分析笔记</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">数值分析笔记NumPy第三方数据表示库NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式
-Matplotlibpyplot如何绘制数据图形的方法
-PandasSeries  DataFrame数据类型
-IPython的%魔术命令
-
-
-常用命令
-说明
-
-
-
-%magic
-显示所有魔术命令
-
-
-%hist
-IPython命令的输入历史
-
-
-%pdb
-异常发生后自动进入调试器
-
-
-%reset
-删除当前命名空间中已经定义的变量或名称
-
-
-%who
-显示IPython当前命名空间中已经定义的变量
-
-
-%time statement
-给出代码的执行时间，statement表示一段代码
-
-
-%timeit statement
-多次执行代码，计算综合平均执行时间
-
-
-</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-20&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/12/20/数值分析笔记/">
         <p class="h4 index-header">数值分析笔记</p>
         
@@ -357,46 +345,59 @@ IPython命令的输入历史
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/04/Pandas入门与实践/">
-        <p class="h4 index-header">Pandas入门与实践</p>
+      <a href="/2019/12/20/New Document/">
+        <p class="h4 index-header">数值分析笔记</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">pandas数据结构Series数据
-指定索引
+          <div class="index-text mb-1">数值分析笔记NumPy第三方数据表示库NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式
+Matplotlibpyplot如何绘制数据图形的方法
+PandasSeries  DataFrame数据类型
+IPython的%魔术命令
 
-In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
-Out []:a    1
-       b    2
-       c    3
-       d    4
-       dtype: int64
-设置字典
 
-data = {
-      &#39;张三&#39;:92,
-      &#39;李四&#39;:78,
-      &#39;王五&#39;:68,
-      &#39;小明&#39;:82,
-}
-In []:obj = Series(data)
-      obj
-Out[]:张三   92
-      李四   78
-      王五   68
-      小明   82
-      dtype: int64
-###DataFrame
-类似于excel表格index行索引cloumns列索引
-构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
+常用命令
+说明
+
+
+
+%magic
+显示所有魔术命令
+
+
+%hist
+IPython命令的输入历史
+
+
+%pdb
+异常发生后自动进入调试器
+
+
+%reset
+删除当前命名空间中已经定义的变量或名称
+
+
+%who
+显示IPython当前命名空间中已经定义的变量
+
+
+%time statement
+给出代码的执行时间，statement表示一段代码
+
+
+%timeit statement
+多次执行代码，计算综合平均执行时间
+
+
+</div>
         </div>
       </a>
 
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-20&nbsp;&nbsp;
         
         
         
@@ -487,6 +488,62 @@ eye,identity
 dtype
 astype
 数组重塑、合并，拆分，转置重塑  reshape swapaxes旋转(少用)将数组折叠变为一维数组  ravel flatten合并  concate</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/04/Pandas入门与实践/">
+        <p class="h4 index-header">Pandas入门与实践</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">pandas数据结构Series数据
+指定索引
+
+In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
+Out []:a    1
+       b    2
+       c    3
+       d    4
+       dtype: int64
+设置字典
+
+data = {
+      &#39;张三&#39;:92,
+      &#39;李四&#39;:78,
+      &#39;王五&#39;:68,
+      &#39;小明&#39;:82,
+}
+In []:obj = Series(data)
+      obj
+Out[]:张三   92
+      李四   78
+      王五   68
+      小明   82
+      dtype: int64
+###DataFrame
+类似于excel表格index行索引cloumns列索引
+构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
         </div>
       </a>
 
@@ -611,90 +668,6 @@ name是当前模块名，当模块被直接运行时模块名为_main_，也就�
       <div>
         
           <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-10&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/python">python</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/10/24/python语言/">
-        <p class="h4 index-header">python语言语法</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">Python1. 变量
-变量作用 
-
-增强程序可读性，拒绝硬编码
-对程序的修改效率有了显著提高
-
-
-变量命名规则
-
-变量名必须为字母或者下划线（或者汉字）开头，可以包含字母，下划线，数字，甚至汉字
-不能使用python关键字和保留字- 常见关键字:if,else,while,for等
-区分大小写
-
-
-变量推荐命名法则
-
-使用英文单词或缩写，见名知意 
-尽量不要使用汉字、汉语拼音命名 
-驼峰命名法:由多个单词构成，除第一个单词外，其余首字母大写，如：myAge,myName 
-大驼峰:包括第一个单词在内的首字母都大写，如：MyAge,MyName
-posix命名规则:由单词构成，全部小写，单词间用下划线连接，如:my_age,my_name
-
-
-
-2. Python基础类型
-常量数字
-直接表示出来的数字就是常量数字，即常量数
-
-
-
-
-
-
-数字类型
-数字举例
-
-
-
-十进制整数
-123, 56, -13
-
-
-浮点数
-1.21, -0.93847, 4e-12, 4.98e4
-
-
-复数
-3+56j, 4.6+7.83j
-
-
-二进制开头（0b开头）
-0b1001, 0b101
-
-
-十六进制（0x</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-10-24&nbsp;&nbsp;
         
         
         
