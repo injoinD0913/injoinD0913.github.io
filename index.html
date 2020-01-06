@@ -357,6 +357,62 @@ IPython命令的输入历史
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/04/Pandas入门与实践/">
+        <p class="h4 index-header">Pandas入门与实践</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">pandas数据结构Series数据
+指定索引
+
+In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
+Out []:a    1
+       b    2
+       c    3
+       d    4
+       dtype: int64
+设置字典
+
+data = {
+      &#39;张三&#39;:92,
+      &#39;李四&#39;:78,
+      &#39;王五&#39;:68,
+      &#39;小明&#39;:82,
+}
+In []:obj = Series(data)
+      obj
+Out[]:张三   92
+      李四   78
+      王五   68
+      小明   82
+      dtype: int64
+###DataFrame
+类似于excel表格index行索引cloumns列索引
+构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/12/04/Numpy/">
         <p class="h4 index-header">Numpy入门与实践</p>
         
@@ -431,62 +487,6 @@ eye,identity
 dtype
 astype
 数组重塑、合并，拆分，转置重塑  reshape swapaxes旋转(少用)将数组折叠变为一维数组  ravel flatten合并  concate</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-04&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/04/Pandas入门与实践/">
-        <p class="h4 index-header">Pandas入门与实践</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">pandas数据结构Series数据
-指定索引
-
-In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])
-Out []:a    1
-       b    2
-       c    3
-       d    4
-       dtype: int64
-设置字典
-
-data = {
-      &#39;张三&#39;:92,
-      &#39;李四&#39;:78,
-      &#39;王五&#39;:68,
-      &#39;小明&#39;:82,
-}
-In []:obj = Series(data)
-      obj
-Out[]:张三   92
-      李四   78
-      王五   68
-      小明   82
-      dtype: int64
-###DataFrame
-类似于excel表格index行索引cloumns列索引
-构造方法|类型|使用说明||-|-||二维ndarray``|数据矩阵，可传入行列索引||由数组</div>
         </div>
       </a>
 
