@@ -128,6 +128,41 @@
     
     
     <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/11/10/name_main/">
+        <p class="h4 index-header">if__name__==&#39;__main__&#39;的使用</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">一个 Python 源码文件除了可以被直接运行外，还可以作为模块（也就是库）被导入。
+if__name__==&#39;__main__&#39;的作用就是控制这两种情况执行代码的过程，在if __name__ == &#39;__main__&#39;: 下的代码只有在第一种情况下（即文件作为脚本直接执行）才会被执行，而import到其他脚本中是不会被执行的。
+name是当前模块名，当模块被直接运行时模块名为_main_，也就是当前的模块，当模块被导入时，模块名就不是main，即代码将不会执行。
+每个python模块都包含内置的变量 name，当该模块被直接执行的时候，name 等于文件名（包含后缀 .py ）；如果该模块 import 到其他模块中，则该模块的 name 等于模块名称（不包含后缀.py）。
+而 “main” 始终指当前执行模块的名称（包含后缀.py）。进而当模块被直接执行时，name == ‘main’ 结果为真;而当模块被import到其他模块中时，name == ‘main‘结果为假，就是不调用对应的方法。
+</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-11-10&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/python">python</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
       <a href="/2019/10/24/python语言/">
         <p class="h4 index-header">python语言语法</p>
         
@@ -514,63 +549,6 @@ typedef struct
           <i class="iconfont icon-tag"></i>
           
             <a href="/tags/StatusStruct">StatusStruct</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/09/29/MarkDown语法小结/">
-        <p class="h4 index-header">MarkDown语法小结</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">#MarkDown语法小结 
-1.标题
-使用 # 表示标题，一级标题使用一个 # ，二级标题使用两个 ## ，以此类推，共有六级标题。
-使用 ===== 表示高阶标题，使用 --------- 表示次阶标题。
-
-
-# 和标题之间记得有个空格哦。
-==== 和 ---- 表示标题时，大于等于2个都可以表示。
-我通常在标题分级时使用标题标记，这个的用处很明了了。
-
-示例1 
-# 这是一级标题
-
-这也是一级标题
-========
-
-## 这是二级标题
-这也是二级标题
---------------
-这是一级标题这也是一级标题这是二级标题这也是二级标题2.引用使用 &gt; 表示引用， &gt;&gt; 表示引用里面再套一层引用，依次类推。
-
-如果 &gt; 和 &gt;&gt; 嵌套使用的话，从 &gt;&gt; 退到 &gt; 时，必须之间要加一个空格或者 &gt; 作为过渡，否则默认为下一行和上一行是同一级别的引用。如示例所示。 
-引用标记里可以使用其他标记，如：有序列表或无序列表标记，代码标记等。 
-
-示例 
-&gt; 这是一级引用
-&gt;&gt;这是二级引用
-&gt;&gt;&gt;</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-29&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/MarkDown">MarkDown</a>&nbsp;
           
         
       </div>

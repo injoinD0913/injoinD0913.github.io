@@ -23,6 +23,25 @@
   
   
   <entry>
+    <title>Matplotlib库入门</title>
+    <link href="undefined2020/01/06/Matplotlib%E5%BA%93%E5%85%A5%E9%97%A8/"/>
+    <url>2020/01/06/Matplotlib%E5%BA%93%E5%85%A5%E9%97%A8/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Matplotlib库介绍"><a href="#Matplotlib库介绍" class="headerlink" title="Matplotlib库介绍"></a>Matplotlib库介绍</h2><p>Matplotlib是Python优秀的数据可视化第三方库</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python数值分析</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>NumPy数据存储与函数</title>
     <link href="undefined2019/12/22/NumPy%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E5%87%BD%E6%95%B0/"/>
     <url>2019/12/22/NumPy%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E5%87%BD%E6%95%B0/</url>
@@ -62,25 +81,6 @@
   
   <entry>
     <title>数值分析笔记</title>
-    <link href="undefined2019/12/20/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/"/>
-    <url>2019/12/20/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
-    
-    <content type="html"><![CDATA[<h2 id="数值分析笔记"><a href="#数值分析笔记" class="headerlink" title="数值分析笔记"></a>数值分析笔记</h2><h3 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h3><p>第三方数据表示库<br>NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式</p><h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><p>pyplot<br>如何绘制数据图形的方法</p><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><p>Series  DataFrame数据类型</p><h3 id="IPython的-魔术命令"><a href="#IPython的-魔术命令" class="headerlink" title="IPython的%魔术命令"></a>IPython的%魔术命令</h3><table><thead><tr><th>常用命令</th><th>说明</th></tr></thead><tbody><tr><td>%magic</td><td>显示所有魔术命令</td></tr><tr><td>%hist</td><td>IPython命令的输入历史</td></tr><tr><td>%pdb</td><td>异常发生后自动进入调试器</td></tr><tr><td>%reset</td><td>删除当前命名空间中已经定义的变量或名称</td></tr><tr><td>%who</td><td>显示IPython当前命名空间中已经定义的变量</td></tr><tr><td>%time statement</td><td>给出代码的执行时间，statement表示一段代码</td></tr><tr><td>%timeit statement</td><td>多次执行代码，计算综合平均执行时间</td></tr></tbody></table>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Python数值分析</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>数值分析笔记</title>
     <link href="undefined2019/12/20/New%20Document/"/>
     <url>2019/12/20/New%20Document/</url>
     
@@ -99,11 +99,11 @@
   
   
   <entry>
-    <title>Numpy入门与实践</title>
-    <link href="undefined2019/12/04/Numpy/"/>
-    <url>2019/12/04/Numpy/</url>
+    <title>数值分析笔记</title>
+    <link href="undefined2019/12/20/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/"/>
+    <url>2019/12/20/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
     
-    <content type="html"><![CDATA[<h2 id="Ndarray多维数组"><a href="#Ndarray多维数组" class="headerlink" title="Ndarray多维数组"></a>Ndarray多维数组</h2><ul><li>Numpy库是用于科学计算的一个开源Python扩充程序库，是其他数据分析包的基础包，为Python提供了高性能的数组与矩阵运算处理能力。</li></ul><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>arange</td><td>类似于内置的range函数,用于创建数组</td></tr><tr><td>ones</td><td>创建指定长度或形状的全数组</td></tr><tr><td>ones_like</td><td>以另一个数组为参考,根据其形状和dtype创建全1数组</td></tr><tr><td>zeros,zeros_like</td><td>类似于ones,ones_like,创建全0数组</td></tr><tr><td>empty,empty_like</td><td>同上,创建没有具体值的数</td></tr><tr><td>eye,identity</td><td>创建正方的N*N单位矩阵</td></tr></tbody></table><h3 id="数组对象属性"><a href="#数组对象属性" class="headerlink" title="数组对象属性"></a>数组对象属性</h3><table><thead><tr><th>属性</th><th>使用说明</th></tr></thead><tbody><tr><td>.ndim</td><td>秩，即数据轴的个数</td></tr><tr><td>.shape</td><td>数组的维度</td></tr><tr><td>.size</td><td>元素的总个数</td></tr><tr><td>.dtype</td><td>数据类型</td></tr><tr><td>.itemsize</td><td>数组中每个元素的字节大小</td></tr></tbody></table><h3 id="数组类型与变换"><a href="#数组类型与变换" class="headerlink" title="数组类型与变换"></a>数组类型与变换</h3><ul><li>dtype</li><li>astype</li><li>数组重塑、合并，拆分，转置<br>重塑  <code>reshape</code> <code>swapaxes</code>旋转(少用)<br>将数组折叠变为一维数组  <code>ravel</code> <code>flatten</code><br>合并  <code>concatenate</code><br>垂直  <code>vstack</code><br>水平  <code>hsatck</code><br>拆分  <code>split</code><br>转置  <code>transpose</code>  <code>T</code></li></ul><h3 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>rand</td><td>产生均匀分布的样本值</td></tr><tr><td>randint</td><td>给定范围内取随机整数</td></tr><tr><td>randn</td><td>产生正态分布的样本值</td></tr><tr><td>seed</td><td>随机数种子</td></tr><tr><td>permutation</td><td>对一个序列随机排序，不改变原数组</td></tr><tr><td>shuffle</td><td>对一个序列随机排序，改变原数组</td></tr><tr><td>uniform(low,high,size)</td><td>产生具有均匀分布的数组，low起始值，high结束值，size形状</td></tr><tr><td>normal(loc,scale,size)</td><td>产生具有正态分布的数组，loc均值，scale标准差</td></tr><tr><td>poisson(lam,size)</td><td>产生泊松分布的数组，lam随机事件发生率</td></tr></tbody></table><h2 id="数组的索引和切片"><a href="#数组的索引和切片" class="headerlink" title="数组的索引和切片"></a>数组的索引和切片</h2><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>[1][2]</p><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>[:1]</p><h3 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h3><p>true false<br>按照要求显示符号条件的行列数组</p><h3 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h3><p>可以改变数组的顺序<br>.ix_</p><h2 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h2><table><thead><tr><th>方法</th><th>使用说明</th></tr></thead><tbody><tr><td>sum</td><td>求和</td></tr><tr><td>mean</td><td>算数平均数</td></tr><tr><td>std,var</td><td>标准差和方差</td></tr><tr><td>min,max</td><td>最小值和最大值</td></tr><tr><td>argmin,argmax</td><td>最小和最大元素的索引</td></tr><tr><td>cumsum</td><td>所有元素的累计和</td></tr><tr><td>cumprod</td><td>所有元素的累计积</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<h2 id="数值分析笔记"><a href="#数值分析笔记" class="headerlink" title="数值分析笔记"></a>数值分析笔记</h2><h3 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h3><p>第三方数据表示库<br>NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式</p><h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><p>pyplot<br>如何绘制数据图形的方法</p><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><p>Series  DataFrame数据类型</p><h3 id="IPython的-魔术命令"><a href="#IPython的-魔术命令" class="headerlink" title="IPython的%魔术命令"></a>IPython的%魔术命令</h3><table><thead><tr><th>常用命令</th><th>说明</th></tr></thead><tbody><tr><td>%magic</td><td>显示所有魔术命令</td></tr><tr><td>%hist</td><td>IPython命令的输入历史</td></tr><tr><td>%pdb</td><td>异常发生后自动进入调试器</td></tr><tr><td>%reset</td><td>删除当前命名空间中已经定义的变量或名称</td></tr><tr><td>%who</td><td>显示IPython当前命名空间中已经定义的变量</td></tr><tr><td>%time statement</td><td>给出代码的执行时间，statement表示一段代码</td></tr><tr><td>%timeit statement</td><td>多次执行代码，计算综合平均执行时间</td></tr></tbody></table>]]></content>
     
     
     
@@ -123,6 +123,25 @@
     <url>2019/12/04/Pandas%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</url>
     
     <content type="html"><![CDATA[<h2 id="pandas数据结构"><a href="#pandas数据结构" class="headerlink" title="pandas数据结构"></a>pandas数据结构</h2><h3 id="Series数据"><a href="#Series数据" class="headerlink" title="Series数据"></a>Series数据</h3><ul><li>指定索引</li></ul><pre><code>In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])Out []:a    1       b    2       c    3       d    4       dtype: int64</code></pre><ul><li>设置字典</li></ul><pre><code>data = {      &#39;张三&#39;:92,      &#39;李四&#39;:78,      &#39;王五&#39;:68,      &#39;小明&#39;:82,}In []:obj = Series(data)      objOut[]:张三   92      李四   78      王五   68      小明   82      dtype: int64</code></pre><p>###DataFrame</p><p>类似于excel表格<br>index行索引<br>cloumns列索引</p><p><strong>构造方法</strong><br>|类型|使用说明|<br>|-|-|<br>|二维ndarray``|数据矩阵，可传入行列索引|<br>|由数组、列表或元组组成的字典||<br>|由Series组成的字典|每个Series为一列，Series索引合并为行索引|<br>|嵌套字典||<br>|字典或Series的列表|各项称为DataFrame一行，字典键或Series索引成为DataFrame列索引|<br>|由列表或元组组成的列表|类似于“二维数组”|</p><h3 id="索引对象"><a href="#索引对象" class="headerlink" title="索引对象"></a>索引对象</h3><ul><li>不可修改</li><li>可以做一些布尔运算</li></ul><h2 id="pandas索引操作"><a href="#pandas索引操作" class="headerlink" title="pandas索引操作"></a>pandas索引操作</h2><h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p><code>reindex</code></p><h3 id="更换索引"><a href="#更换索引" class="headerlink" title="更换索引"></a>更换索引</h3><p>对原有的索引表格进行排序，此时的索引可能是乱序，此时需要重新排序<br><code>reset_index</code><br>此时原索引仍然存在，若不需要，可通过<code>drop = TRUE</code>删掉</p><h3 id="索引和选取"><a href="#索引和选取" class="headerlink" title="索引和选取"></a>索引和选取</h3><ul><li><p>Series<br><code>obj[&#39;a&#39;,&#39;c&#39;]</code><br><code>obj[&#39;a&#39;:&#39;c&#39;]</code></p></li><li><p>DataFrame<br><code>obj[&#39;name&#39;,&#39;city&#39;]</code><br><code>obj[&#39;a&#39;:&#39;c&#39;]</code><br><code>obj[2:]</code></p></li></ul><p><strong>iloc,loc,ix</strong><br><code>obj.iloc[2,1:]</code></p><h3 id="操作行和列"><a href="#操作行和列" class="headerlink" title="操作行和列"></a>操作行和列</h3><p>添加 <code>append</code><br>新加一列 <code>obj[&#39;class&#39;]=2018</code><br>删除行 <code>drop(行号)</code><br>删除列 <code>drop(&#39;class&#39;,axis=1)</code><br>修改 <code>rename</code></p><h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><p>与之前操作相同</p><h3 id="函数应用和映射"><a href="#函数应用和映射" class="headerlink" title="函数应用和映射"></a>函数应用和映射</h3><p>在数据分析实战中，常常会对数据进行较复杂的数据运算，这时需要定义函数。定义好的函数可以应用到pandas数据中，其中有三种方法：map函数，将函数套用在Series的每个元素中；apply函数，将函数套用到DataFrame的行与列上；applymap函数，将函数套用到DataFrame的每个元素上</p><p>map方法：<br>将原来price中元去掉</p><pre><code>def f(x):    return x.split(&#39;&#39;)[0]obj1[&#39;price&#39;] = obj1[&#39;price&#39;].map(f)obj1</code></pre><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="对索引排序"><a href="#对索引排序" class="headerlink" title="对索引排序"></a>对索引排序</h4><p><code>obj.sort_index()</code><br>默认为升序<br><code>obj.sort_index(ascending=False)</code><br>降序</p><h4 id="对值排序"><a href="#对值排序" class="headerlink" title="对值排序"></a>对值排序</h4><p><code>obj.sort_values()</code><br><code>obj.sort_values(by=&#39;b&#39;)</code>    以b一列的元素排序</p><h3 id="汇总与统计"><a href="#汇总与统计" class="headerlink" title="汇总与统计"></a>汇总与统计</h3><p><code>obj.sum()</code>列求和<br><code>obj.sum(axis=1)</code>行求和<br><code>obj.describe()</code></p><h3 id="唯一值与值计数"><a href="#唯一值与值计数" class="headerlink" title="唯一值与值计数"></a>唯一值与值计数</h3><p><code>obj.unique()</code>唯一值<br><code>obj.value_counts()</code>值计数</p><h2 id="层次化索引"><a href="#层次化索引" class="headerlink" title="层次化索引"></a>层次化索引</h2><p>两层或多层嵌套索引<br>obj[‘two’]<br>obj[:,’a’] 内层选取</p><h2 id="pandas可视化"><a href="#pandas可视化" class="headerlink" title="pandas可视化"></a>pandas可视化</h2><p>调用matplotib库可以生成不同类型的统计图</p><p>plot方法</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python数值分析</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Numpy入门与实践</title>
+    <link href="undefined2019/12/04/Numpy/"/>
+    <url>2019/12/04/Numpy/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Ndarray多维数组"><a href="#Ndarray多维数组" class="headerlink" title="Ndarray多维数组"></a>Ndarray多维数组</h2><ul><li>Numpy库是用于科学计算的一个开源Python扩充程序库，是其他数据分析包的基础包，为Python提供了高性能的数组与矩阵运算处理能力。</li></ul><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>arange</td><td>类似于内置的range函数,用于创建数组</td></tr><tr><td>ones</td><td>创建指定长度或形状的全数组</td></tr><tr><td>ones_like</td><td>以另一个数组为参考,根据其形状和dtype创建全1数组</td></tr><tr><td>zeros,zeros_like</td><td>类似于ones,ones_like,创建全0数组</td></tr><tr><td>empty,empty_like</td><td>同上,创建没有具体值的数</td></tr><tr><td>eye,identity</td><td>创建正方的N*N单位矩阵</td></tr></tbody></table><h3 id="数组对象属性"><a href="#数组对象属性" class="headerlink" title="数组对象属性"></a>数组对象属性</h3><table><thead><tr><th>属性</th><th>使用说明</th></tr></thead><tbody><tr><td>.ndim</td><td>秩，即数据轴的个数</td></tr><tr><td>.shape</td><td>数组的维度</td></tr><tr><td>.size</td><td>元素的总个数</td></tr><tr><td>.dtype</td><td>数据类型</td></tr><tr><td>.itemsize</td><td>数组中每个元素的字节大小</td></tr></tbody></table><h3 id="数组类型与变换"><a href="#数组类型与变换" class="headerlink" title="数组类型与变换"></a>数组类型与变换</h3><ul><li>dtype</li><li>astype</li><li>数组重塑、合并，拆分，转置<br>重塑  <code>reshape</code> <code>swapaxes</code>旋转(少用)<br>将数组折叠变为一维数组  <code>ravel</code> <code>flatten</code><br>合并  <code>concatenate</code><br>垂直  <code>vstack</code><br>水平  <code>hsatck</code><br>拆分  <code>split</code><br>转置  <code>transpose</code>  <code>T</code></li></ul><h3 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>rand</td><td>产生均匀分布的样本值</td></tr><tr><td>randint</td><td>给定范围内取随机整数</td></tr><tr><td>randn</td><td>产生正态分布的样本值</td></tr><tr><td>seed</td><td>随机数种子</td></tr><tr><td>permutation</td><td>对一个序列随机排序，不改变原数组</td></tr><tr><td>shuffle</td><td>对一个序列随机排序，改变原数组</td></tr><tr><td>uniform(low,high,size)</td><td>产生具有均匀分布的数组，low起始值，high结束值，size形状</td></tr><tr><td>normal(loc,scale,size)</td><td>产生具有正态分布的数组，loc均值，scale标准差</td></tr><tr><td>poisson(lam,size)</td><td>产生泊松分布的数组，lam随机事件发生率</td></tr></tbody></table><h2 id="数组的索引和切片"><a href="#数组的索引和切片" class="headerlink" title="数组的索引和切片"></a>数组的索引和切片</h2><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>[1][2]</p><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>[:1]</p><h3 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h3><p>true false<br>按照要求显示符号条件的行列数组</p><h3 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h3><p>可以改变数组的顺序<br>.ix_</p><h2 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h2><table><thead><tr><th>方法</th><th>使用说明</th></tr></thead><tbody><tr><td>sum</td><td>求和</td></tr><tr><td>mean</td><td>算数平均数</td></tr><tr><td>std,var</td><td>标准差和方差</td></tr><tr><td>min,max</td><td>最小值和最大值</td></tr><tr><td>argmin,argmax</td><td>最小和最大元素的索引</td></tr><tr><td>cumsum</td><td>所有元素的累计和</td></tr><tr><td>cumprod</td><td>所有元素的累计积</td></tr></tbody></table>]]></content>
     
     
     
@@ -346,25 +365,6 @@
   
   
   <entry>
-    <title>MarkDown语法小结</title>
-    <link href="undefined2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
-    <url>2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/</url>
-    
-    <content type="html"><![CDATA[<p>#MarkDown语法小结 </p><h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul><li>使用 <code>#</code> 表示标题，一级标题使用一个 <code>#</code> ，二级标题使用两个 <code>##</code> ，以此类推，共有六级标题。</li><li>使用 <code>=====</code> 表示高阶标题，使用 <code>---------</code> 表示次阶标题。</li></ul><ol><li><code>#</code> 和标题之间记得有个空格哦。</li><li><code>====</code> 和 <code>----</code> 表示标题时，大于等于2个都可以表示。</li><li>我通常在标题分级时使用标题标记，这个的用处很明了了。</li></ol><p>示例1 </p><pre><code># 这是一级标题这也是一级标题========## 这是二级标题这也是二级标题--------------</code></pre><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h1 id="这也是一级标题"><a href="#这也是一级标题" class="headerlink" title="这也是一级标题"></a>这也是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h2 id="这也是二级标题"><a href="#这也是二级标题" class="headerlink" title="这也是二级标题"></a>这也是二级标题</h2><h3 id="2-引用"><a href="#2-引用" class="headerlink" title="2.引用"></a>2.引用</h3><p>使用 <code>&gt;</code> 表示引用， <code>&gt;&gt;</code> 表示引用里面再套一层引用，依次类推。</p><ol><li>如果 <code>&gt;</code> 和 <code>&gt;&gt;</code> 嵌套使用的话，从 <code>&gt;&gt;</code> 退到 <code>&gt;</code> 时，必须之间要加一个空格或者 <code>&gt;</code> 作为过渡，否则默认为下一行和上一行是同一级别的引用。如示例所示。 </li><li>引用标记里可以使用其他标记，如：有序列表或无序列表标记，代码标记等。 </li></ol><p>示例 </p><pre><code>&gt; 这是一级引用&gt;&gt;这是二级引用&gt;&gt;&gt; 这是三级引用&gt;这是一级引用</code></pre><blockquote><p>这是一级引用</p><blockquote><p>这是二级引用</p><blockquote><p>这是三级引用</p></blockquote></blockquote></blockquote><blockquote><p>这是一级引用</p></blockquote><h3 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3 代码块"></a>3 代码块</h3><p>使用3个连续的”`”符号包围起来表示代码块。</p><ol><li>本文档所有使用讲解Markdown语法标记示例的地方都是使用代码块标记的。</li><li>代码块前后都得有换行哦</li></ol><pre><code>$(document).ready(function() {  $(&#39;pre code&#39;).each(function(i, block) {    hljs.highlightBlock(block);  });});</code></pre><h3 id="4-行内代码"><a href="#4-行内代码" class="headerlink" title="4 行内代码"></a>4 行内代码</h3><p>使用``表示行内代码。本页部分文字中间的英文字母就是使用行内代码标记标记的。</p><p>示例</p><pre><code>这是`javascript`代码</code></pre><p>这是 <code>javascript</code> 代码</p><h4 id="5-链接"><a href="#5-链接" class="headerlink" title="5 链接"></a>5 链接</h4><p>使用 <code>[](link)</code> 表示行内链接。其中：</p><ul><li><code>[]</code> 内的内容为要添加链接的文字。</li><li><code>link</code> 为链接地址。</li></ul><p>示例</p><pre><code>我觉得[Markdown](https://appsto.re/cn/jK8Cbb.i)真是个方便的编辑器.</code></pre><p>我觉得<a href="https://appsto.re/cn/jK8Cbb.i" target="_blank" rel="noopener">Markdown</a>真是个方便的编辑器.</p><h3 id="6-数学公式"><a href="#6-数学公式" class="headerlink" title="6 数学公式"></a>6 数学公式</h3><p><code>$</code>包围的区块将会解析为数学公式，连续的<code>$$</code>将独占一行并居中显示</p><p>当 $a \ne 0$, 此方程式有两个解 $ax^2 + bx + c = 0$，他们是 </p><p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p><h3 id="7-导入图片"><a href="#7-导入图片" class="headerlink" title="7 导入图片"></a>7 导入图片</h3><p>使用 <code>![Alt text](/path/to/img.jpg)</code> 导入图片。其中：</p><ul><li><code>Alt text</code> 为如果图片无法显示时显示的文字；</li><li><code>/path/to/img.jpg</code> 为图片所在路径；</li></ul><p>点击辅助键盘中的添加图片按钮，<strong>Markdown</strong>会自动帮你帮你把图片上传到图片存储服务器，并补齐链接</p><p>示例</p><pre><code>![Markdown](https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1569701098939&amp;di=ff20e6935f1d4085402df94ed4f5cc4a&amp;imgtype=0&amp;src=http%3A%2F%2Fcn.hdwall365.com%2Fwallpapers%2F1509%2FSydney-Opera-House-Australia-night-bridge-lights-sea-blue_m.jpg)</code></pre><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569701098939&di=ff20e6935f1d4085402df94ed4f5cc4a&imgtype=0&src=http%3A%2F%2Fcn.hdwall365.com%2Fwallpapers%2F1509%2FSydney-Opera-House-Australia-night-bridge-lights-sea-blue_m.jpg" srcset="/img/loading.gif" alt="Markdown"></p><h3 id="8-ToDo-List"><a href="#8-ToDo-List" class="headerlink" title="8 ToDo List"></a>8 ToDo List</h3><pre><code>- [x] 支持数学公式- [x] 支持TodoList- [ ] 支持自定义样式- [ ] 支持自定义图床</code></pre><p>小写x表示已完成， 空格表示未完成</p><ul><li><input checked disabled type="checkbox"> 支持数学公式</li><li><input checked disabled type="checkbox"> 支持TodoList</li><li><input disabled type="checkbox"> 支持自定义样式</li><li><input disabled type="checkbox"> 支持自定义图床</li></ul><h3 id="9-粗体和斜体"><a href="#9-粗体和斜体" class="headerlink" title="9 粗体和斜体"></a>9 粗体和斜体</h3><ol><li>使用 <code>**</code> 或者 <code>__</code> 表示粗体。</li><li>使用 <code>*</code> 或者 <code>_</code> 表示斜体。</li><li>前后的 <code>*</code> 或 <code>_</code> 与要 <strong>加粗或倾斜</strong> 的字体之间不能有空格。</li></ol><p>示例</p><pre><code> **粗体** *斜体*</code></pre><p><strong>粗体</strong></p><p><em>斜体</em></p><h3 id="10-列表"><a href="#10-列表" class="headerlink" title="10 列表"></a>10 列表</h3><p>使用 <code>1. 2. 3.</code> 表示有序列表，使用 <code>*</code> 或 <code>-</code> 或 <code>+</code> 表示无序列表。</p><ol><li>无序列表或有序列表标记和后面的文字之间要有一个空格隔开。</li><li>有序列表标记不是按照你写的数字进行显示的，而是根据当前有序列表标记所在位置显示的，如示例1所示。</li><li>无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的，如例2所示。通常情况下，同一层级使用同一种标记表示，便于自己查看和管理。</li></ol><h4 id="例1：有序列表"><a href="#例1：有序列表" class="headerlink" title="例1：有序列表"></a>例1：有序列表</h4><pre><code>1. 第一点2. 第二点4. 第三点</code></pre><ol><li>第一点</li><li>第二点</li><li>第三点</li></ol><h4 id="例2：无序列表"><a href="#例2：无序列表" class="headerlink" title="例2：无序列表"></a>例2：无序列表</h4><pre><code>+ 一级无序列表内容    * 二级无序列表内容    - 二级无序列表内容        - 三级无序列表内容        - 三级无序列表内容+ 一级无序列表内容    - 二级无序列表内容</code></pre><ul><li>一级无序列表内容<ul><li>二级无序列表内容</li></ul><ul><li>二级无序列表内容<ul><li>三级无序列表内容</li><li>三级无序列表内容</li></ul></li></ul></li><li>一级无序列表内容<ul><li>二级无序列表内容</li></ul></li></ul><h3 id="11-分割线"><a href="#11-分割线" class="headerlink" title="11 分割线"></a>11 分割线</h3><p>使用 <code>---</code> 或者 <code>***</code> 或者 <code>* * *</code> 表示水平分割线。</p><ol><li>只要 <code>*</code> 或者 <code>-</code> 大于等于三个就可组成一条平行线。</li><li>使用 <code>---</code> 作为水平分割线时，要在它的前后都空一行，防止 <code>---</code> 被当成标题标记的表示方式。</li></ol><p>示例</p><pre><code>---**** * *</code></pre><h3 id="12-删除线"><a href="#12-删除线" class="headerlink" title="12 删除线"></a>12 删除线</h3><p>使用 <code>~~</code> 表示删除线。</p><ol><li>注意 <code>~~</code> 和 要添加删除线的文字之间不能有空格。</li><li>我常使用在显示的告诉自己这行文字是要删除的。</li></ol><p>示例</p><pre><code>~~这是一条删除线~~</code></pre><p><del>这是一条删除线</del></p><h3 id="13表格"><a href="#13表格" class="headerlink" title="13表格"></a>13表格</h3><p>上面空一行下面空两行</p><table><thead><tr><th>Heading</th><th>Heading</th><th>Heading</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr></tbody></table><p>添加边框:</p><table><thead><tr><th>Heading</th><th>Heading</th><th>Heading</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr></tbody></table><p>对齐方式:</p><table><thead><tr><th align="left">Heading</th><th align="center">Heading</th><th align="right">Heading</th></tr></thead><tbody><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr></tbody></table>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>MarkDown</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hexo+GitHub搭建博客</title>
     <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
@@ -376,6 +376,25 @@
     <tags>
       
       <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MarkDown语法小结</title>
+    <link href="undefined2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
+    <url>2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/</url>
+    
+    <content type="html"><![CDATA[<p>#MarkDown语法小结 </p><h3 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h3><ul><li>使用 <code>#</code> 表示标题，一级标题使用一个 <code>#</code> ，二级标题使用两个 <code>##</code> ，以此类推，共有六级标题。</li><li>使用 <code>=====</code> 表示高阶标题，使用 <code>---------</code> 表示次阶标题。</li></ul><ol><li><code>#</code> 和标题之间记得有个空格哦。</li><li><code>====</code> 和 <code>----</code> 表示标题时，大于等于2个都可以表示。</li><li>我通常在标题分级时使用标题标记，这个的用处很明了了。</li></ol><p>示例1 </p><pre><code># 这是一级标题这也是一级标题========## 这是二级标题这也是二级标题--------------</code></pre><h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h1 id="这也是一级标题"><a href="#这也是一级标题" class="headerlink" title="这也是一级标题"></a>这也是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h2 id="这也是二级标题"><a href="#这也是二级标题" class="headerlink" title="这也是二级标题"></a>这也是二级标题</h2><h3 id="2-引用"><a href="#2-引用" class="headerlink" title="2.引用"></a>2.引用</h3><p>使用 <code>&gt;</code> 表示引用， <code>&gt;&gt;</code> 表示引用里面再套一层引用，依次类推。</p><ol><li>如果 <code>&gt;</code> 和 <code>&gt;&gt;</code> 嵌套使用的话，从 <code>&gt;&gt;</code> 退到 <code>&gt;</code> 时，必须之间要加一个空格或者 <code>&gt;</code> 作为过渡，否则默认为下一行和上一行是同一级别的引用。如示例所示。 </li><li>引用标记里可以使用其他标记，如：有序列表或无序列表标记，代码标记等。 </li></ol><p>示例 </p><pre><code>&gt; 这是一级引用&gt;&gt;这是二级引用&gt;&gt;&gt; 这是三级引用&gt;这是一级引用</code></pre><blockquote><p>这是一级引用</p><blockquote><p>这是二级引用</p><blockquote><p>这是三级引用</p></blockquote></blockquote></blockquote><blockquote><p>这是一级引用</p></blockquote><h3 id="3-代码块"><a href="#3-代码块" class="headerlink" title="3 代码块"></a>3 代码块</h3><p>使用3个连续的”`”符号包围起来表示代码块。</p><ol><li>本文档所有使用讲解Markdown语法标记示例的地方都是使用代码块标记的。</li><li>代码块前后都得有换行哦</li></ol><pre><code>$(document).ready(function() {  $(&#39;pre code&#39;).each(function(i, block) {    hljs.highlightBlock(block);  });});</code></pre><h3 id="4-行内代码"><a href="#4-行内代码" class="headerlink" title="4 行内代码"></a>4 行内代码</h3><p>使用``表示行内代码。本页部分文字中间的英文字母就是使用行内代码标记标记的。</p><p>示例</p><pre><code>这是`javascript`代码</code></pre><p>这是 <code>javascript</code> 代码</p><h4 id="5-链接"><a href="#5-链接" class="headerlink" title="5 链接"></a>5 链接</h4><p>使用 <code>[](link)</code> 表示行内链接。其中：</p><ul><li><code>[]</code> 内的内容为要添加链接的文字。</li><li><code>link</code> 为链接地址。</li></ul><p>示例</p><pre><code>我觉得[Markdown](https://appsto.re/cn/jK8Cbb.i)真是个方便的编辑器.</code></pre><p>我觉得<a href="https://appsto.re/cn/jK8Cbb.i" target="_blank" rel="noopener">Markdown</a>真是个方便的编辑器.</p><h3 id="6-数学公式"><a href="#6-数学公式" class="headerlink" title="6 数学公式"></a>6 数学公式</h3><p><code>$</code>包围的区块将会解析为数学公式，连续的<code>$$</code>将独占一行并居中显示</p><p>当 $a \ne 0$, 此方程式有两个解 $ax^2 + bx + c = 0$，他们是 </p><p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p><h3 id="7-导入图片"><a href="#7-导入图片" class="headerlink" title="7 导入图片"></a>7 导入图片</h3><p>使用 <code>![Alt text](/path/to/img.jpg)</code> 导入图片。其中：</p><ul><li><code>Alt text</code> 为如果图片无法显示时显示的文字；</li><li><code>/path/to/img.jpg</code> 为图片所在路径；</li></ul><p>点击辅助键盘中的添加图片按钮，<strong>Markdown</strong>会自动帮你帮你把图片上传到图片存储服务器，并补齐链接</p><p>示例</p><pre><code>![Markdown](https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1569701098939&amp;di=ff20e6935f1d4085402df94ed4f5cc4a&amp;imgtype=0&amp;src=http%3A%2F%2Fcn.hdwall365.com%2Fwallpapers%2F1509%2FSydney-Opera-House-Australia-night-bridge-lights-sea-blue_m.jpg)</code></pre><p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569701098939&di=ff20e6935f1d4085402df94ed4f5cc4a&imgtype=0&src=http%3A%2F%2Fcn.hdwall365.com%2Fwallpapers%2F1509%2FSydney-Opera-House-Australia-night-bridge-lights-sea-blue_m.jpg" srcset="/img/loading.gif" alt="Markdown"></p><h3 id="8-ToDo-List"><a href="#8-ToDo-List" class="headerlink" title="8 ToDo List"></a>8 ToDo List</h3><pre><code>- [x] 支持数学公式- [x] 支持TodoList- [ ] 支持自定义样式- [ ] 支持自定义图床</code></pre><p>小写x表示已完成， 空格表示未完成</p><ul><li><input checked disabled type="checkbox"> 支持数学公式</li><li><input checked disabled type="checkbox"> 支持TodoList</li><li><input disabled type="checkbox"> 支持自定义样式</li><li><input disabled type="checkbox"> 支持自定义图床</li></ul><h3 id="9-粗体和斜体"><a href="#9-粗体和斜体" class="headerlink" title="9 粗体和斜体"></a>9 粗体和斜体</h3><ol><li>使用 <code>**</code> 或者 <code>__</code> 表示粗体。</li><li>使用 <code>*</code> 或者 <code>_</code> 表示斜体。</li><li>前后的 <code>*</code> 或 <code>_</code> 与要 <strong>加粗或倾斜</strong> 的字体之间不能有空格。</li></ol><p>示例</p><pre><code> **粗体** *斜体*</code></pre><p><strong>粗体</strong></p><p><em>斜体</em></p><h3 id="10-列表"><a href="#10-列表" class="headerlink" title="10 列表"></a>10 列表</h3><p>使用 <code>1. 2. 3.</code> 表示有序列表，使用 <code>*</code> 或 <code>-</code> 或 <code>+</code> 表示无序列表。</p><ol><li>无序列表或有序列表标记和后面的文字之间要有一个空格隔开。</li><li>有序列表标记不是按照你写的数字进行显示的，而是根据当前有序列表标记所在位置显示的，如示例1所示。</li><li>无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的，如例2所示。通常情况下，同一层级使用同一种标记表示，便于自己查看和管理。</li></ol><h4 id="例1：有序列表"><a href="#例1：有序列表" class="headerlink" title="例1：有序列表"></a>例1：有序列表</h4><pre><code>1. 第一点2. 第二点4. 第三点</code></pre><ol><li>第一点</li><li>第二点</li><li>第三点</li></ol><h4 id="例2：无序列表"><a href="#例2：无序列表" class="headerlink" title="例2：无序列表"></a>例2：无序列表</h4><pre><code>+ 一级无序列表内容    * 二级无序列表内容    - 二级无序列表内容        - 三级无序列表内容        - 三级无序列表内容+ 一级无序列表内容    - 二级无序列表内容</code></pre><ul><li>一级无序列表内容<ul><li>二级无序列表内容</li></ul><ul><li>二级无序列表内容<ul><li>三级无序列表内容</li><li>三级无序列表内容</li></ul></li></ul></li><li>一级无序列表内容<ul><li>二级无序列表内容</li></ul></li></ul><h3 id="11-分割线"><a href="#11-分割线" class="headerlink" title="11 分割线"></a>11 分割线</h3><p>使用 <code>---</code> 或者 <code>***</code> 或者 <code>* * *</code> 表示水平分割线。</p><ol><li>只要 <code>*</code> 或者 <code>-</code> 大于等于三个就可组成一条平行线。</li><li>使用 <code>---</code> 作为水平分割线时，要在它的前后都空一行，防止 <code>---</code> 被当成标题标记的表示方式。</li></ol><p>示例</p><pre><code>---**** * *</code></pre><h3 id="12-删除线"><a href="#12-删除线" class="headerlink" title="12 删除线"></a>12 删除线</h3><p>使用 <code>~~</code> 表示删除线。</p><ol><li>注意 <code>~~</code> 和 要添加删除线的文字之间不能有空格。</li><li>我常使用在显示的告诉自己这行文字是要删除的。</li></ol><p>示例</p><pre><code>~~这是一条删除线~~</code></pre><p><del>这是一条删除线</del></p><h3 id="13表格"><a href="#13表格" class="headerlink" title="13表格"></a>13表格</h3><p>上面空一行下面空两行</p><table><thead><tr><th>Heading</th><th>Heading</th><th>Heading</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr></tbody></table><p>添加边框:</p><table><thead><tr><th>Heading</th><th>Heading</th><th>Heading</th></tr></thead><tbody><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr><tr><td>Cell</td><td>Cell</td><td>Cell</td></tr></tbody></table><p>对齐方式:</p><table><thead><tr><th align="left">Heading</th><th align="center">Heading</th><th align="right">Heading</th></tr></thead><tbody><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr></tbody></table>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>MarkDown</tag>
       
     </tags>
     
