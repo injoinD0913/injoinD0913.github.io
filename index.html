@@ -128,37 +128,6 @@
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2020/01/06/Matplotlib库入门/">
-        <p class="h4 index-header">Matplotlib库入门</p>
-        
-        
-          
-        
-        <div class="index-excerpt" >
-          <div class="index-text mb-1">Matplotlib库介绍Matplotlib是Python优秀的数据可视化第三方库
-</div>
-        </div>
-      </a>
-
-      <div>
-        
-          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-06&nbsp;&nbsp;
-        
-        
-        
-          <i class="iconfont icon-tag"></i>
-          
-            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
-          
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4 mx-auto">
-    
-    
-    <div class="col-12 col-md-8 m-auto">
       <a href="/2020/01/06/图像手绘效果/">
         <p class="h4 index-header">图像的手绘效果</p>
         
@@ -216,36 +185,41 @@ a=np.array(Image.o</div>
     
     
     <div class="col-12 col-md-8 m-auto">
-      <a href="/2019/12/22/NumPy数据存储与函数/">
-        <p class="h4 index-header">NumPy数据存储与函数</p>
+      <a href="/2020/01/06/Matplotlib库入门/">
+        <p class="h4 index-header">Matplotlib库入门</p>
         
         
           
         
         <div class="index-excerpt" >
-          <div class="index-text mb-1">数据的CSV文件存取CSV(Comma-Separated Value,逗号分隔符)CSV是一种常见的文件格式，用来存取批量数据。
-CSV文件写入数据np.savetxt(frame,array,fmt=&#39;%.18e&#39;,delimiter=None)
+          <div class="index-text mb-1">Matplotlib库介绍Matplotlib是Python优秀的数据可视化第三方库
+matplotlib.pyplot是绘制各类可视化图形的命令字库，相当于快捷方式
+调用import matplotlib.pyplot as plt
+画出一个可视化图形绘制一个简单的包含5个元素的列表的简单图形
+import matplotlib.pyplot as plt
 
-frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
-array:存入文件的数组。
-fmt:写入文件的格式，例如%d %.2f %.18e。
-delimiter：分割字符串，默认是空格。
+plt.plot([3,1,4,5,2])
 
-例：np.savetxt(&#39;a.csv&#39;,a,fmt=&#39;%d&#39;,delimiter=&#39;,&#39;)
-CSV文件中数据读入到一个数组类型np.loadtxt(frame,dtype=np.float,delimiter=None,unpack=False)
+plt.ylabel(&quot;grade&quot;)
 
-frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
-dtype:数据类型，可选。
-delimiter:分割字符串，默认是空格。
-unpack：如果True，读入属性将分别写入不同变量。
+plt.show()
+将生成的简单图形存储起来plt.save.fig()将输出图形存储为文件，默认PNG文件，可以通过pdi修改输出质量。
+plt.savefig(&#39;test&#39;,dpi=600) #PNG文件
+plt.plot(x,y)当有两个以上参数时，按照X轴和Y轴顺序绘制数据点。
 
-CSV文件的局限性</div>
+plt.plot([0,2,4,6,8],[3,1,4,5,2])
+
+plt.ylabel(&quot;grade&quot;)
+
+plt.axis([-1,10,0,6]) #设定横纵坐标比例
+
+plt.show()`</div>
         </div>
       </a>
 
       <div>
         
-          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-22&nbsp;&nbsp;
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-01-06&nbsp;&nbsp;
         
         
         
@@ -285,6 +259,52 @@ CSV文件的局限性</div>
 ## Numpy的N维数组对象ndarray
 
 - 数组对象可以**去掉**元素间**</div>
+        </div>
+      </a>
+
+      <div>
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2019-12-22&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4 mx-auto">
+    
+    
+    <div class="col-12 col-md-8 m-auto">
+      <a href="/2019/12/22/NumPy数据存储与函数/">
+        <p class="h4 index-header">NumPy数据存储与函数</p>
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">数据的CSV文件存取CSV(Comma-Separated Value,逗号分隔符)CSV是一种常见的文件格式，用来存取批量数据。
+CSV文件写入数据np.savetxt(frame,array,fmt=&#39;%.18e&#39;,delimiter=None)
+
+frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
+array:存入文件的数组。
+fmt:写入文件的格式，例如%d %.2f %.18e。
+delimiter：分割字符串，默认是空格。
+
+例：np.savetxt(&#39;a.csv&#39;,a,fmt=&#39;%d&#39;,delimiter=&#39;,&#39;)
+CSV文件中数据读入到一个数组类型np.loadtxt(frame,dtype=np.float,delimiter=None,unpack=False)
+
+frame:文件、字符串或产生器，可以是.gz或.bz2的压缩文件。
+dtype:数据类型，可选。
+delimiter:分割字符串，默认是空格。
+unpack：如果True，读入属性将分别写入不同变量。
+
+CSV文件的局限性</div>
         </div>
       </a>
 

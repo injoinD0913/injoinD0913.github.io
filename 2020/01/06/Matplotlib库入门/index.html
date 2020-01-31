@@ -124,6 +124,205 @@
         <div class="post-content mx-auto">
           <div class="markdown-body">
             <h2 id="Matplotlib库介绍"><a href="#Matplotlib库介绍" class="headerlink" title="Matplotlib库介绍"></a>Matplotlib库介绍</h2><p>Matplotlib是Python优秀的数据可视化第三方库</p>
+<p>matplotlib.pyplot是绘制各类可视化图形的命令字库，相当于快捷方式</p>
+<p>调用<code>import matplotlib.pyplot as plt</code></p>
+<h3 id="画出一个可视化图形"><a href="#画出一个可视化图形" class="headerlink" title="画出一个可视化图形"></a>画出一个可视化图形</h3><p>绘制一个简单的包含5个元素的列表的简单图形</p>
+<pre><code>import matplotlib.pyplot as plt
+
+plt.plot([3,1,4,5,2])
+
+plt.ylabel(&quot;grade&quot;)
+
+plt.show()</code></pre><p><img src="https://note.youdao.com/yws/api/personal/file/WEBa00a32e4902cd2909fd238e969c64ebb?method=getImage&version=25&cstk=5F2r4UOp" srcset="/img/loading.gif" alt="图片"></p>
+<h3 id="将生成的简单图形存储起来"><a href="#将生成的简单图形存储起来" class="headerlink" title="将生成的简单图形存储起来"></a>将生成的简单图形存储起来</h3><p><code>plt.save.fig()</code>将输出图形存储为文件，默认PNG文件，可以通过pdi修改输出质量。</p>
+<p><code>plt.savefig(&#39;test&#39;,dpi=600) #PNG文件</code></p>
+<p><code>plt.plot(x,y)</code>当有两个以上参数时，按照X轴和Y轴顺序绘制数据点。</p>
+<pre><code class="import">
+plt.plot([0,2,4,6,8],[3,1,4,5,2])
+
+plt.ylabel(&quot;grade&quot;)
+
+plt.axis([-1,10,0,6]) #设定横纵坐标比例
+
+plt.show()```
+
+![图片](https://note.youdao.com/yws/api/personal/file/WEBc8b3b026a55890f655a4319386128036?method=getImage&amp;version=26&amp;cstk=5F2r4UOp)
+
+### pyplot的绘图区域
+
+在一个区域绘制出两个或两个以上的图形
+
+`plt.subplot(nrows,ncols,plot_number)`将一个绘制区域分割成以第一个参数作为横轴数量，第二个参数作为纵轴数量的子区域
+
+`plt.subplot(3,2,4)/plt.subplot(324)`分割成3个横轴2个纵轴，当前绘图区域为子区域4
+
+在全局绘图区域中创建一个分区体系，并定位到一个子绘图区域。
+</code></pre>
+<p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>def f(t):<br>    return np.exp(-t)<em>np.cos(2</em>np.pi*t)</p>
+<p>a=np.arange(0.0, 5.0, 0.02)</p>
+<p>plt.subplot(211)<br>plt.plot(a,f(a))</p>
+<p>plt.subplot(2,1,2)<br>plt.plot(a,np.cos(2<em>np.pi</em>a),’r–’)<br>plt.show()</p>
+<pre><code>
+![图片](https://note.youdao.com/yws/api/personal/file/WEB039caf115570682f50d2e07c1b2c83f1?method=getImage&amp;version=27&amp;cstk=5F2r4UOp)
+
+## pyplot的plot()函数
+
+`plt.plot(x,y,format_string,**kwargs)`
+
+- x:x轴数据，列表或数组，可选。
+- y:y轴数据，列表或数组。
+- format_string:控制曲线的格式字符串，可选。
+- **kwargs:第二组或更多(x,y,format_string)
+
+**当绘制多条曲线时，各条曲线的x不能省略。**
+
+### 绘制多条曲线
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>a=np.arange(10)<br>plt.plot(a,a<em>1.5,a,a</em>2.5,a,a<em>3.5,a,a</em>4.5)<br>plt.show()</p>
+<pre><code>
+![图片](https://note.youdao.com/yws/api/personal/file/WEB47f0f7e657d34d0be65be2474894f01c?method=getImage&amp;version=28&amp;cstk=5F2r4UOp)
+
+`format_string`:控制曲线的格式字符串，可选。
+由颜色字符、风格字符和标记字符组成
+
+|颜色字符|说明|颜色字符|说明|
+|-|-|-|-|
+|&#39;b&#39;|蓝色|&#39;m&#39;|洋红色magenta|
+|&#39;g&#39;|绿色|&#39;y&#39;|黄色|
+|&#39;r&#39;|红色|&#39;k&#39;|黑色|
+|&#39;c&#39;|青绿色cyan|&#39;w&#39;|白色|
+|&#39;#008000&#39;|RGB某颜色|&#39;0.8&#39;|灰度值字符串|
+
+|风格字符|说明|
+|-|-|
+|&#39;-&#39;|实线|
+|&#39;--&#39;|破折线|
+|&#39;-.&#39;|点划线|
+|&#39;:&#39;|虚线|
+|&#39;&#39;&#39;&#39;|无字符|
+
+|标记字符|说明|
+|-|-|
+|&#39;.&#39;|点标记|
+|&#39;,&#39;|像素标记(极小点)|
+|&#39;o&#39;|实心圈标记|
+|&#39;v&#39;|倒三角标记|
+|&#39;^&#39;|上三角标记|
+|&#39;&gt;&#39;|右三角标记|
+|&#39;&lt;&#39;|左三角标记|
+|&#39;1&#39;|下花三角标记|
+|&#39;2&#39;|上花三角标记|
+|&#39;3&#39;|左花三角标记|
+|&#39;4&#39;|右花三角标记|
+|&#39;s&#39;|实心方形标记|
+|&#39;p&#39;|实心五角标记|
+|&#39;*&#39;|星形标记|
+|&#39;h&#39;|竖六边形标记|
+|&#39;H&#39;|横六边形标记|
+|&#39;+&#39;|十字标记|
+|&#39;x&#39;|x标记|
+|&#39;D&#39;|菱形标记|
+|&#39;d&#39;|瘦菱形标记|
+|&#39;|&#39;|垂直线标记|
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>a=np.arange(10)<br>plt.plot(a,a<em>1.5,’go-‘,a,a<em>2.5,’rx’,a,a</em>3.5,’</em>‘,a,a*4.5,’b-.’)<br>plt.show()</p>
+<pre><code>
+![图片](https://note.youdao.com/yws/api/personal/file/WEBd068ce35283566ecd6e19f05fa6d58b1?method=getImage&amp;version=29&amp;cstk=5F2r4UOp)
+
+
+`**kwargs`:第二组或更多(x,y,format_string)
+
+color:控制颜色，color=&#39;green&#39;
+linestyle:线条风格，linestyle=&#39;dashed&#39;
+marker:标记风格，marker=&#39;o&#39;
+markerfacecolor:标记颜色，markerfacecolor=&#39;blue&#39;
+markersize:标记尺寸，markersize=20
+
+## pyplot的中文显示
+
+第一种方法：pyplot并不默认支持中文显示，需要rcParams修改字体实现。
+</code></pre><p>import matplotlib.pyplot as plt<br>import matplotlib</p>
+<p>matplotlib.rcParams[‘font.family’]=’SimHei’<br>plt.plot([3,1,4,5,2])<br>plt.ylabel(“纵轴(值)”)<br>plt.savefig(‘test’,dpi=600)<br>plt.show()</p>
+<pre><code>
+![图片](https://note.youdao.com/yws/api/personal/file/WEB90e19e54f9392aa03998f246a825e252?method=getImage&amp;version=30&amp;cstk=5F2r4UOp)
+
+### rcParams的属性
+
+|属性|说明|
+|-|-|
+|&#39;font.family&#39;|用于显示字体的名字|
+|&#39;font.style&#39;|字体风格，正常&#39;normal&#39;或斜体&#39;italic&#39;|
+|&#39;font.size&#39;|字体大小，整数字号或者&#39;large&#39;、&#39;x-small&#39;|
+
+`rcParams[&#39;font.family&#39;]`
+
+|中文字体|说明|
+|-|-|
+|&#39;SimHei&#39;|中文黑体|
+|&#39;Kaiti&#39;|中文楷体|
+|&#39;LiSu&#39;|中文隶书|
+|&#39;FangSong&#39;|中文仿宋|
+|&#39;YouYuan&#39;|中文幼圆|
+|&#39;STSong&#39;|华文宋体|
+
+### 实例
+
+绘制正弦波
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt<br>import matplotlib</p>
+<p>matplotlib.rcParams[‘font.family’]=’STSong’<br>matplotlib.rcParams[‘font.size’]=20</p>
+<p>a=np.arange(0.0, 5.0, 0.02)</p>
+<p>plt.xlabel(“横轴：时间”)<br>plt.ylabel(“纵轴：振幅”)<br>plt.plot(a,np.cos(2<em>np.pi</em>a),’r–’)<br>plt.show()</p>
+<pre><code>
+![图片](https://note.youdao.com/yws/api/personal/file/WEBe3c2dee6d0bc940e527ffc5c8a51f9e1?method=getImage&amp;version=31&amp;cstk=5F2r4UOp)
+
+第二种方法：在有中文输出的地方，增加一个属性：fontproperties
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>matplotlib.rcParams[‘font.family’]=’SimHei’<br>matplotlib.rcParams[‘font.size’]=20</p>
+<p>a=np.arange(0.0, 5.0, 0.02)</p>
+<p>plt.xlabel(‘横轴：时间’,fontproperties=’STSong’,fontsize=20)<br>plt.ylabel(‘纵轴：振幅’,fontproperties=’STSong’,fontsize=20)<br>plt.plot(a,np.cos(2<em>np.pi</em>a),’r–’)<br>plt.show()</p>
+<pre><code>
+## pyplot的文本显示
+
+pyplot的文本显示函数
+
+|函数|说明|
+|-|-|
+|plt.xlabel()|对x轴增加文本标签|
+|plt.ylabel()|对y轴增加文本标签|
+|plt.title()|对图形整体增加文本标签|
+|plt.text()|在任意位置增加文本|
+|plt.annotate()|在图形中增加带箭头的注解|
+
+### 正弦波实例
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>a=np.arange(0.0, 5.0, 0.02)<br>plt.plot(a,np.cos(2<em>np.pi</em>a),’r–’)</p>
+<p>plt.xlabel(‘横轴：时间’,fontproperties=’SimHei’,fontsize=15,color=’green’)<br>plt.ylabel(‘纵轴：振幅’,fontproperties=’SimHei’,fontsize=15)<br>plt.title(r’正弦波实例$y=cos(2\pi x)$’,fontproperties=’SimHei’,fontsize=25)<br>plt.text(2,1,r’$\mu=100$’,fontsize=15)</p>
+<p>plt.axis([-1,6,-2,2])<br>plt.grid(True)<br>plt.show()</p>
+<pre><code>
+![图片](https://note.youdao.com/yws/api/personal/file/WEB21687a84ee1e0fd8ff98b734f040fba8?method=getImage&amp;version=32&amp;cstk=5F2r4UOp)
+
+`plt.annotate(s,xy=arrow_crd,xytext=text_crd,arrowprops=dict)`
+
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>a=np.arange(0.0, 5.0, 0.02)<br>plt.plot(a,np.cos(2<em>np.pi</em>a),’r–’)</p>
+<p>plt.xlabel(‘横轴：时间’,fontproperties=’SimHei’,fontsize=15,color=’green’)<br>plt.ylabel(‘纵轴：振幅’,fontproperties=’SimHei’,fontsize=15)<br>plt.title(r’正弦波实例$y=cos(2\pi x)$’,fontproperties=’SimHei’,fontsize=25)<br>plt.annotate(r’$\mu=100$’,xy=(2,1),xytext=(3,1.5),arrowprops=dict(facecolor=’black’,shrink=0.1,width=2))</p>
+<p>plt.axis([-1,6,-2,2])<br>plt.grid(True)<br>plt.show()</p>
+<pre><code>
+![图片](https://note.youdao.com/yws/api/personal/file/WEBf00445b43c6ac7beb54471710c6db126?method=getImage&amp;version=33&amp;cstk=5F2r4UOp)
+
+
+## pyplot的子绘图区域
+
+`plt.subplot2grid()`
+
+`plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)`
+
+GridSpec类
+</code></pre><p>import matplotlib.pyplot as plt<br>import matplotlib.gridspec as gridspec</p>
+<p>gs=gridspec.GridSpec(3,3)</p>
+<p>ax1=plt.subplot(gs[0,:])<br>ax2=plt.subplot(gs[1,:-1])<br>ax3=plt.subplot(gs[1:,-1])<br>ax4=plt.subplot(gs[2,0])<br>ax5=plt.subplot(gs[2,1])<br>```</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEBb96e63a36f756bcf9bababc47a3d267c?method=getImage&version=34&cstk=5F2r4UOp" srcset="/img/loading.gif" alt="图片"></p>
 
             <hr>
           </div>
