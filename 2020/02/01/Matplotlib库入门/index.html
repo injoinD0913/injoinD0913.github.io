@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content>
+  <meta name="author" content="Dddddwen">
+  <meta name="keywords" content>
+  <title>Matplotlib库入门 ~ Hexo</title>
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css">
+  <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+  
+    <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+  
+  <link rel="stylesheet" href="/css/main.css">
+
+  
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+    <div class="view intro-2"
+         style="background: url('/img/VCG211171411210.jpg')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              <p>星期六, 二月 1日 2020, 12:00 凌晨</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto">
+          <div class="markdown-body">
+            <h2 id="Matplotlib库介绍"><a href="#Matplotlib库介绍" class="headerlink" title="Matplotlib库介绍"></a>Matplotlib库介绍</h2><p>Matplotlib是Python优秀的数据可视化第三方库</p>
+<p>matplotlib.pyplot是绘制各类可视化图形的命令字库，相当于快捷方式</p>
+<p>调用<code>import matplotlib.pyplot as plt</code></p>
+<h3 id="画出一个可视化图形"><a href="#画出一个可视化图形" class="headerlink" title="画出一个可视化图形"></a>画出一个可视化图形</h3><p>绘制一个简单的包含5个元素的列表的简单图形</p>
+<pre><code>import matplotlib.pyplot as plt
+
+plt.plot([3,1,4,5,2])
+
+plt.ylabel(&quot;grade&quot;)
+
+plt.show()```
+
+
+
+![图片](https://note.youdao.com/yws/api/personal/file/WEBa00a32e4902cd2909fd238e969c64ebb?method=getImage&amp;version=25&amp;cstk=5F2r4UOp)
+
+### 将生成的简单图形存储起来
+
+`plt.save.fig()`将输出图形存储为文件，默认PNG文件，可以通过pdi修改输出质量。
+
+`plt.savefig(&#39;test&#39;,dpi=600) #PNG文件`
+
+`plt.plot(x,y)`当有两个以上参数时，按照X轴和Y轴顺序绘制数据点。
+
+</code></pre><p>import matplotlib.pyplot as plt</p>
+<p>plt.plot([0,2,4,6,8],[3,1,4,5,2])</p>
+<p>plt.ylabel(“grade”)</p>
+<p>plt.axis([-1,10,0,6]) #设定横纵坐标比例</p>
+<p>plt.show()```</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEBc8b3b026a55890f655a4319386128036?method=getImage&version=26&cstk=5F2r4UOp" srcset="/img/loading.gif" alt="图片"></p>
+<h3 id="pyplot的绘图区域"><a href="#pyplot的绘图区域" class="headerlink" title="pyplot的绘图区域"></a>pyplot的绘图区域</h3><p>在一个区域绘制出两个或两个以上的图形</p>
+<p><code>plt.subplot(nrows,ncols,plot_number)</code>将一个绘制区域分割成以第一个参数作为横轴数量，第二个参数作为纵轴数量的子区域</p>
+<p><code>plt.subplot(3,2,4)/plt.subplot(324)</code>分割成3个横轴2个纵轴，当前绘图区域为子区域4</p>
+<p>在全局绘图区域中创建一个分区体系，并定位到一个子绘图区域。</p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+def f(t):
+    return np.exp(-t)*np.cos(2*np.pi*t)
+
+a=np.arange(0.0, 5.0, 0.02)
+
+plt.subplot(211)
+plt.plot(a,f(a))
+
+plt.subplot(2,1,2)
+plt.plot(a,np.cos(2*np.pi*a),&#39;r--&#39;)
+plt.show()```
+
+
+
+![图片](https://note.youdao.com/yws/api/personal/file/WEB039caf115570682f50d2e07c1b2c83f1?method=getImage&amp;version=27&amp;cstk=5F2r4UOp)
+
+## pyplot的plot()函数
+
+`plt.plot(x,y,format_string,**kwargs)`
+
+- x:x轴数据，列表或数组，可选。
+- y:y轴数据，列表或数组。
+- format_string:控制曲线的格式字符串，可选。
+- **kwargs:第二组或更多(x,y,format_string)
+
+**当绘制多条曲线时，各条曲线的x不能省略。**
+
+### 绘制多条曲线
+
+
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>a=np.arange(10)<br>plt.plot(a,a<em>1.5,a,a</em>2.5,a,a<em>3.5,a,a</em>4.5)<br>plt.show()```</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB47f0f7e657d34d0be65be2474894f01c?method=getImage&version=28&cstk=5F2r4UOp" srcset="/img/loading.gif" alt="图片"></p>
+<p><code>format_string</code>:控制曲线的格式字符串，可选。<br>由颜色字符、风格字符和标记字符组成</p>
+<table>
+<thead>
+<tr>
+<th>颜色字符</th>
+<th>说明</th>
+<th>颜色字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘b’</td>
+<td>蓝色</td>
+<td>‘m’</td>
+<td>洋红色magenta</td>
+</tr>
+<tr>
+<td>‘g’</td>
+<td>绿色</td>
+<td>‘y’</td>
+<td>黄色</td>
+</tr>
+<tr>
+<td>‘r’</td>
+<td>红色</td>
+<td>‘k’</td>
+<td>黑色</td>
+</tr>
+<tr>
+<td>‘c’</td>
+<td>青绿色cyan</td>
+<td>‘w’</td>
+<td>白色</td>
+</tr>
+<tr>
+<td>‘#008000’</td>
+<td>RGB某颜色</td>
+<td>‘0.8’</td>
+<td>灰度值字符串</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>风格字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘-‘</td>
+<td>实线</td>
+</tr>
+<tr>
+<td>‘–’</td>
+<td>破折线</td>
+</tr>
+<tr>
+<td>‘-.’</td>
+<td>点划线</td>
+</tr>
+<tr>
+<td>‘:’</td>
+<td>虚线</td>
+</tr>
+<tr>
+<td>‘’’’</td>
+<td>无字符</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>标记字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘.’</td>
+<td>点标记</td>
+</tr>
+<tr>
+<td>‘,’</td>
+<td>像素标记(极小点)</td>
+</tr>
+<tr>
+<td>‘o’</td>
+<td>实心圈标记</td>
+</tr>
+<tr>
+<td>‘v’</td>
+<td>倒三角标记</td>
+</tr>
+<tr>
+<td>‘^’</td>
+<td>上三角标记</td>
+</tr>
+<tr>
+<td>‘&gt;’</td>
+<td>右三角标记</td>
+</tr>
+<tr>
+<td>‘&lt;’</td>
+<td>左三角标记</td>
+</tr>
+<tr>
+<td>‘1’</td>
+<td>下花三角标记</td>
+</tr>
+<tr>
+<td>‘2’</td>
+<td>上花三角标记</td>
+</tr>
+<tr>
+<td>‘3’</td>
+<td>左花三角标记</td>
+</tr>
+<tr>
+<td>‘4’</td>
+<td>右花三角标记</td>
+</tr>
+<tr>
+<td>‘s’</td>
+<td>实心方形标记</td>
+</tr>
+<tr>
+<td>‘p’</td>
+<td>实心五角标记</td>
+</tr>
+<tr>
+<td>‘*’</td>
+<td>星形标记</td>
+</tr>
+<tr>
+<td>‘h’</td>
+<td>竖六边形标记</td>
+</tr>
+<tr>
+<td>‘H’</td>
+<td>横六边形标记</td>
+</tr>
+<tr>
+<td>‘+’</td>
+<td>十字标记</td>
+</tr>
+<tr>
+<td>‘x’</td>
+<td>x标记</td>
+</tr>
+<tr>
+<td>‘D’</td>
+<td>菱形标记</td>
+</tr>
+<tr>
+<td>‘d’</td>
+<td>瘦菱形标记</td>
+</tr>
+<tr>
+<td>‘</td>
+<td>‘</td>
+</tr>
+</tbody></table>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+a=np.arange(10)
+plt.plot(a,a*1.5,&#39;go-&#39;,a,a*2.5,&#39;rx&#39;,a,a*3.5,&#39;*&#39;,a,a*4.5,&#39;b-.&#39;)
+plt.show()```
+
+
+
+![图片](https://note.youdao.com/yws/api/personal/file/WEBd068ce35283566ecd6e19f05fa6d58b1?method=getImage&amp;version=29&amp;cstk=5F2r4UOp)
+
+
+`**kwargs`:第二组或更多(x,y,format_string)
+
+color:控制颜色，color=&#39;green&#39;
+linestyle:线条风格，linestyle=&#39;dashed&#39;
+marker:标记风格，marker=&#39;o&#39;
+markerfacecolor:标记颜色，markerfacecolor=&#39;blue&#39;
+markersize:标记尺寸，markersize=20
+
+## pyplot的中文显示
+
+第一种方法：pyplot并不默认支持中文显示，需要rcParams修改字体实现。
+
+
+</code></pre><p>import matplotlib.pyplot as plt<br>import matplotlib</p>
+<p>matplotlib.rcParams[‘font.family’]=’SimHei’<br>plt.plot([3,1,4,5,2])<br>plt.ylabel(“纵轴(值)”)<br>plt.savefig(‘test’,dpi=600)<br>plt.show()```</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEB90e19e54f9392aa03998f246a825e252?method=getImage&version=30&cstk=5F2r4UOp" srcset="/img/loading.gif" alt="图片"></p>
+<h3 id="rcParams的属性"><a href="#rcParams的属性" class="headerlink" title="rcParams的属性"></a>rcParams的属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘font.family’</td>
+<td>用于显示字体的名字</td>
+</tr>
+<tr>
+<td>‘font.style’</td>
+<td>字体风格，正常’normal’或斜体’italic’</td>
+</tr>
+<tr>
+<td>‘font.size’</td>
+<td>字体大小，整数字号或者’large’、’x-small’</td>
+</tr>
+</tbody></table>
+<p><code>rcParams[&#39;font.family&#39;]</code></p>
+<table>
+<thead>
+<tr>
+<th>中文字体</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>‘SimHei’</td>
+<td>中文黑体</td>
+</tr>
+<tr>
+<td>‘Kaiti’</td>
+<td>中文楷体</td>
+</tr>
+<tr>
+<td>‘LiSu’</td>
+<td>中文隶书</td>
+</tr>
+<tr>
+<td>‘FangSong’</td>
+<td>中文仿宋</td>
+</tr>
+<tr>
+<td>‘YouYuan’</td>
+<td>中文幼圆</td>
+</tr>
+<tr>
+<td>‘STSong’</td>
+<td>华文宋体</td>
+</tr>
+</tbody></table>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>绘制正弦波</p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+
+matplotlib.rcParams[&#39;font.family&#39;]=&#39;STSong&#39;
+matplotlib.rcParams[&#39;font.size&#39;]=20
+
+a=np.arange(0.0, 5.0, 0.02)
+
+plt.xlabel(&quot;横轴：时间&quot;)
+plt.ylabel(&quot;纵轴：振幅&quot;)
+plt.plot(a,np.cos(2*np.pi*a),&#39;r--&#39;)
+plt.show()```
+
+
+
+![图片](https://note.youdao.com/yws/api/personal/file/WEBe3c2dee6d0bc940e527ffc5c8a51f9e1?method=getImage&amp;version=31&amp;cstk=5F2r4UOp)
+
+第二种方法：在有中文输出的地方，增加一个属性：fontproperties
+
+
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>matplotlib.rcParams[‘font.family’]=’SimHei’<br>matplotlib.rcParams[‘font.size’]=20</p>
+<p>a=np.arange(0.0, 5.0, 0.02)</p>
+<p>plt.xlabel(‘横轴：时间’,fontproperties=’STSong’,fontsize=20)<br>plt.ylabel(‘纵轴：振幅’,fontproperties=’STSong’,fontsize=20)<br>plt.plot(a,np.cos(2<em>np.pi</em>a),’r–’)<br>plt.show()```</p>
+<h2 id="pyplot的文本显示"><a href="#pyplot的文本显示" class="headerlink" title="pyplot的文本显示"></a>pyplot的文本显示</h2><p>pyplot的文本显示函数</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>plt.xlabel()</td>
+<td>对x轴增加文本标签</td>
+</tr>
+<tr>
+<td>plt.ylabel()</td>
+<td>对y轴增加文本标签</td>
+</tr>
+<tr>
+<td>plt.title()</td>
+<td>对图形整体增加文本标签</td>
+</tr>
+<tr>
+<td>plt.text()</td>
+<td>在任意位置增加文本</td>
+</tr>
+<tr>
+<td>plt.annotate()</td>
+<td>在图形中增加带箭头的注解</td>
+</tr>
+</tbody></table>
+<h3 id="正弦波实例"><a href="#正弦波实例" class="headerlink" title="正弦波实例"></a>正弦波实例</h3><pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+a=np.arange(0.0, 5.0, 0.02)
+plt.plot(a,np.cos(2*np.pi*a),&#39;r--&#39;)
+
+plt.xlabel(&#39;横轴：时间&#39;,fontproperties=&#39;SimHei&#39;,fontsize=15,color=&#39;green&#39;)
+plt.ylabel(&#39;纵轴：振幅&#39;,fontproperties=&#39;SimHei&#39;,fontsize=15)
+plt.title(r&#39;正弦波实例$y=cos(2\pi x)$&#39;,fontproperties=&#39;SimHei&#39;,fontsize=25)
+plt.text(2,1,r&#39;$\mu=100$&#39;,fontsize=15)
+
+plt.axis([-1,6,-2,2])
+plt.grid(True)
+plt.show()```
+
+
+
+
+![图片](https://note.youdao.com/yws/api/personal/file/WEB21687a84ee1e0fd8ff98b734f040fba8?method=getImage&amp;version=32&amp;cstk=5F2r4UOp)
+
+`plt.annotate(s,xy=arrow_crd,xytext=text_crd,arrowprops=dict)`
+
+
+
+</code></pre><p>import numpy as np<br>import matplotlib.pyplot as plt</p>
+<p>a=np.arange(0.0, 5.0, 0.02)<br>plt.plot(a,np.cos(2<em>np.pi</em>a),’r–’)</p>
+<p>plt.xlabel(‘横轴：时间’,fontproperties=’SimHei’,fontsize=15,color=’green’)<br>plt.ylabel(‘纵轴：振幅’,fontproperties=’SimHei’,fontsize=15)<br>plt.title(r’正弦波实例$y=cos(2\pi x)$’,fontproperties=’SimHei’,fontsize=25)<br>plt.annotate(r’$\mu=100$’,xy=(2,1),xytext=(3,1.5),arrowprops=dict(facecolor=’black’,shrink=0.1,width=2))</p>
+<p>plt.axis([-1,6,-2,2])<br>plt.grid(True)<br>plt.show()```</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEBf00445b43c6ac7beb54471710c6db126?method=getImage&version=33&cstk=5F2r4UOp" srcset="/img/loading.gif" alt="图片"></p>
+<h2 id="pyplot的子绘图区域"><a href="#pyplot的子绘图区域" class="headerlink" title="pyplot的子绘图区域"></a>pyplot的子绘图区域</h2><p><code>plt.subplot2grid()</code></p>
+<p><code>plt.subplot2grid(GridSpec,CurSpec,colspan=1,rowspan=1)</code></p>
+<p>GridSpec类</p>
+<p>```<br>import matplotlib.pyplot as plt<br>import matplotlib.gridspec as gridspec</p>
+<p>gs=gridspec.GridSpec(3,3)</p>
+<p>ax1=plt.subplot(gs[0,:])<br>ax2=plt.subplot(gs[1,:-1])<br>ax3=plt.subplot(gs[1:,-1])<br>ax4=plt.subplot(gs[2,0])<br>ax5=plt.subplot(gs[2,1])```</p>
+<p><img src="https://note.youdao.com/yws/api/personal/file/WEBb96e63a36f756bcf9bababc47a3d267c?method=getImage&version=34&cstk=5F2r4UOp" srcset="/img/loading.gif" alt="图片"></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/Python%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90">Python数值分析</a>
+              
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+  <script src="/js/lazyload.js" ></script>
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Matplotlib库入门&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+</body>
+</html>
