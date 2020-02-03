@@ -81,25 +81,6 @@
   
   <entry>
     <title>数值分析笔记</title>
-    <link href="undefined2019/12/20/New%20Document/"/>
-    <url>2019/12/20/New%20Document/</url>
-    
-    <content type="html"><![CDATA[<h2 id="数值分析笔记"><a href="#数值分析笔记" class="headerlink" title="数值分析笔记"></a>数值分析笔记</h2><h3 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h3><p>第三方数据表示库<br>NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式</p><h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><p>pyplot<br>如何绘制数据图形的方法</p><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><p>Series  DataFrame数据类型</p><h3 id="IPython的-魔术命令"><a href="#IPython的-魔术命令" class="headerlink" title="IPython的%魔术命令"></a>IPython的%魔术命令</h3><table><thead><tr><th>常用命令</th><th>说明</th></tr></thead><tbody><tr><td>%magic</td><td>显示所有魔术命令</td></tr><tr><td>%hist</td><td>IPython命令的输入历史</td></tr><tr><td>%pdb</td><td>异常发生后自动进入调试器</td></tr><tr><td>%reset</td><td>删除当前命名空间中已经定义的变量或名称</td></tr><tr><td>%who</td><td>显示IPython当前命名空间中已经定义的变量</td></tr><tr><td>%time statement</td><td>给出代码的执行时间，statement表示一段代码</td></tr><tr><td>%timeit statement</td><td>多次执行代码，计算综合平均执行时间</td></tr></tbody></table>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Python数值分析</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>数值分析笔记</title>
     <link href="undefined2019/12/20/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/"/>
     <url>2019/12/20/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/</url>
     
@@ -118,11 +99,11 @@
   
   
   <entry>
-    <title>Numpy入门与实践</title>
-    <link href="undefined2019/12/04/Numpy/"/>
-    <url>2019/12/04/Numpy/</url>
+    <title>数值分析笔记</title>
+    <link href="undefined2019/12/20/New%20Document/"/>
+    <url>2019/12/20/New%20Document/</url>
     
-    <content type="html"><![CDATA[<h2 id="Ndarray多维数组"><a href="#Ndarray多维数组" class="headerlink" title="Ndarray多维数组"></a>Ndarray多维数组</h2><ul><li>Numpy库是用于科学计算的一个开源Python扩充程序库，是其他数据分析包的基础包，为Python提供了高性能的数组与矩阵运算处理能力。</li></ul><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>arange</td><td>类似于内置的range函数,用于创建数组</td></tr><tr><td>ones</td><td>创建指定长度或形状的全数组</td></tr><tr><td>ones_like</td><td>以另一个数组为参考,根据其形状和dtype创建全1数组</td></tr><tr><td>zeros,zeros_like</td><td>类似于ones,ones_like,创建全0数组</td></tr><tr><td>empty,empty_like</td><td>同上,创建没有具体值的数</td></tr><tr><td>eye,identity</td><td>创建正方的N*N单位矩阵</td></tr></tbody></table><h3 id="数组对象属性"><a href="#数组对象属性" class="headerlink" title="数组对象属性"></a>数组对象属性</h3><table><thead><tr><th>属性</th><th>使用说明</th></tr></thead><tbody><tr><td>.ndim</td><td>秩，即数据轴的个数</td></tr><tr><td>.shape</td><td>数组的维度</td></tr><tr><td>.size</td><td>元素的总个数</td></tr><tr><td>.dtype</td><td>数据类型</td></tr><tr><td>.itemsize</td><td>数组中每个元素的字节大小</td></tr></tbody></table><h3 id="数组类型与变换"><a href="#数组类型与变换" class="headerlink" title="数组类型与变换"></a>数组类型与变换</h3><ul><li>dtype</li><li>astype</li><li>数组重塑、合并，拆分，转置<br>重塑  <code>reshape</code> <code>swapaxes</code>旋转(少用)<br>将数组折叠变为一维数组  <code>ravel</code> <code>flatten</code><br>合并  <code>concatenate</code><br>垂直  <code>vstack</code><br>水平  <code>hsatck</code><br>拆分  <code>split</code><br>转置  <code>transpose</code>  <code>T</code></li></ul><h3 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>rand</td><td>产生均匀分布的样本值</td></tr><tr><td>randint</td><td>给定范围内取随机整数</td></tr><tr><td>randn</td><td>产生正态分布的样本值</td></tr><tr><td>seed</td><td>随机数种子</td></tr><tr><td>permutation</td><td>对一个序列随机排序，不改变原数组</td></tr><tr><td>shuffle</td><td>对一个序列随机排序，改变原数组</td></tr><tr><td>uniform(low,high,size)</td><td>产生具有均匀分布的数组，low起始值，high结束值，size形状</td></tr><tr><td>normal(loc,scale,size)</td><td>产生具有正态分布的数组，loc均值，scale标准差</td></tr><tr><td>poisson(lam,size)</td><td>产生泊松分布的数组，lam随机事件发生率</td></tr></tbody></table><h2 id="数组的索引和切片"><a href="#数组的索引和切片" class="headerlink" title="数组的索引和切片"></a>数组的索引和切片</h2><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>[1][2]</p><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>[:1]</p><h3 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h3><p>true false<br>按照要求显示符号条件的行列数组</p><h3 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h3><p>可以改变数组的顺序<br>.ix_</p><h2 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h2><table><thead><tr><th>方法</th><th>使用说明</th></tr></thead><tbody><tr><td>sum</td><td>求和</td></tr><tr><td>mean</td><td>算数平均数</td></tr><tr><td>std,var</td><td>标准差和方差</td></tr><tr><td>min,max</td><td>最小值和最大值</td></tr><tr><td>argmin,argmax</td><td>最小和最大元素的索引</td></tr><tr><td>cumsum</td><td>所有元素的累计和</td></tr><tr><td>cumprod</td><td>所有元素的累计积</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<h2 id="数值分析笔记"><a href="#数值分析笔记" class="headerlink" title="数值分析笔记"></a>数值分析笔记</h2><h3 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h3><p>第三方数据表示库<br>NumPy中的ndarray类型以及存储数据的基本方法和相关数据函数，操作一组数据的基本使用方式</p><h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><p>pyplot<br>如何绘制数据图形的方法</p><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><p>Series  DataFrame数据类型</p><h3 id="IPython的-魔术命令"><a href="#IPython的-魔术命令" class="headerlink" title="IPython的%魔术命令"></a>IPython的%魔术命令</h3><table><thead><tr><th>常用命令</th><th>说明</th></tr></thead><tbody><tr><td>%magic</td><td>显示所有魔术命令</td></tr><tr><td>%hist</td><td>IPython命令的输入历史</td></tr><tr><td>%pdb</td><td>异常发生后自动进入调试器</td></tr><tr><td>%reset</td><td>删除当前命名空间中已经定义的变量或名称</td></tr><tr><td>%who</td><td>显示IPython当前命名空间中已经定义的变量</td></tr><tr><td>%time statement</td><td>给出代码的执行时间，statement表示一段代码</td></tr><tr><td>%timeit statement</td><td>多次执行代码，计算综合平均执行时间</td></tr></tbody></table>]]></content>
     
     
     
@@ -142,6 +123,25 @@
     <url>2019/12/04/Pandas%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E8%B7%B5/</url>
     
     <content type="html"><![CDATA[<h2 id="pandas数据结构"><a href="#pandas数据结构" class="headerlink" title="pandas数据结构"></a>pandas数据结构</h2><h3 id="Series数据"><a href="#Series数据" class="headerlink" title="Series数据"></a>Series数据</h3><ul><li>指定索引</li></ul><pre><code>In []:obj = Series([1,-2,3,-4],index = [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;])Out []:a    1       b    2       c    3       d    4       dtype: int64</code></pre><ul><li>设置字典</li></ul><pre><code>data = {      &#39;张三&#39;:92,      &#39;李四&#39;:78,      &#39;王五&#39;:68,      &#39;小明&#39;:82,}In []:obj = Series(data)      objOut[]:张三   92      李四   78      王五   68      小明   82      dtype: int64</code></pre><p>###DataFrame</p><p>类似于excel表格<br>index行索引<br>cloumns列索引</p><p><strong>构造方法</strong><br>|类型|使用说明|<br>|-|-|<br>|二维ndarray``|数据矩阵，可传入行列索引|<br>|由数组、列表或元组组成的字典||<br>|由Series组成的字典|每个Series为一列，Series索引合并为行索引|<br>|嵌套字典||<br>|字典或Series的列表|各项称为DataFrame一行，字典键或Series索引成为DataFrame列索引|<br>|由列表或元组组成的列表|类似于“二维数组”|</p><h3 id="索引对象"><a href="#索引对象" class="headerlink" title="索引对象"></a>索引对象</h3><ul><li>不可修改</li><li>可以做一些布尔运算</li></ul><h2 id="pandas索引操作"><a href="#pandas索引操作" class="headerlink" title="pandas索引操作"></a>pandas索引操作</h2><h3 id="重新索引"><a href="#重新索引" class="headerlink" title="重新索引"></a>重新索引</h3><p><code>reindex</code></p><h3 id="更换索引"><a href="#更换索引" class="headerlink" title="更换索引"></a>更换索引</h3><p>对原有的索引表格进行排序，此时的索引可能是乱序，此时需要重新排序<br><code>reset_index</code><br>此时原索引仍然存在，若不需要，可通过<code>drop = TRUE</code>删掉</p><h3 id="索引和选取"><a href="#索引和选取" class="headerlink" title="索引和选取"></a>索引和选取</h3><ul><li><p>Series<br><code>obj[&#39;a&#39;,&#39;c&#39;]</code><br><code>obj[&#39;a&#39;:&#39;c&#39;]</code></p></li><li><p>DataFrame<br><code>obj[&#39;name&#39;,&#39;city&#39;]</code><br><code>obj[&#39;a&#39;:&#39;c&#39;]</code><br><code>obj[2:]</code></p></li></ul><p><strong>iloc,loc,ix</strong><br><code>obj.iloc[2,1:]</code></p><h3 id="操作行和列"><a href="#操作行和列" class="headerlink" title="操作行和列"></a>操作行和列</h3><p>添加 <code>append</code><br>新加一列 <code>obj[&#39;class&#39;]=2018</code><br>删除行 <code>drop(行号)</code><br>删除列 <code>drop(&#39;class&#39;,axis=1)</code><br>修改 <code>rename</code></p><h2 id="pandas数据运算"><a href="#pandas数据运算" class="headerlink" title="pandas数据运算"></a>pandas数据运算</h2><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><p>与之前操作相同</p><h3 id="函数应用和映射"><a href="#函数应用和映射" class="headerlink" title="函数应用和映射"></a>函数应用和映射</h3><p>在数据分析实战中，常常会对数据进行较复杂的数据运算，这时需要定义函数。定义好的函数可以应用到pandas数据中，其中有三种方法：map函数，将函数套用在Series的每个元素中；apply函数，将函数套用到DataFrame的行与列上；applymap函数，将函数套用到DataFrame的每个元素上</p><p>map方法：<br>将原来price中元去掉</p><pre><code>def f(x):    return x.split(&#39;&#39;)[0]obj1[&#39;price&#39;] = obj1[&#39;price&#39;].map(f)obj1</code></pre><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="对索引排序"><a href="#对索引排序" class="headerlink" title="对索引排序"></a>对索引排序</h4><p><code>obj.sort_index()</code><br>默认为升序<br><code>obj.sort_index(ascending=False)</code><br>降序</p><h4 id="对值排序"><a href="#对值排序" class="headerlink" title="对值排序"></a>对值排序</h4><p><code>obj.sort_values()</code><br><code>obj.sort_values(by=&#39;b&#39;)</code>    以b一列的元素排序</p><h3 id="汇总与统计"><a href="#汇总与统计" class="headerlink" title="汇总与统计"></a>汇总与统计</h3><p><code>obj.sum()</code>列求和<br><code>obj.sum(axis=1)</code>行求和<br><code>obj.describe()</code></p><h3 id="唯一值与值计数"><a href="#唯一值与值计数" class="headerlink" title="唯一值与值计数"></a>唯一值与值计数</h3><p><code>obj.unique()</code>唯一值<br><code>obj.value_counts()</code>值计数</p><h2 id="层次化索引"><a href="#层次化索引" class="headerlink" title="层次化索引"></a>层次化索引</h2><p>两层或多层嵌套索引<br>obj[‘two’]<br>obj[:,’a’] 内层选取</p><h2 id="pandas可视化"><a href="#pandas可视化" class="headerlink" title="pandas可视化"></a>pandas可视化</h2><p>调用matplotib库可以生成不同类型的统计图</p><p>plot方法</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python数值分析</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Numpy入门与实践</title>
+    <link href="undefined2019/12/04/Numpy/"/>
+    <url>2019/12/04/Numpy/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Ndarray多维数组"><a href="#Ndarray多维数组" class="headerlink" title="Ndarray多维数组"></a>Ndarray多维数组</h2><ul><li>Numpy库是用于科学计算的一个开源Python扩充程序库，是其他数据分析包的基础包，为Python提供了高性能的数组与矩阵运算处理能力。</li></ul><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>arange</td><td>类似于内置的range函数,用于创建数组</td></tr><tr><td>ones</td><td>创建指定长度或形状的全数组</td></tr><tr><td>ones_like</td><td>以另一个数组为参考,根据其形状和dtype创建全1数组</td></tr><tr><td>zeros,zeros_like</td><td>类似于ones,ones_like,创建全0数组</td></tr><tr><td>empty,empty_like</td><td>同上,创建没有具体值的数</td></tr><tr><td>eye,identity</td><td>创建正方的N*N单位矩阵</td></tr></tbody></table><h3 id="数组对象属性"><a href="#数组对象属性" class="headerlink" title="数组对象属性"></a>数组对象属性</h3><table><thead><tr><th>属性</th><th>使用说明</th></tr></thead><tbody><tr><td>.ndim</td><td>秩，即数据轴的个数</td></tr><tr><td>.shape</td><td>数组的维度</td></tr><tr><td>.size</td><td>元素的总个数</td></tr><tr><td>.dtype</td><td>数据类型</td></tr><tr><td>.itemsize</td><td>数组中每个元素的字节大小</td></tr></tbody></table><h3 id="数组类型与变换"><a href="#数组类型与变换" class="headerlink" title="数组类型与变换"></a>数组类型与变换</h3><ul><li>dtype</li><li>astype</li><li>数组重塑、合并，拆分，转置<br>重塑  <code>reshape</code> <code>swapaxes</code>旋转(少用)<br>将数组折叠变为一维数组  <code>ravel</code> <code>flatten</code><br>合并  <code>concatenate</code><br>垂直  <code>vstack</code><br>水平  <code>hsatck</code><br>拆分  <code>split</code><br>转置  <code>transpose</code>  <code>T</code></li></ul><h3 id="随机函数"><a href="#随机函数" class="headerlink" title="随机函数"></a>随机函数</h3><table><thead><tr><th>函数</th><th>使用说明</th></tr></thead><tbody><tr><td>rand</td><td>产生均匀分布的样本值</td></tr><tr><td>randint</td><td>给定范围内取随机整数</td></tr><tr><td>randn</td><td>产生正态分布的样本值</td></tr><tr><td>seed</td><td>随机数种子</td></tr><tr><td>permutation</td><td>对一个序列随机排序，不改变原数组</td></tr><tr><td>shuffle</td><td>对一个序列随机排序，改变原数组</td></tr><tr><td>uniform(low,high,size)</td><td>产生具有均匀分布的数组，low起始值，high结束值，size形状</td></tr><tr><td>normal(loc,scale,size)</td><td>产生具有正态分布的数组，loc均值，scale标准差</td></tr><tr><td>poisson(lam,size)</td><td>产生泊松分布的数组，lam随机事件发生率</td></tr></tbody></table><h2 id="数组的索引和切片"><a href="#数组的索引和切片" class="headerlink" title="数组的索引和切片"></a>数组的索引和切片</h2><h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>[1][2]</p><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><p>[:1]</p><h3 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h3><p>true false<br>按照要求显示符号条件的行列数组</p><h3 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h3><p>可以改变数组的顺序<br>.ix_</p><h2 id="数组运算"><a href="#数组运算" class="headerlink" title="数组运算"></a>数组运算</h2><table><thead><tr><th>方法</th><th>使用说明</th></tr></thead><tbody><tr><td>sum</td><td>求和</td></tr><tr><td>mean</td><td>算数平均数</td></tr><tr><td>std,var</td><td>标准差和方差</td></tr><tr><td>min,max</td><td>最小值和最大值</td></tr><tr><td>argmin,argmax</td><td>最小和最大元素的索引</td></tr><tr><td>cumsum</td><td>所有元素的累计和</td></tr><tr><td>cumprod</td><td>所有元素的累计积</td></tr></tbody></table>]]></content>
     
     
     
@@ -365,25 +365,6 @@
   
   
   <entry>
-    <title>Hexo+GitHub搭建博客</title>
-    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    
-    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记 </p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装 </p><p><strong>二、Hexo安装</strong></p><p>安装Hexo </p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>Git</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>MarkDown语法小结</title>
     <link href="undefined2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
     <url>2019/09/29/MarkDown%E8%AF%AD%E6%B3%95%E5%B0%8F%E7%BB%93/</url>
@@ -395,6 +376,25 @@
     <tags>
       
       <tag>MarkDown</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo+GitHub搭建博客</title>
+    <link href="undefined2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <url>2019/09/29/Hexo+GitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<p>#关于hexo与github使用过程中的问题与笔记 </p><p><strong>一、搭建个人博客前提：</strong></p><p><strong><em>Node.js、git</em></strong> 环境安装 </p><p><strong>二、Hexo安装</strong></p><p>安装Hexo </p><pre><code>npm install hexo -cli -g #安装hexo模块hexo init blog #通过hexo创建一个blog项目cd blog #打开blog文件夹npm installhexo server #开发服务</code></pre><p><strong>三、使用github</strong></p><p>GitHub中创建一个与用户名一致的仓库，以 <strong><em>io</em></strong> 为后缀，且一个账户只能建立一个。</p><p>如建立一个名叫<code>injoinD.github.io</code>的仓库，其中<code>injoinD</code>为用户名。</p><p><strong>四、配置git信息（Hexo和GitHub之间利用SSH通信）</strong></p><p>1.设置Git的user name和Email：</p><pre><code>git config --global user.name &quot;用户名&quot;git config --global user.email &quot;邮箱&quot;</code></pre><p>2.生成密钥</p><pre><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></pre><p>打开以.ssh结尾的文件夹，将里面的内容配置到GitHub项目里的SSH and GPG keys中</p><p><strong>五、配置Deployment</strong></p><blockquote><p>在blog项目根目录下找到_config.yml文件，找到Deployment，做出如下修改：</p></blockquote><pre><code>deploy:  type: git  repo: git@github.com:yourname/yourname.github.io.git  branch: master</code></pre><p>如：仓库地址是<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:injoinD/injoinD.github.io.git,所以配置如下：</p><pre><code>deploy:  type: git  repo: git@github.com:injoinD/injoinD.github.io.git  branch: master</code></pre><p><strong>六、安装hexo-diployer-git自动部署发布工具</strong></p><pre><code>npm install hexo-deployer-git --save</code></pre><p><strong>七、生成静态文件部署到GitHub</strong></p><p>通过hexo命令，发布到GitHub上</p><pre><code>hexo g #生成网站静态文件到默认设置的 public 文件夹hexo d #自动生成网站静态文件，并部署到设定的仓库hexo clean #清除缓存文件 db.json 和已生成的静态文件 public</code></pre><p><strong><em>通过链接 injoinD.github.io即可访问 injoinD为自己的用户名</em></strong> </p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
       
     </tags>
     
